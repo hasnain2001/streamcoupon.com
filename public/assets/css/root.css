@@ -1,0 +1,117 @@
+   :root {
+    /* Core Gold Colors */
+    --white: white;
+    --black: black;
+    --primary: #d6a751;
+    --primary-light: #f9e076;
+    --primary-dark: #b8860b;
+    --gold-highlight: #ffeb3b;
+
+    /* Enhanced Gold Gradients */
+    --second-primary: linear-gradient(135deg, #f9e076 0%, #d4af37 25%, #b8860b 50%, #d4af37 75%, #b8860b 100%);
+    --gold-shimmer: linear-gradient(135deg, #fff9c4, #f9e076, #d4af37, #b8860b);
+    --gold-radial: radial-gradient(circle at center, #fff9c4 0%, #f9e076 20%, #d4af37 60%, #b8860b 100%);
+    --gold-metallic: linear-gradient(115deg, #ffeb3b 0%, #ffeb3b 10%, #d4af37 10%, #d4af37 40%, #b8860b 40%, #b8860b 60%, #d4af37 60%, #d4af37 90%, #ffeb3b 90%);
+
+    /* Gold with Texture */
+    --gold-textured: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(184, 134, 11, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="%23000" opacity="0.1" d="M0 0h100v100H0z"/><path fill="%23000" opacity="0.05" d="M20 20h60v60H20z"/></svg>');
+
+    /* Background Colors */
+    --dark-bg: #145f59;
+    --dark-bg-light: #1a7a72;
+    --dark-bg-dark: #0f4a45;
+
+    /* Gray Scale */
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #343a40;
+
+    /* Animation Properties */
+    --gold-animation-shimmer: shimmer 5s ease infinite;
+    --gold-animation-metallic: metallic-shift 6s ease-in-out infinite;
+
+    /* Background Sizes */
+    --bg-size-large: 200% 200%;
+    --bg-size-extra-large: 300% 300%;
+}
+
+/* Keyframes for animations */
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes metallic-shift {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+}
+
+   .text-golden{
+        color: var(--primary);
+
+    }
+    .bg-golden{
+        background: var(--primary);
+    }
+    .btn-golden{
+        background: var(--primary);
+        color: white;
+    }
+    .btn-golden:hover{
+        background: var(--primary-dark);
+    }
+    .btn-link-golden{
+        color: var(--primary);
+    }
+    .btn-link-golden:hover{
+        color: var(--primary-dark);
+    }
+/* Button Styles with Hidden Code */
+.get-code-btn {
+    padding: 10px 20px;
+    background: var(--second-primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+}
+
+.get-code-btn:hover {
+    background: var(--gold-radial);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.get-code-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    animation: none;
+}
+.deal-btn {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    color: var(--dark-gray);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.deal-btn:hover {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--dark-gray);
+    transform: translateY(-2px);
+}
