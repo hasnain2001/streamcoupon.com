@@ -84,8 +84,8 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
                                     @if ($slider->image)
-                                    <a href="{{ asset('storage/' . $slider->image) }}" data-fancybox="gallery">
-                                        <img src="{{ asset('storage/' . $slider->image) }}"
+                                    <a href="{{ asset('uploads/slider/' . $slider->image) }}" data-fancybox="gallery">
+                                        <img src="{{ asset('uploads/slider/' . $slider->image) }}"
                                              class="rounded me-2 img-thumbnail"
                                              alt="{{ $slider->title }}"
                                              width="60" height="40"
@@ -156,7 +156,7 @@
                 </div>
             </div>
 
-            <div class="card-footer bg-light">
+            {{-- <div class="card-footer bg-light">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="text-muted">
                         Showing <strong>{{ $sliders->firstItem() }} - {{ $sliders->lastItem() }}</strong>
@@ -164,7 +164,7 @@
                     </div>
                     {{ $sliders->links() }}
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

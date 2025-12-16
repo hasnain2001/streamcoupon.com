@@ -331,7 +331,7 @@
                         <div class="card-body text-center">
                             <i class="fas fa-envelope mb-3" style="font-size: 2.5rem;"></i>
                             <h5 class="card-title">@lang('contact.email us')</h5>
-                            <p class="card-text text-muted">contact@voucherswell.com<br>support@voucherswell.com</p>
+                            <p class="card-text text-muted">contact@Streamcoupon.com<br>support@Streamcoupon.com</p>
                         </div>
                     </div>
                 </div>

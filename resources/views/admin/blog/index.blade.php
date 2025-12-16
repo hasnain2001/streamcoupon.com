@@ -148,6 +148,7 @@
                                                  src="{{ asset('uploads/blogs/' . $blog->image) }}"
                                                  style="width: 50px; height: 50px; object-fit: contain;"
                                                  alt="{{ $blog->name }}"
+                                                 loading="lazy"
                                                  onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
                                         </div>
                                         <div class="flex-grow-1">

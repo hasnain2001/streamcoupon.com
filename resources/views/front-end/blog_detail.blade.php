@@ -4,126 +4,137 @@
 @section('keywords', $blog->keywords)
 @section('author', $blog->author ?? 'Unknown')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/blog-detail.css') }}">
+@endpush
+
 @section('content')
-<div class="bg-light min-vh-100 py-0">
+<div class="bg-light min-vh-100 py-4">
     <div class="container">
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb bg-white p-3 rounded shadow-sm">
+            <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="/" class="text-primary text-decoration-none fw-semibold">
+                    <a href="/" class="text-decoration-none">
                         <i class="fas fa-home me-1"></i>@lang('nav.home')
                     </a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="{{ route('category.detail', ['slug' => Str::slug($blog->category->slug) ]) }}" class="text-primary text-decoration-none fw-semibold">
-                        <i class="fas fa-list me-1"></i> {{ $blog->category->name ?? 'Uncategorized' }}
+                    <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="text-decoration-none">
+                        <i class="fas fa-blog me-1"></i> @lang('nav.blogs')
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                       {{ $blog->name }}
+                    {{ $blog->name }}
                 </li>
             </ol>
         </nav>
+
         <!-- Blog Detail -->
         <div class="row">
-            <div class="col-12 col-md-8">
-                <div class="card shadow-lg border-0 mb-4">
-                    <div class="position-relative ratio ratio-16x9">
-                        <img src="{{ $blog->image ? asset('storage/blogs/' . $blog->image) : asset('front/assets/images/no-image-found.jpg') }}"
+            <div class="col-12 col-lg-8">
+                <article class="blog-main-card">
+                    <div class="blog-image-container">
+                        <img src="{{ $blog->image ? asset('uploads/blogs/' . $blog->image) : asset('front/assets/images/no-image-found.jpg') }}"
                              alt="{{ $blog->name }}"
-                             class="card-img-top object-fit-fill rounded-top"
+                             class="blog-image"
                              loading="lazy"
-                             style="filter: brightness(0.95);">
-                        <span class="position-absolute top-0 end-0 m-3 badge bg-gradient-primary text-white shadow">
-                            {{ $blog->category->name ?? 'Uncategorized' }}
+                             onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
+                        @if($blog->category)
+                        <span class="category-badge">
+                            {{ $blog->category->name }}
                         </span>
+                        @endif
                     </div>
-                    <div class="card-body">
-                        <h1 class="card-title text-dark fw-bold mb-3 display-5">
-                            {{ $blog->name }}
-                        </h1>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-primary bg-opacity-10 text-primary small px-3 py-2 rounded-pill">
-                                <i class="far fa-calendar-alt me-1"></i>{{ $blog->created_at->format('M d, Y') }}
+                    <div class="blog-content">
+                        <h1 class="blog-title">{{ $blog->name }}</h1>
+                        
+                        <div class="blog-meta">
+                            <span class="meta-badge">
+                                <i class="far fa-calendar-alt"></i>
+                                {{ $blog->created_at->format('M d, Y') }}
                             </span>
-                            <span class="badge bg-secondary bg-opacity-10 text-secondary small px-3 py-2 rounded-pill">
-                                <i class="fas fa-user me-1"></i>{{ $blog->user->name ?? 'Unknown' }}
+                            <span class="meta-badge author">
+                                <i class="fas fa-user"></i>
+                                {{ $blog->user->name ?? 'Unknown' }}
                             </span>
                         </div>
-                        <p class="card-text text-muted mb-4 fs-5" style="line-height:1.7;">
+
+                        <div class="blog-body">
                             {!! $blog->content !!}
-                        </p>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
-            <div class="col-12 col-md-4">
-                <div class="card shadow-sm border-0 mb-4">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title text-dark fw-semibold mb-0">
-                            <i class="fas fa-store me-2 text-primary"></i>@lang('message.Related Stores')
+
+            <div class="col-12 col-lg-4">
+                <!-- Related Stores -->
+                <div class="sidebar-card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="fas fa-store"></i>@lang('message.Related Stores')
                         </h5>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            @forelse ($relatedstores as $store)
-                                <li class="list-group-item px-0 py-3 border-0">
-                                    <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}"
-                                       class="d-flex align-items-center text-decoration-none hover-bg-light rounded-2 p-2 transition shadow-sm"
-                                       style="transition: box-shadow 0.2s;">
-                                        <img src="{{ $store->image ? asset('storage/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                             alt="{{ $store->name }}"
-                                             class="rounded me-3 object-fit-fill border"
-                                             style="width: 60px; height: 60px; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                                        <div>
-                                            <div class="fw-semibold text-dark mb-1">{{ Str::limit($store->name, 40) }}</div>
-                                            <small class="text-muted">
-                                                <i class="far fa-calendar-alt me-1"></i>
-                                                {{ $store->created_at->format('M d, Y') }}
-                                            </small>
+                        @forelse ($relatedstores as $store)
+                            <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" 
+                               class="text-decoration-none">
+                                <div class="related-item">
+                                    <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                                         alt="{{ $store->name }}"
+                                         class="item-image"
+                                         loading="lazy"
+                                         onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
+                                    <div class="item-content">
+                                        <div class="item-title">{{ Str::limit($store->name, 40) }}</div>
+                                        <div class="item-meta">
+                                            <i class="far fa-calendar-alt"></i>
+                                            {{ $store->created_at->format('M d, Y') }}
                                         </div>
-                                    </a>
-                                </li>
-                            @empty
-                                <li class="list-group-item text-muted text-center border-0">
-                                   @lang('message.No related stores found.')
-                                </li>
-                            @endforelse
-                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        @empty
+                            <div class="no-items">
+                                <i class="fas fa-store-slash"></i>
+                                @lang('message.No related stores found.')
+                            </div>
+                        @endforelse
                     </div>
                 </div>
-                <div class="card shadow-sm border-0 mb-4">
-                    <div class="card-header bg-white">
-                        <h5 class="card-title text-dark fw-semibold mb-0">
-                            <i class="fas fa-blog me-2 text-primary"></i>@lang('message.related blogs')
+
+                <!-- Related Blogs -->
+                <div class="sidebar-card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="fas fa-blog"></i>@lang('message.related blogs')
                         </h5>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            @forelse ($relatedBlogs as $relatedBlog)
-                                <li class="list-group-item px-0 py-3 border-0">
-                                    <a href="{{ route('blog.detail', ['slug' => Str::slug($relatedBlog->slug)]) }}"
-                                       class="d-flex align-items-center text-decoration-none hover-bg-light rounded-2 p-2 transition shadow-sm"
-                                       style="transition: box-shadow 0.2s;">
-                                        <img src="{{ $relatedBlog->image ? asset('uploads/blogs/' . $relatedBlog->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                             alt="{{ $relatedBlog->name }}"
-                                             class="rounded me-3 object-fit-fill border"
-                                             style="width: 60px; height: 60px; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                                        <div>
-                                            <div class="fw-semibold text-dark mb-1">{{ Str::limit($relatedBlog->name, 40) }}</div>
-                                            <small class="text-muted">
-                                                <i class="far fa-calendar-alt me-1"></i>
-                                                {{ $relatedBlog->created_at->format('M d, Y') }}
-                                            </small>
+                        @forelse ($relatedBlogs as $relatedBlog)
+                            <a href="{{ route('blog.detail', ['slug' => Str::slug($relatedBlog->slug)]) }}" 
+                               class="text-decoration-none">
+                                <div class="related-item">
+                                    <img src="{{ $relatedBlog->image ? asset('uploads/blogs/' . $relatedBlog->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                                         alt="{{ $relatedBlog->name }}"
+                                         class="item-image"
+                                         loading="lazy"
+                                         onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
+                                    <div class="item-content">
+                                        <div class="item-title">{{ Str::limit($relatedBlog->name, 40) }}</div>
+                                        <div class="item-meta">
+                                            <i class="far fa-calendar-alt"></i>
+                                            {{ $relatedBlog->created_at->format('M d, Y') }}
                                         </div>
-                                    </a>
-                                </li>
-                            @empty
-                                <li class="list-group-item text-muted text-center border-0">
+                                    </div>
+                                </div>
+                            </a>
+                        @empty
+                            <div class="no-items">
+                                <i class="fas fa-file-alt"></i>
                                 @lang('message.No related blogs found.')
-                                </li>
-                            @endforelse
-                        </ul>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
             </div>
@@ -131,3 +142,71 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Image error handling
+    document.querySelectorAll('.blog-image, .item-image').forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = '{{ asset("assets/img/no-image-found.png") }}';
+        });
+    });
+
+    // Add smooth scroll to headings
+    document.querySelectorAll('.blog-body h2, .blog-body h3, .blog-body h4').forEach(heading => {
+        heading.style.cursor = 'pointer';
+        heading.addEventListener('click', function() {
+            this.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+
+    // Intersection Observer for animations
+    if ('IntersectionObserver' in window) {
+        const blogCard = document.querySelector('.blog-main-card');
+        const sidebarCards = document.querySelectorAll('.sidebar-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        if (blogCard) observer.observe(blogCard);
+        sidebarCards.forEach(card => observer.observe(card));
+    }
+
+    // Add page load animation
+    document.body.style.opacity = '0';
+    window.requestAnimationFrame(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    });
+
+    // Add reading progress indicator (optional enhancement)
+    const readingProgress = document.createElement('div');
+    readingProgress.style.position = 'fixed';
+    readingProgress.style.top = '0';
+    readingProgress.style.left = '0';
+    readingProgress.style.height = '3px';
+    readingProgress.style.background = 'var(--primary-gradient)';
+    readingProgress.style.width = '0%';
+    readingProgress.style.zIndex = '9999';
+    readingProgress.style.transition = 'width 0.3s ease';
+    document.body.appendChild(readingProgress);
+
+    window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        readingProgress.style.width = `${scrolled}%`;
+    });
+});
+</script>
+@endpush

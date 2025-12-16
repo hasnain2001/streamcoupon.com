@@ -1,40 +1,51 @@
-   :root {
-    /* Core Gold Colors */
-    --white: white;
-    --black: black;
-    --primary: #d6a751;
-    --primary-light: #f9e076;
-    --primary-dark: #b8860b;
-    --gold-highlight: #ffeb3b;
+:root {
+    /* Enhanced Color Palette with Better Contrast */
+    --white: #ffffff;
+    --black: #000000;
 
-    /* Enhanced Gold Gradients */
-    --second-primary: linear-gradient(135deg, #f9e076 0%, #d4af37 25%, #b8860b 50%, #d4af37 75%, #b8860b 100%);
-    --gold-shimmer: linear-gradient(135deg, #fff9c4, #f9e076, #d4af37, #b8860b);
-    --gold-radial: radial-gradient(circle at center, #fff9c4 0%, #f9e076 20%, #d4af37 60%, #b8860b 100%);
-    --gold-metallic: linear-gradient(115deg, #ffeb3b 0%, #ffeb3b 10%, #d4af37 10%, #d4af37 40%, #b8860b 40%, #b8860b 60%, #d4af37 60%, #d4af37 90%, #ffeb3b 90%);
+    /* Brand Primary (Teal) - Enhanced for better contrast */
+    --primary: #1E8A88;
+    --primary-light: #2CA6A4;
+    --primary-lighter: #4FC1BF;
+    --primary-dark: #176E6C;
 
-    /* Gold with Texture */
-    --gold-textured: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(184, 134, 11, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="%23000" opacity="0.1" d="M0 0h100v100H0z"/><path fill="%23000" opacity="0.05" d="M20 20h60v60H20z"/></svg>');
+    /* Brand Secondary (Green) - Enhanced */
+    --secondary: #6AAD3B;
+    --secondary-light: #7BC043;
+    --secondary-lighter: #9EDB6B;
+    --secondary-dark: #5B9432;
 
-    /* Background Colors */
-    --dark-bg: #145f59;
-    --dark-bg-light: #1a7a72;
-    --dark-bg-dark: #0f4a45;
+    /* Accent Colors */
+    --accent-navy: #1F2D3D;
+    --accent-navy-light: #2A3B4F;
+    --accent-navy-dark: #141E2B;
 
-    /* Gray Scale */
-    --light-gray: #f8f9fa;
-    --medium-gray: #e9ecef;
-    --dark-gray: #343a40;
+    /* Neutral Grays - Improved contrast */
+    --light-gray: #F8FAFC;
+    --medium-gray: #E2E8F0;
+    --dark-gray: #4A5568;
 
-    /* Animation Properties */
-    --gold-animation-shimmer: shimmer 5s ease infinite;
-    --gold-animation-metallic: metallic-shift 6s ease-in-out infinite;
+    /* Text Colors - AAA compliant contrast */
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-light: #718096;
 
-    /* Background Sizes */
-    --bg-size-large: 200% 200%;
-    --bg-size-extra-large: 300% 300%;
+    /* Gradients */
+    --primary-gradient: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+    --secondary-gradient: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
+    --accent-gradient: linear-gradient(135deg, var(--accent-navy-dark) 0%, var(--accent-navy-light) 100%);
+    --logo-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary) 50%, var(--accent-navy) 100%);
+
+    /* Glow Effects */
+    --primary-glow: 0 0 25px rgba(44, 166, 164, 0.5);
+    --secondary-glow: 0 0 25px rgba(123, 192, 67, 0.5);
+    --accent-glow: 0 0 25px rgba(31, 45, 61, 0.5);
+
+    /* Shadows */
+    --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
-
 /* Keyframes for animations */
 @keyframes shimmer {
     0% { background-position: 0% 50%; }
@@ -46,72 +57,549 @@
     0%, 100% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
 }
-
-   .text-golden{
-        color: var(--primary);
-
-    }
-    .bg-golden{
-        background: var(--primary);
-    }
-    .btn-golden{
-        background: var(--primary);
-        color: white;
-    }
-    .btn-golden:hover{
-        background: var(--primary-dark);
-    }
-    .btn-link-golden{
-        color: var(--primary);
-    }
-    .btn-link-golden:hover{
-        color: var(--primary-dark);
-    }
-/* Button Styles with Hidden Code */
-.get-code-btn {
-    padding: 10px 20px;
-    background: var(--second-primary);
-    color: #fff;
+/* Enhanced Button System using Brand Colors */
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 6px 20px rgba(44, 166, 164, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(44, 166, 164, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow:
+        0 4px 15px rgba(44, 166, 164, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(44, 166, 164, 0.2),
+        0 6px 20px rgba(44, 166, 164, 0.3);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: var(--secondary-gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 6px 20px rgba(123, 192, 67, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(123, 192, 67, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover::before {
+    left: 100%;
+}
+
+/* Outline Button */
+.btn-outline-primary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 10px 26px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-outline-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    border-color: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 166, 164, 0.25);
+}
+
+.btn-outline-primary:hover::before {
+    left: 0;
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 12px;
+    padding: 10px 26px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-outline-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-gradient);
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    border-color: var(--secondary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(123, 192, 67, 0.25);
+}
+
+.btn-outline-secondary:hover::before {
+    left: 0;
+}
+
+/* Accent/Dark Button */
+.btn-accent {
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 6px 20px rgba(31, 45, 61, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-accent:hover {
+    background: var(--accent-navy-light);
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(31, 45, 61, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Get Code Button - Enhanced */
+.get-code-btn {
+    width: 100%;
+    padding: 14px 32px;
+    background: var(--secondary-gradient);
+    background-size: 200% 200%;
+    color:var(--text-primary);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 8px 25px rgba(67, 113, 192, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: shimmer 3s infinite ease-in-out;
+}
+
+.get-code-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 3s infinite linear;
 }
 
 .get-code-btn:hover {
-    background: var(--gold-radial);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    color: #fff;
+    background: var(--primary-lighter);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow:
+        0 15px 35px rgba(67, 161, 192, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .get-code-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-    animation: none;
+    transform: translateY(-1px);
+    box-shadow:
+        0 5px 15px rgba(67, 113, 192, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
+
+/* Deal Button - Enhanced */
 .deal-btn {
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-    color: var(--dark-gray);
+    width: 100%;
+    background: var(--primary-gradient);
+    background-size: 200% 200%;
+    color: white;
     border: none;
-    border-radius: 8px;
-    padding: 10px;
-    font-weight: 700;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-weight: 800;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     position: relative;
     overflow: hidden;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow:
+        0 8px 25px rgba(44, 166, 164, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    animation: shimmer 4s infinite ease-in-out;
+}
+
+.deal-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+    transition: left 0.6s;
 }
 
 .deal-btn:hover {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    color: var(--dark-gray);
+    background: var(--primary-light);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow:
+        0 15px 35px rgba(44, 166, 164, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.deal-btn:hover::before {
+    left: 100%;
+}
+
+.deal-btn:active {
+    transform: translateY(-1px);
+    box-shadow:
+        0 5px 15px rgba(44, 166, 164, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Ghost Button */
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 2px solid var(--medium-gray);
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-transform: none;
+}
+
+.btn-ghost:hover {
+    background: rgba(44, 166, 164, 0.05);
+    border-color: var(--primary);
+    color: var(--primary);
     transform: translateY(-2px);
+}
+
+/* Icon Button */
+.btn-icon {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    color: var(--text-secondary);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(44, 166, 164, 0.3);
+}
+
+/* Badge/Count Button */
+.btn-badge {
+    background: var(--secondary);
+    color: white;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-badge:hover {
+    background: var(--secondary-dark);
+    transform: scale(1.1);
+}
+
+/* Floating Action Button */
+.btn-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--secondary-gradient);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    box-shadow:
+        0 6px 20px rgba(123, 192, 67, 0.4),
+        0 0 30px rgba(123, 192, 67, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-fab:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow:
+        0 10px 30px rgba(123, 192, 67, 0.6),
+        0 0 40px rgba(123, 192, 67, 0.4);
+}
+
+/* Loading State */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: button-spin 0.8s linear infinite;
+}
+
+@keyframes button-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Sizes */
+.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
+.btn-lg {
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    border-radius: 14px;
+}
+
+.btn-xl {
+    padding: 20px 50px;
+    font-size: 1.4rem;
+    border-radius: 16px;
+    font-weight: 900;
+}
+
+/* Full Width */
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Button Groups */
+.btn-group {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.btn-group .btn {
+    margin: 0;
+}
+
+/* Disabled State */
+.btn:disabled,
+.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn:disabled:hover,
+.btn-disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent,
+    .get-code-btn,
+    .deal-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .btn-lg {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+    }
+
+    .btn-xl {
+        padding: 16px 35px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent,
+    .get-code-btn,
+    .deal-btn {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+    }
 }

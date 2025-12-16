@@ -466,18 +466,9 @@
                 @foreach ($stores as $store)
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="store-card">
-                            @php
-                                $language = $store->language ? $store->language->code : 'en';
-                                $storeSlug = Str::slug($store->slug);
-                                $storeurl = $store->slug
-                                    ? ($language === 'en'
-                                        ? route('store.detail', ['slug' => $storeSlug])
-                                        : route('store_details.withLang', ['lang' => $language, 'slug' => $storeSlug]))
-                                    : '#';
-                            @endphp
-                            <a href="{{ $storeurl }}" class="text-decoration-none">
+                            <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" class="text-decoration-none">
                                 <div class="d-flex justify-content-center mb-3">
-                                    <img src="{{ $store->image ? asset('storage/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                                    <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
                                          class="store-image rounded-circle"
                                          alt="{{ $store->name }}"
                                          loading="lazy">
@@ -533,10 +524,10 @@
                                 </div>
                                 <p class="card-text text-muted small mb-3">{{ Str::limit($coupon->description, 100) }}</p>
 
-                                @if($coupon->store)
+                                @if($coupon->stores)
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="fas fa-store text-primary me-2 small"></i>
-                                        <small class="text-primary">{{ $coupon->store->name }}</small>
+                                        <small class="text-primary">{{ $coupon->stores->name }} </small>
                                     </div>
                                 @endif
 
@@ -548,10 +539,10 @@
                                 @endif
 
                                 <div class="mt-auto">
-                                    <span class="expiry-badge">
+                                    {{-- <span class="expiry-badge">
                                         <i class="fas fa-clock me-1"></i>
                                         {{ $coupon->ending_date ? $coupon->ending_date->format('M d, Y') : 'No expiry' }}
-                                    </span>
+                                    </span> --}}
                                 </div>
                             </div>
                         </div>
@@ -643,14 +634,14 @@
                         <div class="card blog-card h-100">
                             @if($blog->image)
                              <a href="{{ route('blog.detail', $blog->slug) }}" >
-                                <img src="{{ asset('storage/blogs/' . $blog->image) }}"
+                                <img src="{{ asset('uploads/blogs/' . $blog->image) }}"
                                      class="card-img-top"
-                                     alt="{{ $blog->title }}"
+                                     alt="{{ $blog->name }}"
                                      loading="lazy">
                                </a>
                             @endif
                             <div class="card-body">
-                                <h5 class="blog-title">{{ $blog->title }}</h5>
+                                <h5 class="blog-name">{{ $blog->name }}</h5>
                                 <p class="card-text text-muted mb-3">{{ Str::limit($blog->excerpt, 150) }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">

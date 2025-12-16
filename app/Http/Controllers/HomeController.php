@@ -41,7 +41,6 @@ class HomeController extends Controller
             ->get();
 
         $categories = Category::where('top_category', 1)
-            ->where('language_id', $language->id)
             ->limit(10)
             ->get();
 
@@ -209,31 +208,20 @@ class HomeController extends Controller
     }
 
 
-     public function category_detail($lang = 'en', $slug, Request $request)
+     public function category_detail( $slug, Request $request)
     {
-       app()->setLocale($lang);
-       $language = language::where('code', $lang)->firstOr(function () {
-            abort(404, 'Language not found');
-        });
+      
         $slug = Str::slug($slug);
         $title = ucwords(str_replace('-', ' ', $slug));
-        $category = Category::with('language')->where('slug', $title)->first();
-        if (!$category->language) {
-            return response()->json(['error' => 'No language select for this store.'], 404);
-        }
-        if ($lang !== $category->language->code) {
-            return redirect()->route('category.detail.withlang', [ 'lang' => $category->language->code,
-                'slug' => $slug
-            ]);
-        }
+        $category = Category::where('slug', $title)->first();
+     
         $relatedblogs = Blog::where('category_id', $category->id)
-                 ->where('language_id', $language->id)
                  ->where('status',1)
                 ->orderBy('created_at', 'desc')
                 ->take(5)
                 ->get();
         $stores = Store::where('category_id', $category->id)
-        // ->where('language_id', $category->language_id)
+
         ->get();
 
         return view('front-end.category_detail', compact('category','relatedblogs','stores'));

@@ -355,7 +355,7 @@
                         <div class="top-stores">
                             @foreach($recentStores as $store)
                             <div class="store-item d-flex align-items-center py-3 border-bottom">
-                                <img src="{{ $store->image ? asset('storage/stores/' . $store->image) : asset('assets/img/no-image-found.png') }}"
+                                <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('assets/img/no-image-found.png') }}"
                                     alt="{{ $store->name }}"
                                     class="store-avatar rounded-circle me-3"
                                     width="40"

@@ -22,6 +22,369 @@
             {{ $store->name }}, {{ $store->name }} coupons, {{ $store->name }} vouchers, discount codes, promo offers, save money, online deals
         @endif
     @endsection
+        @push('styles')
+    <style>
+            /* Breadcrumb Section - Custom CSS */
+.breadcrumb-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.breadcrumb-nav {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.breadcrumb-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6c757d;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.breadcrumb-item:hover {
+    color: #d4af37;
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: translateY(-1px);
+}
+
+.breadcrumb-item.current {
+    color: #495057;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item.current .breadcrumb-text {
+    color: #d4af37;
+}
+
+.breadcrumb-text {
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.breadcrumb-link:hover {
+    color: #d4af37;
+}
+
+.breadcrumb-separator {
+    color: #adb5bd;
+    font-weight: 600;
+    margin: 0 2px;
+    user-select: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .breadcrumb-container {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .breadcrumb-item {
+        padding: 3px 6px;
+    }
+
+    .breadcrumb-text {
+        font-size: 12px;
+    }
+
+    .breadcrumb-separator {
+        margin: 0 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb-container {
+        font-size: 11px;
+    }
+
+    .breadcrumb-text {
+        font-size: 11px;
+    }
+
+    /* Hide some breadcrumbs on very small screens */
+    .breadcrumb-item:nth-last-child(n+4) {
+        display: none;
+    }
+
+    /* Show ellipsis for hidden items */
+    .breadcrumb-container::before {
+        content: '...';
+        color: #adb5bd;
+        margin-right: 6px;
+    }
+}
+
+/* Animation for breadcrumb hover */
+.breadcrumb-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, #f9e076);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.breadcrumb-item:hover::after {
+    width: 80%;
+}
+
+.breadcrumb-item.current::after {
+    width: 80%;
+    background: linear-gradient(90deg, #d4af37, #f9e076);
+}
+
+/* Focus states for accessibility */
+.breadcrumb-item:focus {
+    outline: 2px solid #d4af37;
+    outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .breadcrumb-section {
+        background: linear-gradient(135deg, #145f59 0%, #4a5568 100%);
+        border-bottom-color: #4a5568;
+    }
+
+    .breadcrumb-item {
+        color: #cbd5e0;
+    }
+
+    .breadcrumb-item:hover {
+        background-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .breadcrumb-item.current {
+        color: #e2e8f0;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .breadcrumb-separator {
+        color: #718096;
+    }
+}
+
+/* Print styles */
+@media print {
+    .breadcrumb-section {
+        background: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .breadcrumb-item {
+        color: #000;
+    }
+
+    .breadcrumb-item:hover {
+        background: none;
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .breadcrumb-item {
+        border: 1px solid currentColor;
+    }
+
+    .breadcrumb-item.current {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .breadcrumb-item {
+        transition: none;
+    }
+
+    .breadcrumb-item:hover {
+        transform: none;
+    }
+
+    .breadcrumb-item::after {
+        transition: none;
+    }
+}
+
+/* Breadcrumb loading state */
+.breadcrumb-container.loading .breadcrumb-text {
+    color: transparent;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 3px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+    /* Enhanced Button Animations */
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+
+    .btn-shine {
+        animation: shine 2s infinite;
+    }
+
+    /* Enhanced Card Hover Effects */
+    .hover-lift {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Premium Badge Styling */
+    .premium-badge .badge {
+        box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    }
+
+    /* Hot Offer Ribbon */
+    .hot-offer-ribbon .ribbon {
+        box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+        z-index: 1;
+    }
+
+    /* Store Image Container */
+    .store-image-container::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+        border-radius: 50%;
+        z-index: -1;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+    }
+
+    /* Enhanced Modal Styles */
+    .modal-content {
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .ribbon-left {
+        position: absolute;
+        top: 20px;
+        left: -35px;
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        color: white;
+        padding: 8px 40px;
+        transform: rotate(-45deg);
+        box-shadow: 0 4px 12px rgba(238, 90, 36, 0.3);
+        z-index: 1000;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .ribbon-left-content {
+        display: block;
+        text-align: center;
+    }
+
+    /* Bounce Animation for Logo */
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .bounce {
+        animation: bounce 2s infinite;
+    }
+
+    /* Divider Lines */
+    .divider-line {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        flex: 1;
+    }
+
+    /* Responsive Improvements */
+    @media (max-width: 768px) {
+        .coupon-card {
+            margin-bottom: 1rem;
+        }
+
+        .hot-offer-ribbon .ribbon {
+            transform: rotate(45deg) translate(20px, -8px) !important;
+            font-size: 0.6rem !important;
+            padding: 4px 12px !important;
+        }
+    }
+
+    /* Accessibility Improvements */
+    @media (prefers-reduced-motion: reduce) {
+        .hover-lift,
+        .btn-shine,
+        .bounce {
+            animation: none;
+            transition: none;
+        }
+
+        .hover-lift:hover {
+            transform: none;
+        }
+    }
+
+    </style>
+    @endpush
     @section('content')
     <main class="main container-fluid">
         @php
@@ -46,13 +409,10 @@
                             <span class="breadcrumb-text">@lang('nav.home')</span>
                         </a>
                         <div class="breadcrumb-item">
-                            @if($store->category && $store->category->title)
-                                <a class="breadcrumb-link" href="{{ route('category.detail', ['slug' => Str::slug($store->category->title)]) }}">
-                                    <span class="breadcrumb-text">{{ $store->category->title }}</span>
-                                </a>
-                            @elseif(!empty($store->category))
+
+                            @if(!empty($store->category))
                                 <a href="{{ route('category.detail', ['slug' => Str::slug($store->category->slug)]) }}" class="breadcrumb-link">
-                                    <span class="breadcrumb-text">{{ $store->category->title }}</span>
+                                    <span class="breadcrumb-text">{{ $store->category->name }}</span>
                                 </a>
                             @else
                                 <span class="breadcrumb-text">No Category</span>
@@ -75,20 +435,21 @@
             </div>
         </section>
         <!-- Store Header Section - Mobile Optimized -->
-        <section class="store-header-section py-4 bg-white card shadow">
+        <section class="store-header-section bg-white card shadow">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Image on left for all screens -->
                     <div class="col-md-2 col-3">
-                        <img src="{{ asset('storage/stores/' . $store->image) }}"
+                        <img src="{{ asset('uploads/stores/' . $store->image) }}"
                             class="store-logo rounded-3 shadow-sm w-100"
                             alt="{{ $store->name }}"
+                            loading="lazy"
                             style="max-width: 80px;">
                     </div>
 
                     <!-- Store info on right for mobile, full width for desktop -->
                     <div class="col-md-10 col-9">
-                        <div class="store-info text-md-start text-end">
+                        <div class="store-info text-md-start text-start">
                             <h1 class="store-title mb-1">{{ $store->name }}</h1>
                             <div class="store-rating d-flex align-items-center justify-content-md-start justify-content-end mb-1">
                                 <div class="stars text-warning me-2">
@@ -220,9 +581,10 @@
                                             </div>
                                             <div class="text-center mb-3">
                                                 <div class="store-image-container position-relative d-inline-block">
-                                                    <img src="{{ asset('storage/stores/' . $store->image) }}"
+                                                    <img src="{{ asset('uploads/stores/' . $store->image) }}"
                                                         class="coupon-store-image rounded-circle shadow border-3 border-white"
                                                         alt="{{ $store->name }}"
+                                                        loading="lazy"
                                                         width="60"
                                                         height="60"
                                                         style="object-fit: fill;">
@@ -260,7 +622,7 @@
                                             @if ($coupon->code)
                                             <button class="w-100 get-code-btn py-2 border-0 rounded-pill fw-bold position-relative overflow-hidden"
 
-                                                    onclick="handleRevealCode(event, {{ $coupon->id }}, '{{ $coupon->code }}', '{{ $coupon->name }}', '{{ asset('storage/stores/' . $store->image) }}', '{{ $store->destination_url }}', '{{ $coupon->store->name }}')">
+                                                    onclick="handleRevealCode(event, {{ $coupon->id }}, '{{ $coupon->code }}', '{{ $coupon->name }}', '{{ asset('uploads/stores/' . $store->image) }}', '{{ $store->destination_url }}', '{{ $coupon->stores->name }}')">
                                                 <span class="reveal-text position-relative z-2">
                                                     <i class="fas fa-gift me-2"></i>Get Code
                                                 </span>
@@ -303,8 +665,9 @@
                                             <h4 class="blog-title h5 h6-md mb-2 mb-md-3">{{ $blog->title }}</h4>
                                             @if($blog->image)
                                             <img class="blog-image img-fluid rounded mb-2 mb-md-3"
-                                                src="{{ asset('storage/blogs/' . $blog->image) }}"
+                                                src="{{ asset('uploads/blogs/' . $blog->image) }}"
                                                 alt="{{ $blog->title }}"
+                                                loading="lazy"
                                                 style="max-height: 150px; object-fit: cover;">
                                             @endif
                                             <div class="blog-content small">
@@ -334,9 +697,10 @@
                                 <div class="card-body p-0">
                                     <!-- Store Image & Basic Info -->
                                     <div class="store-sidebar-header text-center p-4 bg-gradient-light">
-                                        <img src="{{ asset('storage/stores/' . $store->image) }}"
+                                        <img src="{{ asset('uploads/stores/' . $store->image) }}"
                                             class="store-sidebar-image rounded-circle shadow mb-3 border border-4 border-white"
                                             alt="{{ $store->name }}"
+                                            loading="lazy"
                                             width="90"
                                             height="90">
                                         <h4 class="store-name h5 mb-2 fw-bold text-dark">{{ $store->name }}</h4>
@@ -466,9 +830,10 @@
                                         @foreach ($relatedStores as $relatedStore)
                                         <a href="{{ route('store.detail', ['slug' => Str::slug($relatedStore->slug)]) }}"
                                         class="related-store-item d-flex align-items-center text-decoration-none text-dark mb-3 p-3 rounded hover-lift bg-light">
-                                            <img src="{{ asset('storage/stores/' . $relatedStore->image) }}"
+                                            <img src="{{ asset('uploads/stores/' . $relatedStore->image) }}"
                                                 class="related-store-image rounded-circle shadow-sm me-3 border"
                                                 alt="{{ $relatedStore->name }}"
+                                                loading="lazy"
                                                 width="45"
                                                 height="45">
                                             <div class="related-store-info flex-grow-1">
@@ -518,7 +883,7 @@
                     <!-- Animated Logo -->
                     <div class="mb-4">
                         <div class="logo-container mx-auto">
-                            <img src="" alt="Brand Logo" id="storeImage" class="img-fluid rounded-circle shadow border-4 border-white bounce animation" style="width: 100px; height: 100px; object-fit: cover;">
+                            <img src="" alt="Brand Logo" id="storeImage" class="img-fluid rounded-circle shadow border-4 border-white bounce animation" style="width: 100px; height: 100px; object-fit: cover;" loading="lazy">
                         </div>
                     </div>
 
@@ -676,6 +1041,4 @@
             }
         </script>
     @endpush
-    @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/store-detail.css') }}">
-    @endpush
+

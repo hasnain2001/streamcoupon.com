@@ -41,4 +41,11 @@ class Blog extends Model
     {
         return $this->belongsTo(Store::class, 'store_id');
     }
+    public function getImageUrlAttribute()
+    {
+        return $this->image
+            ? asset('uploads/blogs/' . $this->image)
+            : asset('assets/img/no-image-found.png');
+    }
+
 }

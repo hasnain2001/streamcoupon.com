@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('updated_id')->nullable()->constrained('users')->nullOnDelete();
             $table->foreignId('language_id')->nullable()->constrained('languages')->nullOnDelete();
             $table->foreignId('store_id')->nullable()->constrained()->nullOnDelete();
-            $table->string('status')->default('draft');
+            $table->string('status')->default(0);
             $table->string('name');
             $table->string('slug')->unique();
             $table->longText('content')->nullable();

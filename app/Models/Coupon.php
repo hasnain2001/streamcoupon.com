@@ -15,13 +15,21 @@ class Coupon extends Model
         'clicks',
         'order',
         'status',
+        'langauge_id'
     ];
 
     public function stores()
     {
         return $this->belongsTo(Store::class, 'store_id');
     }
-
+   public function store()
+    {
+        return $this->belongsTo(Store::class, 'store_id');
+    }
+     public function language()
+    {
+        return $this->belongsTo(Language::class, 'langauge_id');
+    }
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');

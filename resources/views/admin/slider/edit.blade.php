@@ -135,7 +135,7 @@
                                             <div class="d-flex align-items-center h-100">
                                                 @if($slider->image)
                                                 <div class="border p-2 rounded me-3">
-                                                    <img src="{{ asset('storage/' . $slider->image) }}"
+                                                    <img src="{{ asset('uploads/slider/' . $slider->image) }}"
                                                         class="img-thumbnail"
                                                         alt="Current slider image"
                                                         width="120">

@@ -4,230 +4,7 @@
 @section('keywords', 'imprint, legal information, company details, contact, disclaimer, copyright, ' . config('app.name'))
 @section('author', config('app.name'))
 @push('styles')
-<style>
-    :root {
-        --gold-primary: #d6a751;
-        --gold-light: #f9e076;
-        --gold-dark: #b8860b;
-        --dark-teal: #145f59;
-        --dark-teal-light: #1a7a72;
-        --dark-teal-dark: #0f4a45;
-        --gradient-gold: linear-gradient(135deg, #f9e076 0%, #d4af37 50%, #b8860b 100%);
-        --gradient-teal: linear-gradient(135deg, #145f59 0%, #1a7a72 100%);
-    }
-
-    .imprint-hero {
-        background: var(--gradient-teal);
-        padding: 4rem 0;
-        color: white;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .imprint-hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-        animation: float 20s infinite linear;
-    }
-
-    @keyframes float {
-        0% { transform: translateX(0) translateY(0); }
-        100% { transform: translateX(-100px) translateY(-100px); }
-    }
-
-    .imprint-hero-content {
-        position: relative;
-        z-index: 2;
-    }
-
-    .imprint-card {
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        margin-top: -50px;
-        position: relative;
-        z-index: 3;
-    }
-
-    .imprint-header-gold {
-        background: var(--gradient-gold);
-        color: #2c3e50;
-        padding: 2.5rem;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .imprint-header-gold::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
-        animation: imshimmer 3s infinite;
-    }
-
-    @keyframes imshimmer {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
-    }
-
-    .info-section {
-        padding: 2rem 2.5rem;
-        border-bottom: 1px solid #e9ecef;
-        transition: all 0.3s ease;
-    }
-
-    .info-section:hover {
-        background: linear-gradient(90deg, rgba(214, 167, 81, 0.05) 0%, transparent 100%);
-        transform: translateX(10px);
-    }
-
-    .info-section:last-child {
-        border-bottom: none;
-    }
-
-    .info-icon {
-        width: 50px;
-        height: 50px;
-        background: var(--gradient-gold);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-        color: white;
-        font-size: 1.25rem;
-        box-shadow: 0 4px 15px rgba(214, 167, 81, 0.3);
-    }
-
-    .info-title {
-        color: var(--dark-teal);
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-        font-size: 1.1rem;
-    }
-
-    .info-content {
-        color: #6c757d;
-        line-height: 1.6;
-    }
-
-    .info-content a {
-        color: var(--gold-primary);
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-
-    .info-content a:hover {
-        color: var(--dark-teal);
-        text-decoration: underline;
-    }
-
-    .btn-golden {
-        background: var(--gradient-gold);
-        color: #2c3e50;
-        border: none;
-        padding: 12px 30px;
-        border-radius: 25px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(214, 167, 81, 0.3);
-    }
-
-    .btn-golden:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(214, 167, 81, 0.4);
-        color: #2c3e50;
-    }
-
-    .legal-badge {
-        background: var(--gradient-teal);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        display: inline-block;
-        margin-bottom: 1rem;
-    }
-
-    .contact-highlight {
-        background: linear-gradient(135deg, #fff9e6 0%, #fff3d9 100%);
-        border-left: 4px solid var(--gold-primary);
-        padding: 1.5rem;
-        border-radius: 0 12px 12px 0;
-        margin: 1.5rem 0;
-    }
-
-    /* Mobile Optimizations */
-    @media (max-width: 768px) {
-        .imprint-hero {
-            padding: 3rem 1rem;
-        }
-
-        .imprint-card {
-            margin: -30px 1rem 0;
-            border-radius: 15px;
-        }
-
-        .imprint-header-gold {
-            padding: 2rem 1.5rem;
-        }
-
-        .info-section {
-            padding: 1.5rem;
-        }
-
-        .info-section:hover {
-            transform: none;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .imprint-hero {
-            padding: 2rem 1rem;
-        }
-
-        .info-section {
-            padding: 1.25rem;
-        }
-
-        .contact-highlight {
-            padding: 1rem;
-        }
-    }
-
-    /* Reduced motion support */
-    @media (prefers-reduced-motion: reduce) {
-        .imprint-hero::before,
-        .imprint-header-gold::before {
-            animation: none;
-        }
-
-        .info-section:hover {
-            transform: none;
-        }
-
-        .btn-golden:hover {
-            transform: none;
-        }
-    }
-</style>
+<link rel="stylesheet" href="{{ asset('assets/css/imprint.css') }}">
 @endpush
 @section('content')
 <main>
@@ -235,8 +12,8 @@
     <section class="imprint-hero">
         <div class="container">
             <div class="imprint-hero-content">
-                <h1 class="display-5 fw-bold mb-3">Legal Imprint</h1>
-                <p class="lead mb-0">Company details, legal information, and contact details</p>
+                <h1>Legal Imprint</h1>
+                <p>Company details, legal information, and contact details</p>
             </div>
         </div>
     </section>
@@ -247,9 +24,11 @@
             <div class="col-lg-10">
                 <div class="imprint-card">
                     <!-- Card Header -->
-                    <div class="imprint-header-gold">
-                        <h2 class="h4 mb-2 fw-bold"><i class="fas fa-scale-balanced me-2"></i>Legal Information</h2>
-                        <p class="mb-0 opacity-75">Required by German law (§5 TMG) and for your information</p>
+                    <div class="imprint-header">
+                        <div class="imprint-header-content">
+                            <h2><i class="fas fa-scale-balanced"></i>Legal Information</h2>
+                            <p>Required by German law (§5 TMG) and for your information</p>
+                        </div>
                     </div>
 
                     <!-- Company Information -->
@@ -259,7 +38,7 @@
                         </div>
                         <h3 class="info-title">Company Details</h3>
                         <div class="info-content">
-                            <p class="mb-2"><strong>VoucherWell Ltd.</strong></p>
+                            <p class="mb-2"><strong>Streamcoupon Ltd.</strong></p>
                             <p class="mb-0">Your trusted partner for deals and coupons</p>
                         </div>
                     </div>
@@ -271,8 +50,8 @@
                         </div>
                         <h3 class="info-title">Registered Address</h3>
                         <div class="info-content">
-                            <p class="mb-1">3000 Hoffman Drive</p>
-                            <p class="mb-1">Plano, TX 75074</p>
+                            <p class="mb-1">3000 Hoffman Dr,</p>
+                            <p class="mb-1">Plano, Tx USA 75074</p>
                             <p class="mb-0">United States of America</p>
                         </div>
                     </div>
@@ -287,11 +66,11 @@
                             <div class="contact-highlight">
                                 <p class="mb-2">
                                     <strong>Email:</strong>
-                                    <a href="mailto:voucherwell@gmail.com">voucherwell@gmail.com</a>
+                                    <a href="mailto:contact@streamcoupon.com">contact@streamcoupon.com</a>
                                 </p>
                                 <p class="mb-0">
                                     <strong>Phone:</strong>
-                                    <a href="tel:+">+</a>
+                                    <a href="tel:+17473651163">+17473651163</a>
                                 </p>
                             </div>
                         </div>
@@ -343,8 +122,8 @@
                         </div>
                         <h3 class="info-title">External Links Disclaimer</h3>
                         <div class="info-content">
-                            <p class="mb-3">Through this website you are able to link to other websites which are not under the control of VoucherWell Ltd. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
-                            <p class="mb-0">Every effort is made to keep the website up and running smoothly. However, VoucherWell Ltd. takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
+                            <p class="mb-3">Through this website you are able to link to other websites which are not under the control of Streamcoupon Ltd. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+                            <p class="mb-0">Every effort is made to keep the website up and running smoothly. However, Streamcoupon Ltd. takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
                         </div>
                     </div>
 
@@ -355,8 +134,8 @@
                         </div>
                         <h3 class="info-title">Copyright Notice</h3>
                         <div class="info-content">
-                            <p class="mb-3">© {{ date('Y') }} VoucherWell Ltd. All rights reserved.</p>
-                            <p class="mb-0">All content, including but not limited to text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of VoucherWell Ltd. or its content suppliers and protected by international copyright laws.</p>
+                            <p class="mb-3">© {{ date('Y') }} Streamcoupon Ltd. All rights reserved.</p>
+                            <p class="mb-0">All content, including but not limited to text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Streamcoupon Ltd. or its content suppliers and protected by international copyright laws.</p>
                         </div>
                     </div>
 
@@ -374,9 +153,9 @@
                     </div>
 
                     <!-- Back to Home -->
-                    <div class="text-center py-4" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-                        <a href="{{ url('/') }}" class="btn-golden">
-                            <i class="fas fa-home me-2"></i>Back to Homepage
+                    <div class="back-home-section">
+                        <a href="{{ url('/') }}" class="btn-primary-custom">
+                            <i class="fas fa-home"></i>Back to Homepage
                         </a>
                     </div>
                 </div>
@@ -385,3 +164,104 @@
     </div>
 </main>
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Intersection Observer for animations
+    if ('IntersectionObserver' in window) {
+        const sections = document.querySelectorAll('.info-section');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Observe main card
+        const imprintCard = document.querySelector('.imprint-card');
+        const backHomeSection = document.querySelector('.back-home-section');
+        
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        if (imprintCard) cardObserver.observe(imprintCard);
+        if (backHomeSection) cardObserver.observe(backHomeSection);
+    }
+
+    // Add ripple effect to button
+    const backButton = document.querySelector('.btn-primary-custom');
+    if (backButton) {
+        backButton.addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const ripple = document.createElement('span');
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+                z-index: 1;
+            }
+            
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Add page load animation
+    document.body.style.opacity = '0';
+    window.requestAnimationFrame(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    });
+
+    // Highlight email and phone on hover
+    const contactLinks = document.querySelectorAll('.contact-highlight a');
+    contactLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.textDecoration = 'none';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.textDecoration = 'none';
+        });
+    });
+});
+</script>
+@endpush

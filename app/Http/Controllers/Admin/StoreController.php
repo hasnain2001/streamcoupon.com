@@ -18,20 +18,15 @@ class StoreController extends Controller
      */
     public function index(Request $request)
     {
-        // Get all languages that have stores
+
         $languages = Language::whereHas('stores')->get();
-
         $selectedLanguage = $request->input('language_id');
-
-        // Build the stores query
         $query = Store::select('id', 'slug', 'name', 'category_id', 'user_id', 'network_id', 'image', 'created_at', 'status', 'updated_id', 'updated_at', 'language_id')
             ->with('user', 'updatedby', 'language', 'network')
             ->when($selectedLanguage, function($query) use ($selectedLanguage) {
                 return $query->where('language_id', $selectedLanguage);
             })
             ->orderBy('created_at', 'desc');
-
-        // If AJAX request, return only partial view
         if ($request->ajax()) {
             $stores = $query->limit(200)->get();
 
@@ -39,8 +34,6 @@ class StoreController extends Controller
                 'html' => view('admin.stores.partials.store-list', compact('stores'))->render()
             ]);
         }
-
-        // Otherwise, return full view
         $stores = $query->get();
 
         return view('admin.stores.index', compact('stores', 'languages', 'selectedLanguage'));
@@ -69,7 +62,7 @@ class StoreController extends Controller
                 'url' => 'required|url',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
                 'title' => 'nullable|string|max:255',
-                'meta_keyword' => 'nullable|string|max:255',
+                'meta_keyword' => 'nullable     ',
                 'meta_description' => 'nullable|string|max:255',
                 'content' => 'nullable|string',
                 'about' => 'nullable|string',
@@ -78,7 +71,7 @@ class StoreController extends Controller
                 'category_id' => 'required|exists:categories,id',
                 'network_id' => 'nullable|exists:networks,id',
                 'top_store' => 'nullable|boolean',
-                'destination_url' => 'nullable|url',
+                'destination_url' => 'required|url',
             ]);
 
             /* ---------------------------
@@ -174,7 +167,7 @@ class StoreController extends Controller
             'url' => 'required|url',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'title' => 'nullable|string|max:255',
-            'meta_keyword' => 'nullable|string|max:255',
+            'meta_keyword' => 'nullable',
             'meta_description' => 'nullable|string|max:255',
             'content' => 'nullable|string',
             'about' => 'nullable|string',
@@ -183,7 +176,7 @@ class StoreController extends Controller
             'category_id' => 'required|exists:categories,id',
             'network_id' => 'nullable|exists:networks,id',
             'top_store' => 'nullable|boolean',
-            'destination_url' => 'nullable|url',
+            'destination_url' => 'required|url',
         ]);
 
         /* ---------------------------

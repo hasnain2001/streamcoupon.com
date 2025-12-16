@@ -33,5 +33,9 @@ protected $fillable = [
     {
         return $this->belongsTo(User::class, 'updated_id');
     }
+     public function stores()
+    {
+        return $this->hasMany(Store::class, 'category_id');
+    }
 
 }
