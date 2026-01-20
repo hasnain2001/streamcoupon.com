@@ -36,9 +36,15 @@
                                     </button>
                                 </form>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" target="_blank">
+                                    <i class="fas fa-eye me-2"></i> View Store on Frontend
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -259,7 +265,8 @@
                                         <th>Coupon Details</th>
                                         <th width="100px">Type</th>
                                         <th width="100px">Status</th>
-                                        <th width="200px">Audit Info</th>
+                                        <th width="100px">Expiration Date</th>
+                                        <th width="100px">Audit Info</th>
                                         <th width="120px" class="text-center">Actions</th>
                                     </tr>
                                 </thead>
@@ -309,6 +316,13 @@
                                                     <i class="fas fa-times-circle me-1"></i> Inactive
                                                 </span>
                                             @endif
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div>
+                                                    <div class="fw-semibold small">{{ $coupon->ending_date->format('M d, Y') }}</div>
+                                                </div>
+                                            </div>
                                         </td>
                                         <td>
                                             <div class="audit-info">

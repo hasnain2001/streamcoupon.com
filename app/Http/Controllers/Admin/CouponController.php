@@ -200,10 +200,16 @@ class CouponController extends Controller
             $coupon->language_id = $request->language_id ?? $coupon->language_id;
             $coupon->ending_date = $request->ending_date;
             $coupon->status = $request->status;
-            $coupon->top_coupons = $request->top_coupons;
+            $coupon->top_coupons = $request->top_coupons ?? 0;
             $coupon->authentication = $request->authentication;
             $coupon->updated_id = Auth::id();
             $coupon->save();
+            if ($request->filled('ending_date')) {
+            Coupon::where('store_id', $coupon->store_id)
+                ->update([
+                    'ending_date' => $request->ending_date,
+                ]);
+        }
 
             // Get the store (either from updated store_id or existing)
             $store = Store::find($coupon->store_id);

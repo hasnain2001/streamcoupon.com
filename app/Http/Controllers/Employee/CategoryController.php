@@ -38,7 +38,7 @@ class CategoryController extends Controller
         $category = new Category();
         $category->user_id = Auth::id();
         $category->name = $request->name;
-        $category->slug = Str::slug($request->slug); // clean slug
+        $category->slug = $request->slug; // clean slug
         $category->top_category = $request->top_category;
         $category->status = $request->status;
         $category->title = $request->title;
@@ -85,7 +85,7 @@ class CategoryController extends Controller
         ]);
 
         $category->name = $request->name;
-        $category->slug = Str::slug($request->slug);
+        $category->slug = $request->slug;
         $category->top_category = $request->top_category;
         $category->status = $request->status;
         $category->title = $request->title;

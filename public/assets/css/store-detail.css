@@ -1,0 +1,871 @@
+/* Enhanced Breadcrumb Styles */
+.breadcrumb-section {
+    background: var(--light-gray);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--medium-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.breadcrumb-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-gradient);
+    z-index: 1;
+}
+
+.breadcrumb-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.breadcrumb-nav {
+    width: 100%;
+}
+
+.breadcrumb-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--medium-gray);
+}
+
+.breadcrumb-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.breadcrumb-container::-webkit-scrollbar-track {
+    background: var(--medium-gray);
+    border-radius: 10px;
+}
+
+.breadcrumb-container::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.breadcrumb-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+.breadcrumb-container.no-scroll {
+    overflow-x: hidden;
+    padding-bottom: 0;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--medium-gray);
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.breadcrumb-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.breadcrumb-item:hover {
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.breadcrumb-item:hover::before {
+    left: 0;
+    opacity: 1;
+}
+
+.breadcrumb-item:hover .breadcrumb-text,
+.breadcrumb-item:hover .breadcrumb-icon {
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb-item.current {
+    background: var(--primary-gradient);
+    color: var(--white);
+    border-color: var(--primary);
+    padding-right: 1.5rem;
+    position: relative;
+    box-shadow: var(--primary-glow);
+}
+
+.breadcrumb-item.current .breadcrumb-text {
+    font-weight: 600;
+    color: var(--white);
+}
+
+.breadcrumb-highlight {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--secondary);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+.breadcrumb-text {
+    color: inherit;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.breadcrumb-icon {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.breadcrumb-item.current .breadcrumb-icon {
+    color: var(--white);
+}
+
+.breadcrumb-separator {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    padding: 0 0.25rem;
+    flex-shrink: 0;
+}
+
+.breadcrumb-store-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.store-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid var(--white);
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease;
+}
+
+.store-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Enhanced Store Header */
+.store-header-section {
+    background: var(--white);
+    border-radius: 16px;
+    margin: 1rem auto;
+    max-width: 1200px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+}
+
+.store-header-section .container {
+    padding: 1.5rem;
+}
+
+.store-logo-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    object-fit: contain;
+    border: 3px solid var(--white);
+    box-shadow: var(--shadow-medium);
+    background: var(--white);
+    padding: 8px;
+}
+
+.store-info h1 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.store-tagline {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-golden {
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: var(--primary-glow);
+}
+
+.btn-golden:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+/* Enhanced Coupons Grid */
+.coupons-grid-container {
+    margin-top: 2rem;
+}
+
+.coupon-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    background: var(--white);
+    position: relative;
+}
+
+.coupon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.coupon-type-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.badge-code {
+    background: var(--secondary-gradient);
+    color: var(--white);
+}
+
+.badge-deal {
+    background: var(--primary-gradient);
+    color: var(--white);
+}
+
+.coupon-store-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: contain;
+    border: 3px solid var(--white);
+    box-shadow: var(--shadow-light);
+    background: var(--white);
+    margin: 0 auto 1rem;
+}
+
+.coupon-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.coupon-description {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.coupon-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.ending-date {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.used-count {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+
+
+/* Hot Offer Ribbon */
+.hot-offer-ribbon {
+    position: absolute;
+    top: 12px;
+    right: -30px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    padding: 4px 30px;
+    transform: rotate(45deg);
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+}
+
+/* Premium Badge */
+.premium-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+}
+
+.premium-badge .badge {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+    font-weight: 600;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Stats Bar */
+.stats-bar {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-light);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.text-golden {
+    color: var(--primary);
+}
+
+/* Enhanced Sidebar */
+.sidebar-sticky {
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-card .card-header {
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+}
+
+.store-sidebar-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-medium);
+    background: var(--white);
+    padding: 8px;
+}
+
+.store-stats .stat-circle {
+    margin-bottom: 1.5rem;
+}
+
+.stat-circle .stat-number {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-gradient);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 0.75rem;
+}
+
+/* Related Stores */
+.related-store-item {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: var(--light-gray);
+}
+
+.related-store-item:hover {
+    background: var(--white);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-light);
+}
+
+.related-store-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    object-fit: contain;
+    border: 2px solid var(--white);
+    background: var(--white);
+}
+
+/* Enhanced Modal */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-heavy);
+}
+
+.modal-header {
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    padding: 1.5rem;
+}
+
+.coupon-code-text {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    background: var(--light-gray);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px dashed var(--primary);
+}
+
+.copy-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .breadcrumb-wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .breadcrumb-container {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: thin;
+    }
+
+    .breadcrumb-nav {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .breadcrumb-store-logo {
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .breadcrumb-item {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8125rem;
+        flex-shrink: 0;
+    }
+
+    .breadcrumb-separator {
+        padding: 0 0.125rem;
+    }
+
+    .store-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Mobile-specific breadcrumb improvements */
+    @media (max-width: 480px) {
+        .breadcrumb-icon {
+            display: none;
+        }
+
+        .breadcrumb-item {
+            padding: 0.35rem 0.5rem;
+        }
+    }
+
+    /* Store Header Mobile */
+    .store-header-section {
+        margin: 0.5rem;
+        border-radius: 12px;
+    }
+
+    .store-logo-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .store-info h1 {
+        font-size: 1.4rem;
+    }
+
+    /* Coupons Grid - 2 per line on mobile */
+    .coupons-grid-container .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+
+    .coupons-grid-container .col-6 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .coupon-card {
+        margin-bottom: 1rem;
+    }
+
+    .coupon-type-badge {
+        top: 8px;
+        left: 8px;
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+
+    .coupon-store-image {
+        width: 50px;
+        height: 50px;
+        margin: 0.5rem auto;
+    }
+
+    .coupon-title {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .coupon-description {
+        font-size: 0.8rem;
+        display: none; /* Hide description on mobile to save space */
+    }
+
+    .coupon-meta {
+        padding-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .ending-date, .used-count {
+        font-size: 0.75rem;
+    }
+
+    .get-code-btn, .deal-btn {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Stats Bar Mobile */
+    .stats-bar {
+        padding: 1rem;
+        border-radius: 12px;
+        margin: 1rem 0.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    /* Sidebar adjustments for mobile */
+    .sidebar-sticky {
+        margin-top: 2rem;
+    }
+
+    .sidebar-card {
+        margin: 0.5rem;
+    }
+
+    .store-sidebar-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .stat-circle .stat-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    /* Modal adjustments for mobile */
+    .modal-content {
+        margin: 1rem;
+    }
+
+    .coupon-code-text {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+
+    .copy-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb-section {
+        padding: 1rem 0;
+    }
+
+    .breadcrumb-wrapper {
+        gap: 0.75rem;
+    }
+
+    .breadcrumb-item {
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumb-container {
+        mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+    }
+
+    /* Store Header Extra Small */
+    .store-header-section .container {
+        padding: 1rem;
+    }
+
+    .store-logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .store-info h1 {
+        font-size: 1.2rem;
+    }
+
+    .btn-golden {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Even tighter grid for very small screens */
+    .coupons-grid-container .col-6 {
+        padding-left: 0.375rem;
+        padding-right: 0.375rem;
+    }
+
+    .coupon-card {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Tablet specific */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .coupons-grid-container .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .coupon-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Desktop specific */
+@media (min-width: 1025px) {
+    .coupons-grid-container .col-xl-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* Animation for breadcrumb items */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.breadcrumb-item {
+    animation: slideIn 0.4s ease forwards;
+}
+
+.breadcrumb-item:nth-child(1) { animation-delay: 0.1s; }
+.breadcrumb-item:nth-child(2) { animation-delay: 0.2s; }
+.breadcrumb-item:nth-child(3) { animation-delay: 0.3s; }
+.breadcrumb-item:nth-child(4) { animation-delay: 0.4s; }
+.breadcrumb-item.current { animation-delay: 0.5s; }
+
+/* Scroll hint animation for mobile */
+@keyframes scrollHint {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-container:after {
+        content: '↔';
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--primary);
+        font-size: 1rem;
+        opacity: 0.7;
+        animation: scrollHint 2s infinite;
+        pointer-events: none;
+    }
+}
+
+/* Shine animation for buttons */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) skewX(-20deg);
+    }
+    100% {
+        transform: translateX(200%) skewX(-20deg);
+    }
+}
+
+.btn-shine {
+    animation: shine 3s infinite;
+    opacity: 0.5;
+}
+
+/* Hover lift effect */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Bounce animation for modal logo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+.sidebar-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium) !important;
+}
+
+.store-about-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(30, 138, 136, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-about-text p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+    text-align: justify;
+    hyphens: auto;
+}
+
+@media (max-width: 768px) {
+    .card-header.p-4 {
+        padding: 1rem !important;
+    }
+
+    .card-body.p-4 {
+        padding: 1rem !important;
+    }
+
+    .store-about-text p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+}

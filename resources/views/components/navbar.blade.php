@@ -139,69 +139,176 @@
     </nav>
 </header>
 
-<!-- Mobile Navigation -->
+<!-- Enhanced Mobile Navigation -->
 <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 <div class="mobile-nav-container" id="mobileNavContainer">
-    <div class="mobile-nav-header position-relative ">
-        <a href="{{ url(app()->getLocale().'/') }}" class="d-block">
-            <div class="mobile-logo-container ">
-                <x-application-logo class="img-fluid"/>
-            </div>
-        </a>
-        <button class="mobile-close-btn" id="mobileNavClose">
-            <i class="bi bi-x-lg"></i>
-        </button>
+    <!-- Mobile Header with Fixed Logo -->
+    <div class="mobile-nav-header">
+        <div class="mobile-nav-header-content">
+            <a href="{{ url(app()->getLocale().'/') }}" class="mobile-logo-wrapper">
+                <div class="mobile-logo-container">
+                    <x-application-logo class="img-fluid mobile-logo"/>
+                </div>
+                <div class="mobile-logo-text">
+                    <h3 class="site-name">{{ config('app.name') }}</h3>
+                    <p class="site-tagline">Exclusive Discounts & Deals</p>
+                </div>
+            </a>
+            <button class="mobile-close-btn" id="mobileNavClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
     </div>
 
     <!-- Mobile Search -->
-    <div class="mobile-search-container ">
+    <div class="mobile-search-container">
         <form action="{{ route('search') }}" method="GET" class="w-100">
-            <div class="input-group">
-                <span class="input-group-text bg-white border-end-0" id="basic-addon1">
-                    <i class="bi bi-search text-primary"></i>
+            <div class="input-group mobile-search-group">
+                <span class="input-group-text search-icon-wrapper">
+                    <i class="bi bi-search"></i>
                 </span>
-                <input type="search" class="form-control border-start-0" name="query" placeholder="@lang('nav.Search here')" aria-label="Search">
+                <input type="search" class="form-control mobile-search-input"
+                       name="query" placeholder="@lang('nav.Search here')"
+                       aria-label="Search">
+                <button type="submit" class="mobile-search-btn">
+                   <i class="bi bi-search text-primary"></i>
+                </button>
             </div>
         </form>
     </div>
 
-    <div class="flex-grow-1">
-        <a href="{{ url(app()->getLocale().'/') }}" class="mobile-nav-link active"><i class="bi bi-house-door"></i> <span>@lang('nav.home')</span></a>
-        <a href="{{ route('stores', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link"><i class="bi bi-shop"></i> <span>@lang('nav.stores')</span></a>
-        <a href="{{ route('category', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link"><i class="bi bi-grid-3x3-gap-fill"></i> <span>@lang('nav.cateories')</span></a>
-        <a href="{{ route('coupons', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link"><i class="bi bi-ticket-perforated"></i> <span>@lang('nav.Coupons')</span></a>
-        <a href="{{ route('deals', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link"><i class="bi bi-tags"></i> <span>@lang('nav.deal')</span></a>
-        <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link"><i class="bi bi-journal-text"></i> <span>@lang('nav.blogs')</span></a>
-    </div>
+    <!-- Main Navigation Links -->
+    <nav class="mobile-nav-links">
+        <a href="{{ url(app()->getLocale().'/') }}" class="mobile-nav-link active">
+            <span class="nav-icon"><i class="bi bi-house-door-fill"></i></span>
+            <span class="nav-text">@lang('nav.home')</span>
+            <span class="nav-arrow"><i class="bi bi-chevron-right"></i></span>
+        </a>
 
-    <div class="p-4 bg-light border-top">
-        <div class="small text-uppercase fw-bold text-muted mb-3">@lang('select language')</div>
-        <div class="d-grid gap-2" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="{{ route('stores', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link">
+            <span class="nav-icon"><i class="bi bi-shop-window"></i></span>
+            <span class="nav-text">@lang('nav.stores')</span>
+            <span class="nav-arrow"><i class="bi bi-chevron-right"></i></span>
+        </a>
+
+        <a href="{{ route('category', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link">
+            <span class="nav-icon"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+            <span class="nav-text">@lang('nav.cateories')</span>
+            <span class="nav-arrow"><i class="bi bi-chevron-right"></i></span>
+        </a>
+
+        <a href="{{ route('coupons', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link">
+            <span class="nav-icon"><i class="bi bi-ticket-perforated-fill"></i></span>
+            <span class="nav-text">@lang('nav.Coupons')</span>
+            <span class="nav-arrow"><i class="bi bi-chevron-right"></i></span>
+        </a>
+
+        <a href="{{ route('deals', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link">
+            <span class="nav-icon"><i class="bi bi-tag-fill"></i></span>
+            <span class="nav-text">@lang('nav.deal')</span>
+            <span class="nav-arrow"><i class="bi bi-chevron-right"></i></span>
+        </a>
+
+        <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="mobile-nav-link">
+            <span class="nav-icon"><i class="bi bi-journal-text"></i></span>
+            <span class="nav-text">@lang('nav.blogs')</span>
+            <span class="nav-arrow"><i class="bi bi-chevron-right"></i></span>
+        </a>
+    </nav>
+
+    <!-- Language Selection -->
+    <div class="mobile-language-section">
+        <div class="section-header">
+            <i class="bi bi-globe-americas"></i>
+            <span class="section-title">@lang('select language')</span>
+        </div>
+        <div class="language-grid">
             @foreach ($langs as $lang)
-            <a href="{{ url('/' . $lang->code) }}" class="btn btn-sm rounded d-flex align-items-center gap-2 p-3 text-start {{ app()->getLocale() === $lang->code ? 'btn-warning text-dark' : 'btn-outline-secondary' }}">
-                <img src="{{ asset('uploads/flags/' . $lang->flag) }}" width="20" height="14" class="rounded">
-                <span class="small">{{ $lang->name }}</span>
+            <a href="{{ url('/' . $lang->code) }}"
+               class="language-card {{ app()->getLocale() === $lang->code ? 'active' : '' }}">
+                <div class="language-flag">
+                    <img src="{{ asset('uploads/flags/' . $lang->flag) }}"
+                         width="24" height="18"
+                         class="flag-img" alt="{{ $lang->name }}">
+                </div>
+                <span class="language-name">{{ $lang->name }}</span>
+                @if(app()->getLocale() === $lang->code)
+                <span class="active-indicator"><i class="bi bi-check-circle-fill"></i></span>
+                @endif
             </a>
             @endforeach
         </div>
     </div>
 
-    <div class="p-4 bg-light border-top">
+    <!-- Authentication Section -->
+    <div class="mobile-auth-section">
         @auth
             <a href="{{
                 auth()->user()->role === 'admin' ? route('admin.dashboard') :
                 (auth()->user()->role === 'employee' ? route('employee.dashboard') : route('dashboard'))
-            }}" class="mobile-auth-btn btn-dashboard">
-                <i class="bi bi-speedometer2"></i> <span>@lang('nav.Dashboard')</span>
+            }}" class="auth-btn dashboard-btn">
+                <span class="auth-icon"><i class="bi bi-speedometer2"></i></span>
+                <span class="auth-text">@lang('nav.Dashboard')</span>
+                <span class="auth-badge">Premium</span>
             </a>
+
+            <div class="user-profile-card">
+                <div class="user-avatar">
+                    {{ substr(auth()->user()->name, 0, 1) }}
+                </div>
+                <div class="user-info">
+                    <h4 class="user-name">{{ auth()->user()->name }}</h4>
+                    <p class="user-email">{{ auth()->user()->email }}</p>
+                </div>
+                <a href="{{ route('logout') }}" class="logout-btn" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
         @else
-            <a href="{{ route('login') }}" class="mobile-auth-btn btn-login">
-                <i class="bi bi-power"></i> <span>@lang('nav.Login')</span>
-            </a>
-            <a href="{{ route('register') }}" class="mobile-auth-btn btn-register">
-                <i class="bi bi-person-plus"></i> <span>@lang('nav.register')</span>
-            </a>
+            <div class="auth-buttons-grid">
+                <a href="{{ route('login') }}" class="auth-btn login-btn">
+                    <span class="auth-icon"><i class="bi bi-door-open-fill"></i></span>
+                    <span class="auth-text">@lang('nav.Login')</span>
+                </a>
+
+                <a href="{{ route('register') }}" class="auth-btn register-btn">
+                    <span class="auth-icon"><i class="bi bi-person-plus-fill"></i></span>
+                    <span class="auth-text">@lang('nav.register')</span>
+                    <span class="free-badge">FREE</span>
+                </a>
+            </div>
+
+            <div class="auth-benefits">
+                <div class="benefit-item">
+                    <i class="bi bi-shield-check text-success"></i>
+                    <span>Secure Account</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="bi bi-lightning-charge text-warning"></i>
+                    <span>Fast Access</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="bi bi-gift text-primary"></i>
+                    <span>Exclusive Offers</span>
+                </div>
+            </div>
         @endauth
     </div>
-</div>
 
+    <!-- App Download CTA -->
+    <div class="mobile-app-cta">
+        <div class="app-icon">
+            <i class="bi bi-phone-fill"></i>
+        </div>
+        <div class="app-content">
+            <h4>Get Our Mobile App</h4>
+            <p>Download for exclusive mobile-only deals</p>
+        </div>
+        <button class="app-download-btn">
+            <i class="bi bi-arrow-down-circle"></i>
+        </button>
+    </div>
+</div>

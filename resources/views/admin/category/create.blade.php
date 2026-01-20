@@ -173,7 +173,7 @@
 
             const slug = name.toLowerCase()
                 .replace(/[^\w\s-]/g, '')   // remove non-word characters
-                .replace(/[\s_-]+/g, '-')   // replace spaces/underscores with dash
+                .replace(/[\s_-]+/g, ' ')   // replace spaces/underscores with dash
                 .replace(/^-+|-+$/g, '');   // trim leading/trailing dashes
 
             $('#slug').val(slug);

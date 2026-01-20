@@ -21,12 +21,10 @@ footer::before {
 .footer-logo {
     width: 180px;
     height: 80px;
-    background: var(--primary-gradient);
-
+    /* background: var(--primary-gradient); */
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shadow-medium);
     position: relative;
@@ -50,7 +48,7 @@ footer::before {
 
 .footer-logo:hover {
     transform: translateY(-5px);
-    box-shadow: 
+    box-shadow:
         0 10px 30px rgba(30, 138, 136, 0.4),
         0 0 40px rgba(44, 166, 164, 0.3);
 }
@@ -84,7 +82,7 @@ footer::before {
 
 .enhanced-logo:hover {
     transform: scale(1.05);
-    box-shadow: 
+    box-shadow:
         var(--shadow-heavy),
         0 0 30px rgba(44, 166, 164, 0.4);
 }
@@ -422,7 +420,7 @@ footer::before {
 
 .back-to-top:hover {
     transform: translateY(-5px);
-    box-shadow: 
+    box-shadow:
         0 10px 25px rgba(44, 166, 164, 0.4),
         0 0 30px rgba(44, 166, 164, 0.3);
 }
@@ -458,33 +456,33 @@ footer::before {
         width: 140px;
         height: 60px;
     }
-    
+
     .enhanced-logo {
         font-size: 1.25rem;
         padding: 8px 12px;
     }
-    
+
     .logo-icon {
         width: 36px;
         height: 36px;
         margin-right: 8px;
     }
-    
+
     .social-links a {
         width: 40px;
         height: 40px;
         font-size: 0.9rem;
     }
-    
+
     .footer-bottom-links {
         justify-content: center;
         margin-top: 1rem;
     }
-    
+
     .footer-heading {
         font-size: 1.1rem;
     }
-    
+
     .back-to-top {
         bottom: 20px;
         right: 20px;
@@ -499,16 +497,16 @@ footer::before {
         width: 120px;
         height: 50px;
     }
-    
+
     .enhanced-logo {
         font-size: 1.1rem;
     }
-    
+
     .logo-icon {
         width: 32px;
         height: 32px;
     }
-    
+
     .newsletter-btn {
         position: relative;
         right: auto;
@@ -518,7 +516,7 @@ footer::before {
         margin-top: 0.75rem;
         padding: 0.8rem;
     }
-    
+
     .newsletter-input {
         padding-right: 1.2rem;
     }

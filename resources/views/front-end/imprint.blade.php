@@ -26,8 +26,8 @@
                     <!-- Card Header -->
                     <div class="imprint-header">
                         <div class="imprint-header-content">
-                            <h2><i class="fas fa-scale-balanced"></i>Legal Information</h2>
-                            <p>Required by German law (§5 TMG) and for your information</p>
+                            <h2><i class="fas fa-scale-balanced "></i>Legal Information</h2>
+
                         </div>
                     </div>
 
@@ -83,7 +83,7 @@
                         </div>
                         <h3 class="info-title">Legal Representation</h3>
                         <div class="info-content">
-                            <p class="mb-2"><strong>Managing Director:</strong> John Doe</p>
+                            {{-- <p class="mb-2"><strong>Managing Director:</strong> John Doe</p> --}}
                             <p class="mb-2"><strong>Commercial Register:</strong> Plano County, HRB 123456</p>
                             <p class="mb-0"><strong>VAT Identification Number:</strong> US123456789</p>
                         </div>
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Observe main card
         const imprintCard = document.querySelector('.imprint-card');
         const backHomeSection = document.querySelector('.back-home-section');
-        
+
         const cardObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -211,13 +211,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const rect = this.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             const ripple = document.createElement('span');
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
             this.appendChild(ripple);
-            
+
             setTimeout(() => ripple.remove(), 600);
         });
 
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 pointer-events: none;
                 z-index: 1;
             }
-            
+
             @keyframes ripple {
                 to {
                     transform: scale(4);
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('mouseenter', function() {
             this.style.textDecoration = 'none';
         });
-        
+
         link.addEventListener('mouseleave', function() {
             this.style.textDecoration = 'none';
         });

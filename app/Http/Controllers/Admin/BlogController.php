@@ -61,7 +61,7 @@ class BlogController extends Controller
         $blog->language_id    = $request->language_id ?? 1;
         $blog->store_id       = $request->store_id;
         $blog->name           = $request->name;
-        $blog->slug           = Str::slug($request->slug);
+        $blog->slug           = $request->slug;
         $blog->title          = $request->title;
         $blog->content        = $request->content;
         $blog->meta_keyword   = $request->meta_keyword;
@@ -148,7 +148,7 @@ class BlogController extends Controller
         $blog->language_id      = $request->language_id ?? $blog->language_id;
         $blog->store_id         = $request->store_id;
         $blog->name             = $request->name;
-        $blog->slug             = Str::slug($request->slug);
+        $blog->slug             = $request->slug;
         $blog->title            = $request->title;
         $blog->content          = $request->content;
         $blog->meta_keyword     = $request->meta_keyword;

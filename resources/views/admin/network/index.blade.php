@@ -180,7 +180,7 @@
                                         </span>
                                         <span class="text-muted">
                                             <i class="fas fa-user-edit me-1"></i>
-                                            {{ $network->updatedby->name ?? 'N/A'}}
+                                            {{ $network->updatedUser->name ?? 'N/A'}}
                                         </span>
                                     </div>
                                 </td>

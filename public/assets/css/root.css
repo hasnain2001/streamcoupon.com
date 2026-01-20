@@ -1,3 +1,6 @@
+/* ===================================================== */
+/* ROOT CSS VARIABLES - ENHANCED COLOR PALETTE */
+/* ===================================================== */
 :root {
     /* Enhanced Color Palette with Better Contrast */
     --white: #ffffff;
@@ -35,6 +38,7 @@
     --secondary-gradient: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
     --accent-gradient: linear-gradient(135deg, var(--accent-navy-dark) 0%, var(--accent-navy-light) 100%);
     --logo-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary) 50%, var(--accent-navy) 100%);
+    --metallic-gradient: linear-gradient(45deg, #B0B0B0 0%, #E0E0E0 50%, #B0B0B0 100%);
 
     /* Glow Effects */
     --primary-glow: 0 0 25px rgba(44, 166, 164, 0.5);
@@ -293,7 +297,7 @@
 .get-code-btn {
     width: 100%;
     padding: 14px 32px;
-    background: var(--secondary-gradient);
+    background: var(--metallic-gradient);
     background-size: 200% 200%;
     color:var(--text-primary);
     border: none;

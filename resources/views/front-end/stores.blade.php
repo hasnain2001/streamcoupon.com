@@ -1,5 +1,6 @@
 @extends('layouts.master')
-@section('title', 'Latest Discount Codes of ' . date('Y') . ' | Best Offers and Deals On ' . config('app.name'))
+@section('title', 'All Stores Coupons, Promo Codes & Best Deals '.date('Y').' | '.config('app.name'))
+
 @section('description', 'Discover amazing stores with exclusive offers, discounts, and coupons. Find the best deals from top brands in one place.')
 @section('keywords', 'stores, offers, discounts, coupons, deals, shopping, brands, savings')
 @section('author', 'Your Brand Name')
@@ -129,18 +130,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, {
             threshold: 0.5
         });
-        
+
         observer.observe(statsBar);
     }
 
     // Add hover effect to store cards with delay for better performance
     const storeCards = document.querySelectorAll('.store-card');
-    
+
     storeCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.zIndex = '10';
         });
-        
+
         card.addEventListener('mouseleave', function() {
             this.style.zIndex = '1';
         });
@@ -188,13 +189,13 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             const x = e.clientX - e.target.getBoundingClientRect().left;
             const y = e.clientY - e.target.getBoundingClientRect().top;
-            
+
             const ripple = document.createElement('span');
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
             this.appendChild(ripple);
-            
+
             setTimeout(() => ripple.remove(), 600);
         });
     });
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, {
             threshold: 0.1
         });
-        
+
         gridObserver.observe(storeGrid);
     }
 });
@@ -231,14 +232,14 @@ style.textContent = `
         animation: ripple 0.6s linear;
         pointer-events: none;
     }
-    
+
     @keyframes ripple {
         to {
             transform: scale(4);
             opacity: 0;
         }
     }
-    
+
     .page-link {
         position: relative;
         overflow: hidden;
