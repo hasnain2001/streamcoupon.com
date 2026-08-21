@@ -2,111 +2,111 @@
 
 return [
     // Meta
-    'meta_title'       => 'About Us - Best Deals and Discounts :year | :app',
-    'meta_description' => 'Learn more about streamcoupon, your go-to source for the best deals and discounts. Discover our mission, values, and how we help you save more.',
-    'meta_keywords'    => 'deals, discounts, coupons, savings, affiliate marketing',
+    'meta_title'       => 'Over ons - Beste deals en kortingen :year | :app',
+    'meta_description' => 'Leer meer over streamcoupon, jouw bron voor de beste deals en kortingen. Ontdek onze missie, waarden en hoe we jou helpen meer te besparen.',
+    'meta_keywords'    => 'deals, kortingen, coupons, besparingen, affiliate marketing',
 
     // Header
-    'header_title'     => 'The Story Behind Your Savings: Welcome to streamcoupon',
-    'header_subtitle'  => 'Where Every Deal Tells a Story and Every Savings Has a Journey',
+    'header_title'     => 'Het verhaal achter jouw besparingen: welkom bij streamcoupon',
+    'header_subtitle'  => 'Waar elke deal een verhaal vertelt en elke besparing een reis is',
 
     // Breadcrumb
-    'breadcrumb'       => 'Our Story',
+    'breadcrumb'       => 'Ons verhaal',
 
     // Page heading
-    'page_heading'     => 'From Frustration to Celebration: The streamcoupon Journey',
+    'page_heading'     => 'Van frustratie naar viering: de reis van streamcoupon',
 
     // Introduction
-    'intro_heading'    => 'The Day That Changed Everything',
-    'intro_text'       => 'It started with a simple online shopping experience that turned into a wild goose chase for savings. I remember spending hours scouring the internet for a working coupon code, only to find expired offers, broken links, and empty promises. That frustration sparked an idea: <strong>What if there was one place where all deals were verified, updated, and actually worked?</strong>',
-    'intro_text_2'     => 'streamcoupon was born from that moment of frustration. What began as a personal spreadsheet of working coupons has transformed into a thriving community of smart shoppers who\'ve collectively saved millions.',
+    'intro_heading'    => 'De dag die alles veranderde',
+    'intro_text'       => 'Het begon met een simpele online winkelervaring die veranderde in een zoektocht naar besparingen. Ik herinner me dat ik urenlang het internet afzocht naar een werkende kortingscode, alleen om verlopen aanbiedingen, kapotte links en loze beloften te vinden. Die frustratie bracht een idee: <strong>Wat als er één plek was waar alle deals werden geverifieerd, bijgewerkt en daadwerkelijk werkten?</strong>',
+    'intro_text_2'     => 'streamcoupon is geboren uit dat moment van frustratie. Wat begon als een persoonlijke spreadsheet met werkende kortingsbonnen, is uitgegroeid tot een bloeiende gemeenschap van slimme shoppers die gezamenlijk miljoenen hebben bespaard.',
 
     // Mission & Vision
-    'mission_title'    => 'Our Mission',
-    'mission_text'     => 'To transform shopping from a chore into a celebration of smart decisions. We\'re not just about saving money—we\'re about <strong>giving you back the most precious resource: your time</strong>.',
-    'vision_title'     => 'Our Vision',
-    'vision_text'      => 'Imagine a world where no one pays full price. Where every purchase feels like a victory. That\'s the world we\'re building—one coupon, one smile, one saved dollar at a time.',
+    'mission_title'    => 'Onze missie',
+    'mission_text'     => 'Om winkelen te transformeren van een klus naar een viering van slimme keuzes. We gaan niet alleen over geld besparen—we gaan over <strong>jou de kostbaarste bron teruggeven: jouw tijd</strong>.',
+    'vision_title'     => 'Onze visie',
+    'vision_text'      => 'Stel je een wereld voor waarin niemand de volle prijs betaalt. Waar elke aankoop als een overwinning voelt. Dat is de wereld die we bouwen—één coupon, één glimlach, één bespaarde dollar tegelijk.',
 
     // What Sets Us Apart
-    'different_heading' => 'Why We\'re Different: The Human Touch in a Digital World',
-    'different_intro'   => 'In an age of automated deal aggregators, we\'ve chosen a different path. Here\'s what makes our approach special:',
+    'different_heading' => 'Waarom wij anders zijn: de menselijke touch in een digitale wereld',
+    'different_intro'   => 'In een tijdperk van geautomatiseerde dealverzamelaars hebben we een ander pad gekozen. Dit is wat onze aanpak bijzonder maakt:',
 
-    'detectives_title' => 'The Deal Detectives',
-    'detectives_text'  => 'We don\'t just collect coupons; we curate them. Our team of shopping enthusiasts personally tests and verifies every single offer before it goes live. Think of us as your personal shopping assistant who\'s always on the hunt for the next great deal.',
+    'detectives_title' => 'De dealdetectives',
+    'detectives_text'  => 'We verzamelen niet alleen coupons; we cureren ze. Ons team van winkelenthousiastelingen test en verifieert persoonlijk elke aanbieding voordat deze live gaat. Zie ons als jouw persoonlijke winkelassistent die altijd op jacht is naar de volgende geweldige deal.',
 
-    'community_title'  => 'Community-Powered Savings',
-    'community_text'   => 'Some of our best finds come from our amazing community members. When you share a working coupon with us, you\'re not just helping yourself—you\'re helping thousands of fellow shoppers. It\'s like having millions of eyes looking out for deals 24/7.',
+    'community_title'  => 'Besparingen door de gemeenschap',
+    'community_text'   => 'Enkele van onze beste vondsten komen van onze geweldige gemeenschapsleden. Wanneer je een werkende coupon met ons deelt, help je niet alleen jezelf—je helpt duizenden andere shoppers. Het is alsof je miljoenen ogen 24/7 op zoek naar deals hebt.',
 
-    'sauce_title'      => 'The "Secret Sauce"',
-    'sauce_text'       => 'Through years of experience, we\'ve developed relationships with hundreds of brands. These partnerships mean we often get early access to sales, exclusive coupon codes you won\'t find anywhere else, and special perks just for our community members.',
+    'sauce_title'      => 'De "geheime saus"',
+    'sauce_text'       => 'Door jarenlange ervaring hebben we relaties opgebouwd met honderden merken. Deze partnerschappen betekenen dat we vaak vroege toegang krijgen tot uitverkopen, exclusieve kortingscodes die je nergens anders vindt, en speciale extra\'s voor onze gemeenschapsleden.',
 
-    'beyond_title'     => 'Beyond the Numbers',
-    'beyond_text'      => 'We track more than just savings. We celebrate the <strong>stories behind those savings</strong>: the student who could afford textbooks, the family that stretched their budget further, the small business that got the equipment they needed. Every statistic has a human story.',
+    'beyond_title'     => 'Meer dan de cijfers',
+    'beyond_text'      => 'We volgen meer dan alleen besparingen. We vieren de <strong>verhalen achter die besparingen</strong>: de student die studieboeken kon betalen, het gezin dat hun budget verder kon rekken, het kleine bedrijf dat de benodigde apparatuur kreeg. Elk statistiek heeft een menselijk verhaal.',
 
     // Why Choose
-    'why_heading'      => 'Join the Smart Shopping Revolution',
-    'why_intro'        => 'Becoming a streamcoupon member isn\'t just about accessing deals—it\'s about joining a movement of intentional, savvy consumers who value both quality and savings.',
+    'why_heading'      => 'Doe mee met de slimme winkelrevolutie',
+    'why_intro'        => 'Lid worden van streamcoupon gaat niet alleen over toegang tot deals—het gaat over meedoen aan een beweging van bewuste, slimme consumenten die waarde hechten aan zowel kwaliteit als besparingen.',
     'features'         => [
-        '<strong>Early Bird Access:</strong> Be the first to know about flash sales and limited-time offers',
-        '<strong>Personalized Discovery:</strong> Our algorithm learns your preferences to surface deals you\'ll actually love',
-        '<strong>Verified Quality:</strong> Every deal is hand-checked for validity and value',
-        '<strong>Community Wisdom:</strong> Access real reviews and shopping tips from actual users',
-        '<strong>Sustainability Focus:</strong> We promote brands that value quality and longevity over fast fashion',
+        '<strong>Vroege vogel toegang:</strong> Wees de eerste die weet van flitsverkopen en tijdelijke aanbiedingen',
+        '<strong>Persoonlijke ontdekking:</strong> Ons algoritme leert jouw voorkeuren om deals te tonen waar je echt van zult houden',
+        '<strong>Geverifieerde kwaliteit:</strong> Elke deal is handmatig gecontroleerd op geldigheid en waarde',
+        '<strong>Gemeenschapswijsheid:</strong> Toegang tot echte recensies en winkel tips van daadwerkelijke gebruikers',
+        '<strong>Duurzaamheidsfocus:</strong> We promoten merken die waarde hechten aan kwaliteit en duurzaamheid boven fast fashion',
     ],
 
     // Stats
-    'stats_title'      => 'Savings That Tell a Story',
-    'stats_subtitle'   => 'These numbers represent real people, real purchases, and real impact',
-    'stat_shoppers'    => 'Smart Shoppers',
-    'stat_deals'       => 'Verified Deals',
-    'stat_savings'     => 'Community Savings',
-    'stat_partners'    => 'Trusted Partners',
+    'stats_title'      => 'Besparingen die een verhaal vertellen',
+    'stats_subtitle'   => 'Deze cijfers staan voor echte mensen, echte aankopen en echte impact',
+    'stat_shoppers'    => 'Slimme shoppers',
+    'stat_deals'       => 'Geverifieerde deals',
+    'stat_savings'     => 'Besparingen gemeenschap',
+    'stat_partners'    => 'Vertrouwde partners',
 
     // Values
-    'values_heading'   => 'The Principles That Guide Us',
+    'values_heading'   => 'De principes die ons leiden',
     'values'           => [
         [
             'icon'  => 'fa-hand-holding-heart',
-            'title' => 'Transparency First',
-            'text'  => 'No hidden fees, no misleading offers. We believe in clear, honest communication about every deal.',
+            'title' => 'Transparantie voorop',
+            'text'  => 'Geen verborgen kosten, geen misleidende aanbiedingen. We geloven in duidelijke, eerlijke communicatie over elke deal.',
         ],
         [
             'icon'  => 'fa-seedling',
-            'title' => 'Sustainable Savings',
-            'text'  => 'We promote quality over quantity, helping you make purchases that last and reduce waste.',
+            'title' => 'Duurzame besparingen',
+            'text'  => 'We promoten kwaliteit boven kwantiteit, zodat je aankopen doet die langer meegaan en verspilling verminderen.',
         ],
         [
             'icon'  => 'fa-hands-helping',
-            'title' => 'Community First',
-            'text'  => 'When one of us saves, we all celebrate. Our platform grows through shared success.',
+            'title' => 'Gemeenschap eerst',
+            'text'  => 'Wanneer een van ons bespaart, vieren we samen. Ons platform groeit door gedeeld succes.',
         ],
         [
             'icon'  => 'fa-lightbulb',
-            'title' => 'Continuous Learning',
-            'text'  => 'We\'re constantly evolving based on your feedback and changing shopping trends.',
+            'title' => 'Continu leren',
+            'text'  => 'We evolueren voortdurend op basis van jouw feedback en veranderende winkel trends.',
         ],
     ],
 
     // The Future
-    'future_heading'   => 'What\'s Next on Our Journey',
-    'future_intro'     => 'We\'re not done yet. In the coming months, you can expect:',
-    'future_badge'     => 'Coming Soon:',
+    'future_heading'   => 'Wat er nog komt op onze reis',
+    'future_intro'     => 'We zijn nog niet klaar. In de komende maanden kun je verwachten:',
+    'future_badge'     => 'Binnenkort beschikbaar:',
     'future_list'      => [
-        '<strong>Personal Savings Assistant:</strong> AI-powered deal matching based on your shopping habits',
-        '<strong>Local Deals Network:</strong> Connecting you with savings at nearby brick-and-mortar stores',
-        '<strong>Sustainability Score:</strong> Helping you make eco-friendly purchasing decisions',
-        '<strong>Community Challenges:</strong> Fun savings goals with real rewards',
+        '<strong>Persoonlijke besparingsassistent:</strong> AI-gestuurde deal matching op basis van jouw winkelgewoonten',
+        '<strong>Lokale deal netwerk:</strong> Verbinding met besparingen bij fysieke winkels in jouw buurt',
+        '<strong>Duurzaamheidsscore:</strong> Hulp bij milieuvriendelijke aankoopbeslissingen',
+        '<strong>Gemeenschapsuitdagingen:</strong> Leuke spaardoelen met echte beloningen',
     ],
 
     // Your Story
-    'story_heading'    => 'Your Savings Story Starts Here',
-    'story_text'       => 'Every great journey begins with a single step. Yours started when you landed on this page. Now it\'s time to write your savings story.',
-    'testimonial'      => '"I used to dread online shopping. Now, with streamcoupon, it feels like a treasure hunt where I always win. Last month alone, I saved enough for a weekend getaway!"<br><strong style="color: var(--primary);">- Sarah M., streamcoupon member since 2022</strong>',
+    'story_heading'    => 'Jouw besparingsverhaal begint hier',
+    'story_text'       => 'Elke grote reis begint met een enkele stap. De jouwe begon toen je op deze pagina terechtkwam. Nu is het tijd om jouw besparingsverhaal te schrijven.',
+    'testimonial'      => '"Vroeger had ik een hekel aan online winkelen. Nu voelt het met streamcoupon als een schattenjacht waarbij ik altijd win. Afgelopen maand alleen al bespaarde ik genoeg voor een weekendje weg!"<br><strong style="color: var(--primary);">- Sarah M., streamcoupon lid sinds 2022</strong>',
 
     // CTA
-    'cta_title'        => 'Ready to Write Your Savings Story?',
-    'cta_text'         => 'Join thousands who\'ve turned shopping from a necessity into an adventure. Your next great deal—and your next great story—awaits.',
-    'cta_primary'      => 'Explore Featured Stores',
-    'cta_secondary'    => 'Discover Today\'s Best Deals',
-    'cta_ps'           => 'P.S. Check back often—new stories (and savings) are added daily!',
+    'cta_title'        => 'Klaar om jouw besparingsverhaal te schrijven?',
+    'cta_text'         => 'Sluit je aan bij duizenden mensen die winkelen hebben veranderd van een noodzaak in een avontuur. Jouw volgende geweldige deal—en jouw volgende geweldige verhaal—wacht op je.',
+    'cta_primary'      => 'Bekijk aanbevolen winkels',
+    'cta_secondary'    => 'Ontdek de beste deals van vandaag',
+    'cta_ps'           => 'P.S. Kom regelmatig terug—er worden dagelijks nieuwe verhalen (en besparingen) toegevoegd!',
 ];

@@ -3,11 +3,11 @@
 return [
     // Meta
     'meta_title'       => 'Community :year | :app',
-    'meta_description' => 'Learn more about ' . config('app.name') . ', your go-to source for the best deals and discounts. Discover our mission, values, and how we help you save more.',
-    'meta_keywords'    => 'deals, discounts, coupons, savings, affiliate marketing',
+    'meta_description' => 'Leer meer over ' . config('app.name') . ', jouw bron voor de beste deals en kortingen. Ontdek onze missie, waarden en hoe we jou helpen meer te besparen.',
+    'meta_keywords'    => 'deals, kortingen, coupons, besparingen, affiliate marketing',
 
     // Page content
     'heading'          => 'Community',
-    'paragraph_1'      => 'Welcome to the ' . config('app.name') . ' community! We are a passionate group of deal hunters, bargain enthusiasts, and savvy shoppers who love to share the best discounts and offers available online. Our mission is to help you save money while shopping for your favorite products and services.',
-    'paragraph_2'      => 'Join our community to stay updated on the latest deals, share your own finds, and connect with like-minded individuals who are always on the lookout for great savings. Together, we can make shopping smarter and more affordable for everyone!',
+    'paragraph_1'      => 'Welkom bij de ' . config('app.name') . '-community! Wij zijn een gepassioneerde groep dealjagers, koopjesenthousiastelingen en slimme shoppers die graag de beste kortingen en aanbiedingen die online beschikbaar zijn met elkaar delen. Onze missie is om jou te helpen geld te besparen terwijl je winkelt voor je favoriete producten en diensten.',
+    'paragraph_2'      => 'Word lid van onze community om op de hoogte te blijven van de nieuwste deals, je eigen vondsten te delen en in contact te komen met gelijkgestemde individuen die altijd op zoek zijn naar geweldige besparingen. Samen kunnen we winkelen slimmer en betaalbaarder maken voor iedereen!',
 ];

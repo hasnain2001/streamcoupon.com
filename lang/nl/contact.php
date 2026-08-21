@@ -2,41 +2,41 @@
 
 return [
     // Meta
-    'meta_title'       => 'Contact Us',
-    'meta_description' => 'Get in touch with us for any inquiries or support.',
-    'meta_keywords'    => 'contact, support, inquiries',
-    'meta_author'      => 'John Doe',
+    'meta_title'       => 'Contacteer ons',
+    'meta_description' => 'Neem contact met ons op voor vragen of ondersteuning.',
+    'meta_keywords'    => 'contact, ondersteuning, vragen',
+    'meta_author'      => 'Jan Jansen',
 
     // Header
-    'header_title'     => 'Contact Us',
-    'header_subtitle'  => 'We\'d love to hear from you! Get in touch with our team.',
+    'header_title'     => 'Contacteer ons',
+    'header_subtitle'  => 'We horen graag van je! Neem contact op met ons team.',
 
     // Form
-    'form_title'       => 'Contact Us',
-    'form_subtitle'    => 'Fill out the form below and we\'ll get back to you as soon as possible.',
+    'form_title'       => 'Contacteer ons',
+    'form_subtitle'    => 'Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met je op.',
 
     // Form Labels
-    'name_label'       => 'Your Name',
-    'name_placeholder' => 'Enter your full name',
-    'email_label'      => 'Email Address',
-    'email_placeholder' => 'your.email@example.com',
-    'subject_label'    => 'Subject',
-    'subject_placeholder' => 'What is this regarding?',
-    'message_label'    => 'Message',
-    'message_placeholder' => 'Tell us how we can help you...',
+    'name_label'       => 'Jouw naam',
+    'name_placeholder' => 'Vul je volledige naam in',
+    'email_label'      => 'E-mailadres',
+    'email_placeholder' => 'jouw.email@voorbeeld.nl',
+    'subject_label'    => 'Onderwerp',
+    'subject_placeholder' => 'Waar gaat dit over?',
+    'message_label'    => 'Bericht',
+    'message_placeholder' => 'Vertel ons hoe we je kunnen helpen...',
 
     // Button
-    'send_button'      => 'Send Message',
+    'send_button'      => 'Bericht verzenden',
 
     // Loading state
-    'sending'          => 'Sending',
+    'sending'          => 'Verzenden',
 
     // Alert
-    'close'            => 'Close',
-    'errors_heading'   => 'Please fix the following errors:',
+    'close'            => 'Sluiten',
+    'errors_heading'   => 'Los de volgende fouten op:',
 
     // Contact Info Cards
-    'location_title'   => 'Our Location',
-    'phone_title'      => 'Call Us',
-    'email_title'      => 'Email Us',
+    'location_title'   => 'Onze locatie',
+    'phone_title'      => 'Bel ons',
+    'email_title'      => 'E-mail ons',
 ];

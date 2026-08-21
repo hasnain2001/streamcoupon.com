@@ -2,34 +2,34 @@
 
 return [
     // Meta
-    'meta_title'       => 'FAQ - Frequently Asked Questions | :app',
-    'meta_description' => 'Find answers to common questions about our coupon codes, discounts, and how to save money while shopping online.',
-    'meta_keywords'    => 'FAQ, frequently asked questions, coupon codes, discounts, online shopping help',
+    'meta_title'       => 'FAQ - Veelgestelde vragen | :app',
+    'meta_description' => 'Vind antwoorden op veelgestelde vragen over onze kortingscodes, kortingen en hoe je geld kunt besparen tijdens het online winkelen.',
+    'meta_keywords'    => 'FAQ, veelgestelde vragen, kortingscodes, kortingen, online winkelhulp',
 
     // Page title
-    'page_title'       => 'Frequently Asked Questions (FAQ)',
+    'page_title'       => 'Veelgestelde vragen (FAQ)',
 
     // Question 1
-    'q1'               => 'What is :app?',
-    'a1'               => ':app is your go-to source for the latest coupon codes, discounts, and deals from top online retailers. We help you save money while shopping online.',
+    'q1'               => 'Wat is :app?',
+    'a1'               => ':app is jouw bron voor de nieuwste kortingscodes, kortingen en deals van top online retailers. Wij helpen je geld te besparen tijdens het online winkelen.',
 
     // Question 2
-    'q2'               => 'How do I use a coupon code?',
-    'a2'               => 'To use a coupon code, simply copy the code provided on our website and paste it into the promo code field during checkout on the retailer\'s website. The discount will be applied to your total purchase amount.',
+    'q2'               => 'Hoe gebruik ik een kortingscode?',
+    'a2'               => 'Om een kortingscode te gebruiken, kopieer je eenvoudig de code die op onze website wordt weergegeven en plak je deze in het promotiecode-veld tijdens het afrekenen op de website van de retailer. De korting wordt toegepast op je totale aankoopbedrag.',
 
     // Question 3
-    'q3'               => 'Are the coupon codes on :app free to use?',
-    'a3'               => 'Yes, all coupon codes listed on :app are completely free to use. We do not charge any fees for accessing or using the coupons.',
+    'q3'               => 'Zijn de kortingscodes op :app gratis te gebruiken?',
+    'a3'               => 'Ja, alle kortingscodes die op :app worden vermeld, zijn volledig gratis te gebruiken. We brengen geen kosten in rekening voor het bekijken of gebruiken van de coupons.',
 
     // Question 4
-    'q4'               => 'How often are new coupons added?',
-    'a4'               => 'We regularly update our website with new coupon codes and deals. Check back frequently to find the latest offers and discounts.',
+    'q4'               => 'Hoe vaak worden er nieuwe coupons toegevoegd?',
+    'a4'               => 'We werken onze website regelmatig bij met nieuwe kortingscodes en deals. Kom regelmatig terug om de nieuwste aanbiedingen en kortingen te vinden.',
 
     // Question 5
-    'q5'               => 'What should I do if a coupon code doesn\'t work?',
-    'a5'               => 'If a coupon code doesn\'t work, please ensure that you have entered it correctly and that it is still valid. Some codes may have expiration dates or specific terms and conditions. If you continue to experience issues, feel free to contact our support team for assistance.',
+    'q5'               => 'Wat moet ik doen als een kortingscode niet werkt?',
+    'a5'               => 'Als een kortingscode niet werkt, controleer dan of je deze correct hebt ingevoerd en of deze nog geldig is. Sommige codes kunnen vervaldatums of specifieke voorwaarden hebben. Als je nog steeds problemen ondervindt, neem dan gerust contact op met ons ondersteuningsteam voor hulp.',
 
     // Question 6
-    'q6'               => 'Can I share the coupon codes with others?',
-    'a6'               => 'Absolutely! Feel free to share our coupon codes with friends and family so they can also enjoy great savings while shopping online.',
+    'q6'               => 'Kan ik de kortingscodes met anderen delen?',
+    'a6'               => 'Absoluut! Deel onze kortingscodes gerust met vrienden en familie, zodat ook zij kunnen genieten van geweldige besparingen tijdens het online winkelen.',
 ];

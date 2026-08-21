@@ -2,39 +2,39 @@
 
 return [
     // Meta
-    'meta_title'       => 'Coupon Codes - Find the latest coupon codes and deals for your favorite stores',
-    'meta_description' => 'Find the latest coupon codes and deals for your favorite stores. Save money on your online shopping with our exclusive discount codes.',
-    'meta_keywords'    => 'coupon codes, discount codes, promo codes, deals, offers, vouchers, discounts, savings, online shopping',
+    'meta_title'       => 'Kortingscodes - Vind de nieuwste kortingscodes en deals voor jouw favoriete winkels',
+    'meta_description' => 'Vind de nieuwste kortingscodes en deals voor jouw favoriete winkels. Bespaar geld op je online aankopen met onze exclusieve kortingscodes.',
+    'meta_keywords'    => 'kortingscodes, discountcodes, promotiecodes, deals, aanbiedingen, vouchers, kortingen, besparingen, online winkelen',
 
     // Page header
-    'page_title'       => 'Exclusive Coupon Codes',
-    'page_subtitle'    => 'Save money with our verified discount codes for your favorite online stores',
+    'page_title'       => 'Exclusieve kortingscodes',
+    'page_subtitle'    => 'Bespaar geld met onze geverifieerde kortingscodes voor jouw favoriete online winkels',
 
     // Coupon card
-    'expires'          => 'Expires',
-    'used'             => 'Used',
-    'times'            => 'times',
+    'expires'          => 'Verloopt',
+    'used'             => 'Gebruikt',
+    'times'            => 'keer',
 
     // Buttons
-    'get_code'         => 'Get Code',
-    'view_deal'        => 'View Deal',
-    'more_offers'      => 'More Offers',
+    'get_code'         => 'Code ophalen',
+    'view_deal'        => 'Bekijk deal',
+    'more_offers'      => 'Meer aanbiedingen',
 
     // Empty state
-    'no_coupons_found'    => 'No Coupons Found',
-    'no_coupons_message'  => 'We couldn\'t find any coupons at the moment. Please check back later or browse our stores.',
+    'no_coupons_found'    => 'Geen coupons gevonden',
+    'no_coupons_message'  => 'We konden momenteel geen coupons vinden. Kom later terug of blader door onze winkels.',
 
     // Pagination
-    'pagination_label'    => 'Coupons pagination',
+    'pagination_label'    => 'Coupons paginering',
 
     // Modal
-    'modal_badge'         => 'EXCLUSIVE OFFER',
-    'close'               => 'Close',
-    'your_coupon_code'    => 'YOUR COUPON CODE',
-    'copy_button'         => 'Copy',
-    'copied_message'      => 'Copied to clipboard!',
-    'use_code_at_checkout' => 'Use this code at checkout on',
-    'go_to_store'         => 'Go to Store',
+    'modal_badge'         => 'EXCLUSIEVE AANBIEDING',
+    'close'               => 'Sluiten',
+    'your_coupon_code'    => 'JOUW KORTINGSCODE',
+    'copy_button'         => 'Kopiëren',
+    'copied_message'      => 'Gekopieerd naar klembord!',
+    'use_code_at_checkout' => 'Gebruik deze code bij het afrekenen op',
+    'go_to_store'         => 'Ga naar winkel',
     'default_coupon_name' => 'Coupon',
-    'default_store_name'  => 'Store',
+    'default_store_name'  => 'Winkel',
 ];

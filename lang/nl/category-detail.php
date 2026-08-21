@@ -2,20 +2,20 @@
 
 return [
     // Meta fallbacks
-    'meta_title_fallback'         => ':category | :year Deals, Offers & Promo Codes',
-    'meta_description_fallback'   => 'Find the best :category deals and verified discount codes for :year. Save money with exclusive :category_lower coupons, vouchers, and promo offers updated daily.',
-    'meta_keywords_fallback'      => ':category, :category coupons, :category promo codes, :category vouchers, discount offers, :category deals, save money online',
+    'meta_title_fallback'         => ':category | :year Deals, aanbiedingen & promotiecodes',
+    'meta_description_fallback'   => 'Vind de beste :category deals en geverifieerde kortingscodes voor :year. Bespaar geld met exclusieve :category_lower coupons, vouchers en promotieaanbiedingen die dagelijks worden bijgewerkt.',
+    'meta_keywords_fallback'      => ':category, :category coupons, :category promotiecodes, :category vouchers, kortingsaanbiedingen, :category deals, geld besparen online',
 
     // Stats & badges
-    'blog_available'              => ':count Blog Available',
-    'total_blogs'                 => 'Total Blogs ',
-    'total_stores'                => 'Total Stores ',
-    'blogs_available'             => 'Blogs Available',
+    'blog_available'              => ':count Blog beschikbaar',
+    'total_blogs'                 => 'Totaal blogs ',
+    'total_stores'                 => 'Totaal winkels ',
+    'blogs_available'             => 'Blogs beschikbaar',
 
     // Store grid (commented out)
-    'default_store_title'         => 'Title not found',
-    'no_stores_heading'           => 'No stores found in this category! Explore new',
+    'default_store_title'         => 'Titel niet gevonden',
+    'no_stores_heading'           => 'Geen winkels gevonden in deze categorie! Ontdek nieuwe',
 
     // Blog section
-    'section_title'               => 'Shopping Hacks & Savings Tips & Tricks',
+    'section_title'               => 'Winkelhacks & spaartips & trucs',
 ];

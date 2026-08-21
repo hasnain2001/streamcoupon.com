@@ -2,48 +2,48 @@
 
 return [
     // Meta
-    'meta_title'       => 'Search | Latest Discount Codes of :year | Best Offers and Deals',
-    'meta_description' => 'Explore our amazing stores and offers. Find the best products and services in one place.',
-    'meta_keywords'    => 'stores, offers, products, services',
-    'meta_author'      => 'john doe',
+    'meta_title'       => 'Zoeken | Nieuwste kortingscodes van :year | Beste aanbiedingen en deals',
+    'meta_description' => 'Ontdek onze geweldige winkels en aanbiedingen. Vind de beste producten en diensten op één plek.',
+    'meta_keywords'    => 'winkels, aanbiedingen, producten, diensten',
+    'meta_author'      => 'jan jansen',
 
     // Page header
-    'page_title'       => 'Search Results',
-    'found_results'    => 'Found results for:',
+    'page_title'       => 'Zoekresultaten',
+    'found_results'    => 'Gevonden resultaten voor:',
 
     // Stats
-    'stores'           => 'Stores',
+    'stores'           => 'Winkels',
     'coupons'          => 'Coupons',
-    'categories'       => 'Categories',
+    'categories'       => 'Categorieën',
     'blogs'            => 'Blogs',
 
     // Breadcrumb
-    'breadcrumb'       => 'Search Results',
+    'breadcrumb'       => 'Zoekresultaten',
 
     // Filters
-    'results_title'    => 'Search Results',
-    'for'              => 'for',
-    'all_results'      => 'All Results',
+    'results_title'    => 'Zoekresultaten',
+    'for'              => 'voor',
+    'all_results'      => 'Alle resultaten',
 
     // Badges
-    'view_all'         => 'View All',
-    'of'               => 'of',
-    'offers'           => 'offers',
-    'stores_plural'    => 'stores',
+    'view_all'         => 'Bekijk alles',
+    'of'               => 'van',
+    'offers'           => 'aanbiedingen',
+    'stores_plural'    => 'winkels',
 
     // Coupon card
-    'no_expiry'        => 'No expiry',
-    'get_code'         => 'Get Code',
-    'copied'           => 'Copied!',
+    'no_expiry'        => 'Geen vervaldatum',
+    'get_code'         => 'Code ophalen',
+    'copied'           => 'Gekopieerd!',
 
     // Blog
-    'admin'            => 'Admin',
+    'admin'            => 'Beheerder',
 
     // No results
-    'no_results_title' => 'No results found for ":query"',
-    'no_results_text'  => 'Try adjusting your search criteria and try again',
-    'back_home'        => 'Back to Home',
+    'no_results_title' => 'Geen resultaten gevonden voor ":query"',
+    'no_results_text'  => 'Pas je zoekcriteria aan en probeer het opnieuw',
+    'back_home'        => 'Terug naar home',
 
     // Read more (use common key)
-    'read_more'        => 'Read More',
+    'read_more'        => 'Lees meer',
 ];

@@ -2,63 +2,63 @@
 
 return [
     // Meta fallbacks
-    'meta_title_fallback'        => ':store Coupons & Promo Codes :year | :app',
-    'meta_description_fallback'  => 'Find the latest :store coupons, promo codes, coupon codes, deals, and discounts. Save more with verified offers and special deals at :app.',
-    'meta_keywords_fallback'     => ':store, :store coupons, :store vouchers, discount codes, promo offers, save money, online deals',
+    'meta_title_fallback'        => ':store Coupons & promotiecodes :year | :app',
+    'meta_description_fallback'  => 'Vind de nieuwste :store coupons, promotiecodes, kortingscodes, deals en kortingen. Bespaar meer met geverifieerde aanbiedingen en speciale deals bij :app.',
+    'meta_keywords_fallback'     => ':store, :store coupons, :store vouchers, kortingscodes, promotieaanbiedingen, geld besparen, online deals',
 
     // Breadcrumb
-    'no_category'                => 'No Category',
+    'no_category'                => 'Geen categorie',
 
     // Store header
-    'header_title'               => ':store Coupons & Promo Codes :year Verified Deals',
-    'rating'                     => '(4.8/5) • :total offers',
-    'default_description'        => 'Save more with the latest :store promo codes and coupons for :year. All deals are tested and verified to help you get the best discounts. Find exclusive offers and start saving today at :app.',
-    'visit_store'                => 'Visit Store',
+    'header_title'               => ':store Coupons & promotiecodes :year Geverifieerde deals',
+    'rating'                     => '(4.8/5) • :total aanbiedingen',
+    'default_description'        => 'Bespaar meer met de nieuwste :store promotiecodes en coupons voor :year. Alle deals zijn getest en geverifieerd om je de beste kortingen te bieden. Vind exclusieve aanbiedingen en begin vandaag nog met besparen bij :app.',
+    'visit_store'                => 'Bezoek winkel',
 
     // Stats bar
-    'total_offers'               => 'Total Offers',
-    'coupon_codes'               => 'Coupon Codes',
-    'deals_sales'                => 'Deals & Sales',
+    'total_offers'               => 'Totaal aanbiedingen',
+    'coupon_codes'               => 'Kortingscodes',
+    'deals_sales'                => 'Deals & uitverkopen',
 
     // Filter section
-    'available_offers'           => 'Available Offers',
-    'filter_offers'              => 'Filter Offers',
-    'all'                        => 'All',
+    'available_offers'           => 'Beschikbare aanbiedingen',
+    'filter_offers'              => 'Filter aanbiedingen',
+    'all'                        => 'Alles',
     'codes'                      => 'Codes',
     'deals'                      => 'Deals',
-    'all_offers'                 => 'All Offers',
+    'all_offers'                 => 'Alle aanbiedingen',
 
     // Empty state
-    'no_coupons_title'           => 'Oops! No Coupons Available',
-    'no_coupons_text'            => 'Don\'t worry, you can still explore amazing deals from our partnered brands.',
-    'explore_brands'             => 'Explore Brands',
+    'no_coupons_title'           => 'Oeps! Geen coupons beschikbaar',
+    'no_coupons_text'            => 'Maak je geen zorgen, je kunt nog steeds geweldige deals ontdekken van onze partnermerken.',
+    'explore_brands'             => 'Ontdek merken',
 
     // Coupon card
     'hot'                        => 'HOT',
     'code'                       => 'Code',
     'deal'                       => 'Deal',
-    'ends'                       => 'Ends',
-    'get_code'                   => 'Get Code',
-    'view_deal'                  => 'View Deal',
+    'ends'                       => 'Verloopt',
+    'get_code'                   => 'Code ophalen',
+    'view_deal'                  => 'Bekijk deal',
 
     // Related blogs
-    'related_articles'           => 'Related Articles',
+    'related_articles'           => 'Gerelateerde artikelen',
 
     // Sidebar
-    'quick_view'                 => 'Store Quick View',
-    'view_all_coupons'           => 'View All Coupons',
-    'store_statistics'           => 'Store Statistics',
-    'about_store'                => 'About :store',
-    'store_details'              => 'Store details and information',
-    'no_description'             => 'No store description available',
-    'similar_stores'             => 'Similar Stores',
-    'offers'                     => 'offers',
+    'quick_view'                 => 'Snelle winkelweergave',
+    'view_all_coupons'           => 'Bekijk alle coupons',
+    'store_statistics'           => 'Winkelstatistieken',
+    'about_store'                => 'Over :store',
+    'store_details'              => 'Winkelgegevens en informatie',
+    'no_description'             => 'Geen winkelomschrijving beschikbaar',
+    'similar_stores'             => 'Vergelijkbare winkels',
+    'offers'                     => 'aanbiedingen',
 
     // Modal
-    'exclusive_discount'         => 'EXCLUSIVE DISCOUNT',
-    'close'                      => 'Close',
-    'your_exclusive_code'        => 'YOUR EXCLUSIVE CODE',
-    'copied'                     => 'Copied to clipboard!',
-    'apply_code'                 => 'Apply this code at checkout on',
-    'redeem_now'                 => 'REDEEM NOW',
+    'exclusive_discount'         => 'EXCLUSIEVE KORTING',
+    'close'                      => 'Sluiten',
+    'your_exclusive_code'        => 'JOUW EXCLUSIEVE CODE',
+    'copied'                     => 'Gekopieerd naar klembord!',
+    'apply_code'                 => 'Pas deze code toe bij het afrekenen op',
+    'redeem_now'                 => 'NU INWISSELEN',
 ];

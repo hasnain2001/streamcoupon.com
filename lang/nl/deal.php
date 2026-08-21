@@ -2,26 +2,26 @@
 
 return [
     // Meta
-    'meta_title'       => 'Hot Deals - Limited-time offers & exclusive discounts | :app',
-    'meta_description' => 'Discover today\'s hottest deals and limited-time offers from your favorite stores. Save big with our exclusive discounts!',
-    'meta_keywords'    => 'hot deals, limited-time offers, flash sales, exclusive discounts, online shopping deals',
+    'meta_title'       => 'Hot Deals - Tijdelijke aanbiedingen & exclusieve kortingen | :app',
+    'meta_description' => 'Ontdek de heetste deals van vandaag en tijdelijke aanbiedingen van jouw favoriete winkels. Bespaar veel met onze exclusieve kortingen!',
+    'meta_keywords'    => 'hot deals, tijdelijke aanbiedingen, flitsverkopen, exclusieve kortingen, online winkeldeals',
 
     // Page header
-    'header_title'     => '🔥 FLASH DEALS ALERT!',
-    'header_subtitle'  => 'Limited-time offers you won\'t want to miss - act fast before they\'re gone!',
+    'header_title'     => '🔥 FLITSDEALS ALERT!',
+    'header_subtitle'  => 'Tijdelijke aanbiedingen die je niet wilt missen - wees er snel bij voordat ze verdwenen zijn!',
 
     // Category filters
-    'shop_by_category' => 'Shop by Category:',
-    'all_deals'        => 'All Deals',
-    'fashion'          => 'Fashion',
-    'electronics'      => 'Electronics',
-    'home_garden'      => 'Home & Garden',
-    'travel'           => 'Travel',
-    'food_drink'       => 'Food & Drink',
+    'shop_by_category' => 'Winkel op categorie:',
+    'all_deals'        => 'Alle deals',
+    'fashion'          => 'Mode',
+    'electronics'      => 'Elektronica',
+    'home_garden'      => 'Wonen & Tuin',
+    'travel'           => 'Reizen',
+    'food_drink'       => 'Eten & Drinken',
 
     // Deal card
     'hot_deal_badge'   => 'HOT DEAL',
-    'expires'          => 'Expires',
-    'view_deal'        => 'View Deal',
-    'more_offers'      => 'More Offers',
+    'expires'          => 'Verloopt',
+    'view_deal'        => 'Bekijk deal',
+    'more_offers'      => 'Meer aanbiedingen',
 ];

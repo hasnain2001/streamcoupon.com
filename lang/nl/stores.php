@@ -2,40 +2,40 @@
 
 return [
     // Meta
-    'meta_title'       => 'All Stores Coupons, Promo Codes & Best Deals :year | :app',
-    'meta_description' => 'Discover amazing stores with exclusive offers, discounts, and coupons. Find the best deals from top brands in one place.',
-    'meta_keywords'    => 'stores, offers, discounts, coupons, deals, shopping, brands, savings',
-    'meta_author'      => 'Your Brand Name',
+    'meta_title'       => 'Alle winkels Coupons, promotiecodes & beste deals :year | :app',
+    'meta_description' => 'Ontdek geweldige winkels met exclusieve aanbiedingen, kortingen en coupons. Vind de beste deals van topmerken op één plek.',
+    'meta_keywords'    => 'winkels, aanbiedingen, kortingen, coupons, deals, winkelen, merken, besparingen',
+    'meta_author'      => 'Jouw Merknaam',
 
     // Page header
-    'page_title'       => 'Stores',
-    'page_subtitle'    => 'Browse stores alphabetically or search for your favorite brands to find exclusive coupons and deals',
+    'page_title'       => 'Winkels',
+    'page_subtitle'    => 'Blader alfabetisch door winkels of zoek naar je favoriete merken om exclusieve coupons en deals te vinden',
 
     // Search
-    'search_placeholder' => 'Search for stores, brands, or categories...',
+    'search_placeholder' => 'Zoek naar winkels, merken of categorieën...',
 
     // Alphabet navigation
-    'all'              => 'All',
+    'all'              => 'Alles',
 
     // Stats
-    'stores_found'     => 'Stores Found',
-    'latest_deals'     => 'Latest :year Deals',
-    'verified_offers'  => 'Verified Offers',
+    'stores_found'     => 'Winkels gevonden',
+    'latest_deals'     => 'Nieuwste :year deals',
+    'verified_offers'  => 'Geverifieerde aanbiedingen',
 
     // Store card
-    'top_store'        => 'Top Store',
-    'default_store_name' => 'Store Name',
-    'offers'           => 'Offers',
+    'top_store'        => 'Topwinkel',
+    'default_store_name' => 'Winkelnaam',
+    'offers'           => 'Aanbiedingen',
 
     // Empty state
-    'no_stores_title'   => 'No Stores Found',
-    'no_stores_message' => 'No stores found. Try adjusting your search or filter.',
-    'no_stores_found'   => 'No Stores Found',
+    'no_stores_title'   => 'Geen winkels gevonden',
+    'no_stores_message' => 'Geen winkels gevonden. Pas je zoekopdracht of filter aan.',
+    'no_stores_found'   => 'Geen winkels gevonden',
 
     // Filters
-    'search'           => 'Search',
+    'search'           => 'Zoeken',
     'letter'           => 'Letter',
 
     // Pagination
-    'pagination_label' => 'Stores pagination',
+    'pagination_label' => 'Winkels paginering',
 ];

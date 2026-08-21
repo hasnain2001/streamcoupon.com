@@ -2,20 +2,20 @@
 
 return [
     // Meta
-    'meta_title'       => 'Latest Coupon & Shopping Tips Blog :year | :app',
-    'meta_description' => 'Explore our amazing blogs and offers. Find the best products and services in one place.',
-    'meta_keywords'    => 'blogs, offers, products, services',
-    'meta_author'      => 'John Doe',
+    'meta_title'       => 'Laatste coupon- & winkelblog :year | :app',
+    'meta_description' => 'Ontdek onze geweldige blogs en aanbiedingen. Vind de beste producten en diensten op één plek.',
+    'meta_keywords'    => 'blogs, aanbiedingen, producten, diensten',
+    'meta_author'      => 'Jan Jansen',
 
     // Page header
-    'page_title'       => 'Our Blog',
-    'page_subtitle'    => 'Discover the latest insights, tips, and news on :app',
+    'page_title'       => 'Onze blog',
+    'page_subtitle'    => 'Ontdek de nieuwste inzichten, tips en nieuws op :app',
 
     // Statistics
-    'stat_articles'    => 'Articles Published',
-    'stat_writers'     => 'Expert Writers',
-    'stat_updates'     => 'Latest Updates',
+    'stat_articles'    => 'Geplaatste artikelen',
+    'stat_writers'     => 'Deskundige schrijvers',
+    'stat_updates'     => 'Laatste updates',
 
     // Default author fallback
-    'default_author'   => 'Admin',
+    'default_author'   => 'Beheerder',
 ];
