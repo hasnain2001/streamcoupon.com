@@ -258,6 +258,7 @@
                             <th>Code</th>
                             <th width="120">Flag</th>
                             <th width="120">Status</th>
+                            <th width="120">Info</th>
                             <th width="160" class="text-center">Actions</th>
                         </tr>
                     </thead>
@@ -285,7 +286,7 @@
                             </td>
                             <td>
                                 <div class="flag-container">
-                                    <img src="{{ asset('uploads/flags/' . $language->flag) }}"
+                                    <img src="{{ $language->flag_url }}"
                                          alt="{{ $language->name }}"
                                          class="flag-img"
                                          title="{{ $language->name }}">
@@ -296,6 +297,21 @@
                                     <i class="fas {{ $language->status ? 'fa-check-circle' : 'fa-times-circle' }}"></i>
                                     {{ $language->status ? 'Active' : 'Inactive' }}
                                 </span>
+                            </td>
+                            <td>
+                                        
+                                <small class="text-muted d-block">
+                                    Created: {{ $language->created_at->format('Y-m-d H:i') }}
+                                    @if($language->user)
+                                        <br><small>by {{ $language->user->name }}</small>
+                                        @endif
+                                </small>
+                                <small class="text-muted d-block">
+                                    Updated: {{ $language->updated_at->format('Y-m-d H:i') }}
+                                    @if($language->updatedby)
+                                        <br><small>by {{ $language->updatedby->name }}</small>
+                                    @endif
+                                </small>
                             </td>
                             <td class="text-center">
                                 <div class="action-buttons">

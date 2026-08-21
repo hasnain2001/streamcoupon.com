@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">
+     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">
     <!-- ✅ Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -116,41 +116,8 @@
 
     <!-- ✅ DataTables Initialization (Optional global setup) -->
     <script>
-          $(document).ready(function () {
-           const table = $('#basic-datatable').DataTable({
-            responsive: true,
-            paging: true,
-            lengthChange: true,
-            searching: true,
-            ordering: true,
-            info: true,
-            autoWidth: false,
-            pageLength: 10
-        });
-
-            // Make table body sortable
-            $('#tablecontents').sortable({
-                items: 'tr.row1',
-                cursor: 'move',
-                opacity: 0.8,
-                handle: '.handle',
-                helper: function(e, tr) {
-                    var $originals = tr.children();
-                    var $helper = tr.clone();
-                    $helper.children().each(function(index) {
-                        $(this).width($originals.eq(index).width());
-                    });
-                    return $helper;
-                },
-                start: function(e, ui){
-                    ui.placeholder.height(ui.item.height());
-                },
-                update: function () {
-                    sendOrderToServer();
-                }
-            });
-
-            function sendOrderToServer() {
+      
+                    function sendOrderToServer() {
                 var order = [];
                 var token = '{{ csrf_token() }}';
 
@@ -181,7 +148,6 @@
                     }
                 });
             }
-        });
     </script>
 
     @stack('scripts')

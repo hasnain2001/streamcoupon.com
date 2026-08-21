@@ -47,6 +47,24 @@
 
             </div>
         </div>
+                        @if ($errors->any())
+                    <div class="alert alert-danger border-0 alert-dismissible fade show">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <strong>Error!</strong> Please fix the following issues:
+                        <ul class="mt-2 mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                      @if(session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <strong>Success!</strong> {{ session('success') }}
+
+                    </div>
+                @endif
 
         <!-- Store Overview Cards -->
         <div class="row mb-4">
@@ -124,7 +142,7 @@
                     <div class="card-body">
                         <div class="text-center mb-4">
                             <img class="img-thumbnail rounded-circle border-4 border-primary shadow-sm"
-                                 src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                                 src="{{ $store->image_url }}"
                                  style="width: 120px; height: 120px; object-fit: contain;"
                                  loading="lazy"
                                  alt="{{ $store->name }}"
@@ -139,7 +157,7 @@
                                     <span class="text-muted">
                                         <i class="fas fa-network-wired me-2 text-primary"></i>Network
                                     </span>
-                                    <span class="fw-semibold">{{ $store->network->title ?? 'N/A' }}</span>
+                                    <span class="fw-semibold">{{ $store->network->name ?? 'N/A' }}</span>
                                 </div>
                             </div>
                             <div class="detail-item mb-3">
@@ -253,6 +271,17 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     @endif
+                 @if ($errors->any())
+                    <div class="alert alert-danger border-0 alert-dismissible fade show">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <strong>Error!</strong> Please fix the following issues:
+                        <ul class="mt-2 mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
                     <div class="card-body p-0">
                         @if($coupons->count() > 0)
@@ -439,7 +468,7 @@
                                                 <div class="mb-3">
                                                     <label for="name" class="form-label fw-semibold">Coupon Name <span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control shadow-sm" name="name" id="name"
-                                                        value="{{ old('name') }}" required placeholder="e.g. Summer Sale 2024">
+                                                        value="{{ old('name') }}" required placeholder="e.g. Summer Sale 2024" required>
                                                     <div class="invalid-feedback">Please provide a coupon name.</div>
                                                 </div>
                                             </div>
@@ -447,7 +476,7 @@
                                                 <div class="mb-3">
                                                     <label for="ending_date" class="form-label fw-semibold">Expiry Date <span class="text-danger">*</span></label>
                                                     <input type="date" class="form-control shadow-sm" name="ending_date" id="ending_date"
-                                                        value="{{ old('ending_date') }}" required min="{{ date('Y-m-d') }}">
+                                                        value="{{ old('ending_date') }}" min="{{ date('Y-m-d') }}" required>
                                                     <div class="invalid-feedback">Please select a valid future date.</div>
                                                 </div>
                                             </div>

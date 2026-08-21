@@ -283,19 +283,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const suggestions = [
                 {
-                    text: 'Popular Coupons',
+                    text: 'Popular Blogs',
                     icon: 'bi-ticket-perforated',
-                    url: '/coupons?sort=popular'
+                    url: '/blogs?sort=popular'
                 },
                 {
-                    text: 'Latest Deals',
+                    text: 'Latest Blogs',
                     icon: 'bi-tags',
-                    url: '/deals?sort=latest'
+                    url: '/blogs?sort=latest'
                 },
                 {
-                    text: 'Featured Stores',
+                    text: 'Featured Blogs',
                     icon: 'bi-shop',
-                    url: '/stores?featured=true'
+                    url: '/blogs?featured=true'
                 },
                 {
                     text: 'Top Categories',

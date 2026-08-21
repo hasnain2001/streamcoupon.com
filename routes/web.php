@@ -2,7 +2,7 @@
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
 require __DIR__.'/employee.php';
-use App\Http\Controllers\ProfileController;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\SearchController;
@@ -11,11 +11,6 @@ use App\Http\Controllers\ContactController;
 use App\Http\Middleware\Localization;
 use Illuminate\Support\Facades\Route;
 
-    Route::middleware('auth')->group(function () {
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    });
     Route::middleware(['auth','role:user'])->group(function () {
         Route::get('/dashboard', function () { return view('dashboard');})->name('dashboard');
     });
@@ -25,10 +20,12 @@ use Illuminate\Support\Facades\Route;
     Route::get('/privacy', function () { return view('front-end.privacy'); })->name('privacy');
     Route::get('/terms', function () { return view('front-end.terms'); })->name('terms');
     Route::get('/about', function () { return view('front-end.about'); })->name('about');
+    Route::get('/faq', function () { return view('front-end.faq'); })->name('faq');
+    Route::get('/community', function () { return view('front-end.community'); })->name('community');
     Route::get('/contact',[ContactController::class, 'index'])->name('contact');
         });
       });
- Route::get('/category/{slug}', [HomeController::class, 'category_detail'])->name('category.detail');
+    Route::get('/category/{slug}', [HomeController::class, 'category_detail'])->name('category.detail');
     Route::post('/contact',[ContactController::class, 'store'])->name('contact.store');
     Route::middleware([Localization::class])->group(function () {
         Route::controller(HomeController::class)->group(function () {
@@ -36,11 +33,10 @@ use Illuminate\Support\Facades\Route;
             Route::get('/{lang?}/stores', 'stores')->name('stores');
             Route::get('store/{slug}', function($slug) {return app(HomeController::class)->StoreDetails('en', $slug, request());})->name('store.detail');
             Route::get('/{lang}/store/{slug}', [HomeController::class, 'StoreDetails'])->name('store_details.withLang');
-            Route::get('{lang?}/category', 'category')->name('category');
-            
-           
+            Route::get('{lang?}/category', 'category')->name('category');        
             Route::get('{lang?}/coupon', 'coupons')->name('coupons');
             Route::get('{lang?}/deal', 'deal')->name('deals');
+            Route::get('{lang?}/faq', 'faq')->name('faq');
             Route::get('{lang?}/coupon/{slug}', 'coupon_detail')->name('coupon.detail');
             Route::get('{lang?}/blog', 'blog')->name('blog');
             Route::get('/blog/{slug}',function($slug) {return app(HomeController::class)->blog_detail('en', $slug, request());})->name('blog.detail');

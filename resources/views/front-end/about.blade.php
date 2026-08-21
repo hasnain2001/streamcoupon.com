@@ -1,7 +1,8 @@
 @extends('layouts.master')
-@section('title','About Us - Best Deals and Discounts ' . date('Y') . ' | ' . config('app.name'))
-@section('description','Learn more about streamcoupon, your go-to source for the best deals and discounts. Discover our mission, values, and how we help you save more.')
-@section('keywords','deals, discounts, coupons, savings, affiliate marketing')
+
+@section('title', __('about.meta_title', ['year' => date('Y'), 'app' => config('app.name')]))
+@section('description', __('about.meta_description'))
+@section('keywords', __('about.meta_keywords'))
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
@@ -12,78 +13,77 @@
 <div class="about-header">
     <div class="container">
         <div class="about-header-content">
-            <h1>@lang('about.heading-1')</h1>
-            <p class="lead">@lang('about.heading-2')</p>
+            <h1>{{ __('about.header_title') }}</h1>
+            <p class="lead">{{ __('about.header_subtitle') }}</p>
         </div>
     </div>
 </div>
 
-<div class="container text-capitalized ">
+<div class="container">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-custom">
             <li class="breadcrumb-item">
                 <a href="/" class="text-decoration-none">
-                    <i class="fas fa-home me-1"></i>@lang('nav.home')
+                    <i class="fas fa-home me-1"></i>{{ __('home') }}
                 </a>
             </li>
-            <li class="breadcrumb-item active text-secondary" aria-current="page">@lang('nav.about')</li>
+            <li class="breadcrumb-item active text-secondary" aria-current="page">{{ __('about.breadcrumb') }}</li>
         </ol>
     </nav>
 
     <!-- Main Content -->
     <div class="about-content">
-        <h1 class="page-heading">Welcome to streamcoupon</h1>
+        <h1 class="page-heading">{{ __('about.page_heading') }}</h1>
 
         <!-- Introduction Section -->
         <section class="about-section">
-            <h2>@lang('about.heading-3')</h2>
-            <p>@lang('about.heading-4')</p>
+            <h2>{{ __('about.intro_heading') }}</h2>
+            <p>{!! __('about.intro_text') !!}</p>
+            <p>{!! __('about.intro_text_2') !!}</p>
         </section>
 
         <!-- Mission & Vision -->
         <div class="mission-vision-grid">
             <div class="mission-card">
                 <i class="fas fa-bullseye"></i>
-                <h3>Our Mission</h3>
-                <p>@lang('about.heading-6')</p>
+                <h3>{{ __('about.mission_title') }}</h3>
+                <p>{!! __('about.mission_text') !!}</p>
             </div>
             <div class="vision-card">
                 <i class="fas fa-eye"></i>
-                <h3>Our Vision</h3>
-                <p>@lang('about.heading-19')</p>
+                <h3>{{ __('about.vision_title') }}</h3>
+                <p>{!! __('about.vision_text') !!}</p>
             </div>
         </div>
 
         <!-- What Sets Us Apart -->
         <section class="about-section">
-            <h2>@lang('about.heading-5')</h2>
-            <p>@lang('about.heading-6')</p>
+            <h2>{{ __('about.different_heading') }}</h2>
+            <p>{{ __('about.different_intro') }}</p>
 
-            <h3>@lang('about.heading-7')</h3>
-            <p>@lang('about.heading-8')</p>
+            <h3>{{ __('about.detectives_title') }}</h3>
+            <p>{{ __('about.detectives_text') }}</p>
 
-            <h3>@lang('about.heading-9')</h3>
-            <p>@lang('about.heading-10')</p>
+            <h3>{{ __('about.community_title') }}</h3>
+            <p>{{ __('about.community_text') }}</p>
 
-            <h3>@lang('about.heading-11')</h3>
-            <p>@lang('about.heading-12')</p>
+            <h3>{{ __('about.sauce_title') }}</h3>
+            <p>{{ __('about.sauce_text') }}</p>
 
-            <h3>@lang('about.heading-13')</h3>
-            <p>@lang('about.heading-14')</p>
-            <p>@lang('about.heading-15')</p>
+            <h3>{{ __('about.beyond_title') }}</h3>
+            <p>{!! __('about.beyond_text') !!}</p>
         </section>
 
         <!-- Why Choose streamcoupon -->
         <section class="about-section">
-            <h2>@lang('about.heading-16')</h2>
-            <p>@lang('about.heading-17')</p>
+            <h2>{{ __('about.why_heading') }}</h2>
+            <p>{{ __('about.why_intro') }}</p>
 
             <ul class="feature-list">
-                <li>@lang('about.Access promotions you wont find anywhere else')</li>
-                <li>@lang('about.Tailored deals based on your preferences.')</li>
-                <li>@lang('about.Stay ahead with the latest and most up-to-date coupons.')</li>
-                <li>@lang('about. Connect with fellow savers, share tips, and celebrate your successes.')</li>
+                @foreach(__('about.features') as $feature)
+                    <li>{!! $feature !!}</li>
+                @endforeach
             </ul>
         </section>
 
@@ -91,27 +91,27 @@
         <div class="stats-section">
             <div class="container">
                 <h2 style="color: white; border: none; justify-content: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
-                    Our Impact in Numbers
+                    {{ __('about.stats_title') }}
                 </h2>
                 <p style="color: rgba(255,255,255,0.95); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-                    Join thousands of satisfied users who trust streamcoupon for their savings journey
+                    {{ __('about.stats_subtitle') }}
                 </p>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number" data-count="10000">10,000+</div>
-                        <div class="stat-label">Active Users</div>
+                        <div class="stat-label">{{ __('about.stat_shoppers') }}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-count="5000">5,000+</div>
-                        <div class="stat-label">Exclusive Deals</div>
+                        <div class="stat-label">{{ __('about.stat_deals') }}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-count="1000">$1M+</div>
-                        <div class="stat-label">Total Savings</div>
+                        <div class="stat-label">{{ __('about.stat_savings') }}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number" data-count="200">200+</div>
-                        <div class="stat-label">Partner Stores</div>
+                        <div class="stat-label">{{ __('about.stat_partners') }}</div>
                     </div>
                 </div>
             </div>
@@ -119,53 +119,60 @@
 
         <!-- Our Values -->
         <section class="about-section">
-            <h2>Our Core Values</h2>
+            <h2>{{ __('about.values_heading') }}</h2>
             <div class="values-grid">
-                <div class="value-card">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h4>Maximum Savings</h4>
-                    <p>We're committed to helping you save as much as possible on every purchase</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Trust & Reliability</h4>
-                    <p>All our deals are verified and updated regularly to ensure they work</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-users"></i>
-                    <h4>Community First</h4>
-                    <p>We believe in building a community of smart shoppers who help each other save</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-rocket"></i>
-                    <h4>Innovation</h4>
-                    <p>Constantly improving our platform to provide the best user experience</p>
-                </div>
+                @foreach(__('about.values') as $value)
+                    <div class="value-card">
+                        <i class="fas {{ $value['icon'] }}"></i>
+                        <h4>{{ $value['title'] }}</h4>
+                        <p>{{ $value['text'] }}</p>
+                    </div>
+                @endforeach
             </div>
         </section>
 
-        <!-- Join Community -->
+        <!-- The Future -->
         <section class="about-section">
-            <h2>@lang('about.heading-18')</h2>
-            <p>@lang('about.heading-19')</p>
+            <h2>{{ __('about.future_heading') }}</h2>
+            <p>{{ __('about.future_intro') }}</p>
+            
+            <div style="background: var(--light-gradient); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">{{ __('about.future_badge') }}</h4>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    @foreach(__('about.future_list') as $item)
+                        <li>{!! $item !!}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </section>
 
-            <h2>@lang('about.heading-20')</h2>
-            <p>@lang('about.heading-21')</p>
-            <p>@lang('about.heading-22')</p>
+        <!-- Your Story Awaits -->
+        <section class="about-section">
+            <h2>{{ __('about.story_heading') }}</h2>
+            <p>{{ __('about.story_text') }}</p>
+            
+            <div style="border-left: 4px solid var(--secondary); padding-left: 2rem; margin: 2rem 0;">
+                <p style="font-style: italic; color: var(--text-secondary);">
+                    {!! __('about.testimonial') !!}
+                </p>
+            </div>
         </section>
 
         <!-- CTA Section -->
         <div class="cta-section">
-            <h3>Ready to Start Saving?</h3>
-            <p>Join thousands of smart shoppers who trust streamcoupon for the best deals and discounts</p>
+            <h3>{{ __('about.cta_title') }}</h3>
+            <p>{{ __('about.cta_text') }}</p>
             <div class="cta-buttons">
-                <a href="{{ route('stores') }}" class="cta-btn primary">
-                    <i class="fas fa-store me-2"></i>Explore Stores
+                <a href="{{ route('stores', ['lang' => app()->getLocale()]) }}" class="cta-btn primary">
+                    <i class="fas fa-store me-2"></i>{{ __('about.cta_primary') }}
                 </a>
-                <a href="{{ route('coupons') }}" class="cta-btn secondary">
-                    <i class="fas fa-tag me-2"></i>View All Coupons
+                <a href="{{ route('coupons', ['lang' => app()->getLocale()]) }}" class="cta-btn secondary">
+                    <i class="fas fa-gift me-2"></i>{{ __('about.cta_secondary') }}
                 </a>
             </div>
+            <p class="mt-3" style="color: var(--text-light); font-size: 0.9rem;">
+                {!! __('about.cta_ps') !!}
+            </p>
         </div>
     </div>
 </div>

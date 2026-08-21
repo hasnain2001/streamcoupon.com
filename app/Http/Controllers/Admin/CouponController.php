@@ -128,7 +128,7 @@ class CouponController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'nullable|string|max:1000',
             'code' => 'nullable|string|max:100',
-            'ending_date' => 'nullable|date|after_or_equal:today',
+            'ending_date' => 'required|date|after_or_equal:today',
             'status' => 'required|boolean',
             'authentication' => 'nullable|string',
             'authentication.*' => 'string',

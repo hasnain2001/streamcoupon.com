@@ -7,13 +7,12 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
     public function edit(Request $request): View
     {
         return view('profile.edit', [
@@ -21,25 +20,48 @@ class ProfileController extends Controller
         ]);
     }
 
-    /**
-     * Update the user's profile information.
-     */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $user = $request->user();
+        $user->fill($request->validated());
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
         }
 
-        $request->user()->save();
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
-    /**
-     * Delete the user's account.
-     */
+
+    public function updateAvatar(Request $request): RedirectResponse
+        {
+            $request->validate([
+                'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            ]);
+
+            $user = $request->user();
+
+            // 1. Delete old avatar if it exists (and is not a default/system avatar)
+            if ($user->avatar && Storage::disk('public')->exists('avatars/' . $user->avatar)) {
+                Storage::disk('public')->delete('avatars/' . $user->avatar);
+            }
+
+            // 2. Generate a filename using the same pattern as your store() method
+            $extension = $request->file('avatar')->getClientOriginalExtension();
+            $filename = Str::slug($user->name) . '-' . time() . '.' . $extension;
+
+            // 3. Store the new file
+            $path = $request->file('avatar')->storeAs('avatars', $filename, 'public');
+
+            // 4. Update the user record (store only the filename)
+            $user->avatar = $filename;
+            $user->save();
+
+            return Redirect::route('profile.edit')->with('status', 'avatar-updated');
+        }
+
     public function destroy(Request $request): RedirectResponse
     {
         $request->validateWithBag('userDeletion', [

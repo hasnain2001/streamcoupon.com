@@ -1,29 +1,30 @@
 <?php
-return [
+ return [
     // nav //
-    'home' => 'Accueil',
-    'contact' => 'Contactez-nous',
-    'blogs' => 'Blogs',
-    'stores' => 'Magasins',
-    'cateories' => 'Catégories',
+    'home' => 'Home',
+    'contact' => 'Contact Us',
+    'blogs' => 'blogs',
+    'stores' =>'stores',
+    'cateories' => 'categories',
     'Coupons' => 'Coupons',
-    'deal' => 'Offre',
-    'Popular-Categories' => 'Catégories populaires',
-    'Featured' => 'En vedette',
-    'New-Arrivals' => 'Nouveautés',
-    'Special-Offers' => 'Offres spéciales',
-    'Dashboard' => 'Tableau de bord',
-    'Login' => 'Connexion',
-    'register' => 'Inscription',
-    'Search here' => 'Rechercher des magasins pour des coupons, des offres...',
+    'deal' => 'deal',
+    'Popular-Categories' =>'Popular Categories',
+    'Featured' => 'Featured',
+    'New-Arrivals' => 'New Arrivals',
+    'Special-Offers' => 'Special Offers',
+    'Dashboard' => 'Dashboard',
+    'Login' => 'Login',
+    'register' =>'Register',
+   'Search here' => 'Search blog here...',
 
-    // footer //
-    'support' => 'Support',
-    'about' => 'À propos',
-    'Privacy Policy' => 'Politique de confidentialité',
-    'Terms of Service' => 'Conditions d\'utilisation',
-    'Imprint' => 'Mentions légales',
-    'Quick Links' => 'Liens rapides',
-    'Company Name. All rights reserved' => 'retailtosave.com. Tous droits réservés',
-    'about-f' => 'Découvrez les meilleurs coupons, offres exclusives et réductions de vos boutiques en ligne préférées.',
-];
+    //footer//
+   'support'=> 'support',
+    'about'=> 'about',
+    'Privacy Policy'=>'Privacy Policy',
+    'Terms of Service' => 'Terms of Service',
+    'Imprint' => "Imprint",
+    'Quick Links' => 'Quick Links',
+    'Company Name. All rights reserved' => 'streamcoupon.com. All rights reserved',
+    'about-f' =>'Discover top coupons, exclusive deals, and discounts from your favorite online stores.',
+
+  ];

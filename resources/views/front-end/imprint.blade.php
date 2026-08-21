@@ -1,163 +1,318 @@
 @extends('layouts.master')
-@section('title', 'Imprint - Legal Information | ' . config('app.name'))
-@section('description', 'Legal information, company details, and contact information for ' . config('app.name') . '. Find our imprint, disclaimer, and legal notices.')
-@section('keywords', 'imprint, legal information, company details, contact, disclaimer, copyright, ' . config('app.name'))
+
+@section('title', __('imprint.meta_title', ['app' => config('app.name')]))
+@section('description', __('imprint.meta_description', ['app' => config('app.name')]))
+@section('keywords', __('imprint.meta_keywords', ['app' => config('app.name')]))
 @section('author', config('app.name'))
+
 @push('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/imprint.css') }}">
 @endpush
+
 @section('content')
 <main>
-    <!-- Hero Section -->
+    {{-- HERO --}}
     <section class="imprint-hero">
-        <div class="container">
-            <div class="imprint-hero-content">
-                <h1>Legal Imprint</h1>
-                <p>Company details, legal information, and contact details</p>
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="mb-3">{{ __('imprint.hero_title') }}</h1>
+                    <p class="lead mb-3">{{ __('imprint.hero_subtitle') }}</p>
+                    <div class="hero-badge">
+                        <i class="fas fa-file-contract"></i> {{ __('imprint.hero_badge') }}
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
+    {{-- MAIN CARD --}}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="imprint-card">
-                    <!-- Card Header -->
+
+                    {{-- HEADER --}}
                     <div class="imprint-header">
-                        <div class="imprint-header-content">
-                            <h2><i class="fas fa-scale-balanced "></i>Legal Information</h2>
+                        <h2><i class="fas fa-home-alt me-2"></i>{{ __('imprint.card_header') }}</h2>
+                        <p class="subtitle">{{ __('imprint.card_subheader') }}</p>
+                    </div>
 
+                    {{-- OPENING NOTE --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <div>
+                            <h4 class="info-title">{{ __('imprint.welcome_title') }}</h4>
+                            <p class="info-content">{{ __('imprint.welcome_text') }}</p>
                         </div>
                     </div>
 
-                    <!-- Company Information -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-building"></i>
+                    {{-- OUR STORY / TEXAS ROOTS --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-map-pin"></i>
                         </div>
-                        <h3 class="info-title">Company Details</h3>
-                        <div class="info-content">
-                            <p class="mb-2"><strong>Streamcoupon Ltd.</strong></p>
-                            <p class="mb-0">Your trusted partner for deals and coupons</p>
-                        </div>
-                    </div>
-
-                    <!-- Address -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3 class="info-title">Registered Address</h3>
-                        <div class="info-content">
-                            <p class="mb-1">3000 Hoffman Dr,</p>
-                            <p class="mb-1">Plano, Tx USA 75074</p>
-                            <p class="mb-0">United States of America</p>
-                        </div>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 class="info-title">Contact Information</h3>
-                        <div class="info-content">
-                            <div class="contact-highlight">
-                                <p class="mb-2">
-                                    <strong>Email:</strong>
-                                    <a href="mailto:contact@streamcoupon.com">contact@streamcoupon.com</a>
-                                </p>
-                                <p class="mb-0">
-                                    <strong>Phone:</strong>
-                                    <a href="tel:+17473651163">+17473651163</a>
-                                </p>
+                        <div>
+                            <h4 class="info-title">{{ __('imprint.texas_title') }}</h4>
+                            <div class="info-content">
+                                <div class="d-flex flex-wrap align-items-center gap-3 bg-soft-primary p-3 rounded-4 border border-soft">
+                                    <div class="display-6 text-primary-dark" style="font-size: 2.8rem;">
+                                        <i class="fas fa-texas"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1 fw-bold text-accent">{{ __('imprint.texas_location') }}</h5>
+                                        <p class="mb-1">{{ __('imprint.texas_text') }}</p>
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary-emphasis px-3 py-2">
+                                            <i class="fas fa-lightbulb me-1"></i> {{ __('imprint.texas_fun_fact') }}
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Legal Details -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-gavel"></i>
+                    {{-- TEAM --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-users-gear"></i>
                         </div>
-                        <h3 class="info-title">Legal Representation</h3>
-                        <div class="info-content">
-                            {{-- <p class="mb-2"><strong>Managing Director:</strong> John Doe</p> --}}
-                            <p class="mb-2"><strong>Commercial Register:</strong> Plano County, HRB 123456</p>
-                            <p class="mb-0"><strong>VAT Identification Number:</strong> US123456789</p>
-                        </div>
-                    </div>
-
-                    <!-- Professional Indemnity -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="info-title">Professional Indemnity Insurance</h3>
-                        <div class="info-content">
-                            <p class="mb-2"><strong>Insurance Provider:</strong> Example Insurance Co.</p>
-                            <p class="mb-2"><strong>Territorial Coverage:</strong> Worldwide</p>
-                            <p class="mb-0"><strong>Policy Number:</strong> EI-987654321</p>
-                        </div>
-                    </div>
-
-                    <!-- Disclaimer -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3 class="info-title">Disclaimer</h3>
-                        <div class="info-content">
-                            <span class="legal-badge">Important Legal Notice</span>
-                            <p class="mb-3">The information contained on this website is for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.</p>
-                            <p class="mb-0">Any reliance you place on such information is therefore strictly at your own risk. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
-                        </div>
-                    </div>
-
-                    <!-- External Links -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                        <h3 class="info-title">External Links Disclaimer</h3>
-                        <div class="info-content">
-                            <p class="mb-3">Through this website you are able to link to other websites which are not under the control of Streamcoupon Ltd. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
-                            <p class="mb-0">Every effort is made to keep the website up and running smoothly. However, Streamcoupon Ltd. takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
+                        <div class="w-100">
+                            <h4 class="info-title">{{ __('imprint.team_title') }}</h4>
+                            <div class="row g-3 mt-1">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-4 bg-white hover-lift">
+                                        <i class="fas fa-user-tie fs-2 text-primary"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.team_legal') }}</h6>
+                                            <small class="text-muted">{{ __('imprint.team_legal_sub') }}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-4 bg-white hover-lift">
+                                        <i class="fas fa-shield-alt fs-2 text-primary"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.team_compliance') }}</h6>
+                                            <small class="text-muted">{{ __('imprint.team_compliance_sub') }}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-4 bg-white hover-lift">
+                                        <i class="fas fa-handshake fs-2 text-primary"></i>
+                                        <div>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.team_partners') }}</h6>
+                                            <small class="text-muted">{{ __('imprint.team_partners_sub') }}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Copyright -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-copyright"></i>
+                    {{-- CONTACT HUB --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-comments"></i>
                         </div>
-                        <h3 class="info-title">Copyright Notice</h3>
-                        <div class="info-content">
-                            <p class="mb-3">© {{ date('Y') }} Streamcoupon Ltd. All rights reserved.</p>
-                            <p class="mb-0">All content, including but not limited to text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Streamcoupon Ltd. or its content suppliers and protected by international copyright laws.</p>
+                        <div class="w-100">
+                            <h4 class="info-title">{{ __('imprint.contact_title') }}</h4>
+                            <p class="text-muted">{{ __('imprint.contact_subtitle') }}</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-4 h-100 bg-white hover-lift">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="fas fa-envelope-open-text fs-4 text-primary"></i>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.contact_email') }}</h6>
+                                        </div>
+                                        <p class="small text-muted">{{ __('imprint.contact_email_text') }}</p>
+                                        <a href="mailto:contact@streamcoupon.com" class="fw-bold text-decoration-none text-primary-dark">
+                                            <i class="fas fa-paper-plane me-1"></i> contact@streamcoupon.com
+                                        </a>
+                                        <div class="mt-2"><span class="badge bg-light text-dark"><i class="far fa-clock me-1"></i> {{ __('imprint.contact_response') }}</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-4 h-100 bg-white hover-lift">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="fas fa-phone-volume fs-4 text-primary"></i>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.contact_phone') }}</h6>
+                                        </div>
+                                        <p class="small text-muted">{{ __('imprint.contact_phone_text') }}</p>
+                                        <a href="tel:+17473651163" class="fw-bold text-decoration-none text-primary-dark">
+                                            <i class="fas fa-phone-alt me-1"></i> +1 (747) 365-1163
+                                        </a>
+                                        <div class="mt-2"><span class="badge bg-light text-dark"><i class="far fa-calendar-alt me-1"></i> {{ __('imprint.contact_hours') }}</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Updates -->
-                    <div class="info-section">
-                        <div class="info-icon">
-                            <i class="fas fa-sync-alt"></i>
+                    {{-- LEGAL BACKBONE --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-book"></i>
                         </div>
-                        <h3 class="info-title">Updates & Changes</h3>
-                        <div class="info-content">
-                            <p class="mb-3">We reserve the right to update or change our imprint information at any time. Any changes will be posted on this page with an updated revision date.</p>
-                            <p class="mb-1"><strong>Last Updated:</strong> {{ date('F j, Y') }}</p>
-                            <p class="mb-0"><strong>Effective Date:</strong> January 1, 2023</p>
+                        <div class="w-100">
+                            <h4 class="info-title">{{ __('imprint.legal_title') }}</h4>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="p-3 bg-soft-primary rounded-4 border border-soft h-100">
+                                        <i class="fas fa-building-columns fs-3 text-primary-dark mb-2"></i>
+                                        <h6 class="fw-bold">{{ __('imprint.legal_registered') }}</h6>
+                                        <p class="small mb-0">{{ __('imprint.legal_registered_text') }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 bg-soft-primary rounded-4 border border-soft h-100">
+                                        <i class="fas fa-file-invoice-dollar fs-3 text-primary-dark mb-2"></i>
+                                        <h6 class="fw-bold">{{ __('imprint.legal_tax') }}</h6>
+                                        <p class="small mb-0">{{ __('imprint.legal_tax_text') }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 bg-soft-primary rounded-4 border border-soft h-100">
+                                        <i class="fas fa-umbrella fs-3 text-primary-dark mb-2"></i>
+                                        <h6 class="fw-bold">{{ __('imprint.legal_insurance') }}</h6>
+                                        <p class="small mb-0">{{ __('imprint.legal_insurance_text') }}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Back to Home -->
+                    {{-- DISCLAIMER / REAL TALK --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <div class="w-100">
+                            <h4 class="info-title">{{ __('imprint.disclaimer_title') }}</h4>
+                            <p>{{ __('imprint.disclaimer_intro') }}</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="fas fa-check-circle text-success fs-4"></i>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.disclaimer_do') }}</h6>
+                                        </div>
+                                        <p class="small mb-0">{{ __('imprint.disclaimer_do_text') }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded-4 bg-white h-100">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="fas fa-exclamation-circle text-warning fs-4"></i>
+                                            <h6 class="fw-bold mb-0">{{ __('imprint.disclaimer_cant') }}</h6>
+                                        </div>
+                                        <p class="small mb-0">{{ __('imprint.disclaimer_cant_text') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 p-3 bg-light rounded-4 d-flex align-items-start gap-3">
+                                <i class="fas fa-hand-holding-heart fs-3 text-primary-dark"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">{{ __('imprint.disclaimer_responsibility') }}</h6>
+                                    <p class="small mb-0">{{ __('imprint.disclaimer_responsibility_text') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- COPYRIGHT --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div>
+                            <h4 class="info-title">{{ __('imprint.copyright_title') }}</h4>
+                            <p class="info-content">{{ __('imprint.copyright_text') }}</p>
+                            <div class="d-flex flex-wrap align-items-center gap-3 p-3 bg-soft-primary rounded-4 border border-soft">
+                                <i class="fas fa-copyright fs-2 text-primary-dark"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-0">© {{ date('Y') }} streamcoupon</h6>
+                                    <p class="small mb-0">{{ __('imprint.copyright_tagline') }}</p>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h6><i class="fas fa-share-alt me-1"></i> {{ __('imprint.copyright_sharing') }}</h6>
+                                <p class="small text-muted">{{ __('imprint.copyright_sharing_text') }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- LIVING DOCUMENT --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div>
+                            <h4 class="info-title">{{ __('imprint.living_title') }}</h4>
+                            <p>{{ __('imprint.living_text') }}</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="p-3 bg-white border rounded-4 flex-grow-1">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fas fa-calendar-check text-primary"></i>
+                                        <span class="fw-bold">{{ date('F j, Y') }}</span>
+                                    </div>
+                                    <h6 class="fw-bold mt-1">{{ __('imprint.living_review') }}</h6>
+                                    <p class="small mb-0">{{ __('imprint.living_review_text') }}</p>
+                                </div>
+                                <div class="p-3 bg-white border rounded-4 flex-grow-1">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fas fa-rocket text-primary"></i>
+                                        <span class="fw-bold">January 1, 2023</span>
+                                    </div>
+                                    <h6 class="fw-bold mt-1">{{ __('imprint.living_beginning') }}</h6>
+                                    <p class="small mb-0">{{ __('imprint.living_beginning_text') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- CLOSING --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4 class="info-title">{{ __('imprint.closing_title') }}</h4>
+                            <p>{{ __('imprint.closing_text_1') }}</p>
+                            <p>{{ __('imprint.closing_text_2') }}</p>
+                            <p class="mt-3 fst-italic">{{ __('imprint.closing_signoff') }}<br><strong>{{ __('imprint.closing_team') }}</strong></p>
+                        </div>
+                    </div>
+
+                    {{-- JOURNEY CONTINUES --}}
+                    <div class="info-section d-flex flex-wrap align-items-start gap-3 border-bottom-0">
+                        <div class="info-icon flex-shrink-0">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="w-100">
+                            <h4 class="info-title">{{ __('imprint.journey_title') }}</h4>
+                            <p class="mb-3">{{ __('imprint.journey_text') }}</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="{{ route('home', ['lang' => app()->getLocale()]) }}" class="btn btn-primary-custom">
+                                    <i class="fas fa-home"></i> {{ __('imprint.journey_btn_deals') }}
+                                </a>
+                                <a href="{{ route('about', ['lang' => app()->getLocale()]) }}" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-semibold">
+                                    <i class="fas fa-users me-1"></i> {{ __('imprint.journey_btn_team') }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- BACK HOME FOOTER --}}
                     <div class="back-home-section">
-                        <a href="{{ url('/') }}" class="btn-primary-custom">
-                            <i class="fas fa-home"></i>Back to Homepage
+                        <p class="text-muted mb-3">{{ __('imprint.back_home_text') }}</p>
+                        <a href="{{ route('home', ['lang' => app()->getLocale()]) }}" class="btn btn-primary-custom">
+                            <i class="fas fa-arrow-left"></i> {{ __('imprint.back_home_btn') }}
                         </a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -166,102 +321,19 @@
 @endsection
 
 @push('scripts')
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Intersection Observer for animations
-    if ('IntersectionObserver' in window) {
-        const sections = document.querySelectorAll('.info-section');
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // subtle fade-in for sections (optional)
+            const sections = document.querySelectorAll('.info-section');
+            sections.forEach((el, i) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(12px)';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 + i * 60);
             });
-        }, {
-            threshold: 0.1
         });
-
-        sections.forEach(section => {
-            sectionObserver.observe(section);
-        });
-
-        // Observe main card
-        const imprintCard = document.querySelector('.imprint-card');
-        const backHomeSection = document.querySelector('.back-home-section');
-
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        if (imprintCard) cardObserver.observe(imprintCard);
-        if (backHomeSection) cardObserver.observe(backHomeSection);
-    }
-
-    // Add ripple effect to button
-    const backButton = document.querySelector('.btn-primary-custom');
-    if (backButton) {
-        backButton.addEventListener('click', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const ripple = document.createElement('span');
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            ripple.classList.add('ripple');
-            this.appendChild(ripple);
-
-            setTimeout(() => ripple.remove(), 600);
-        });
-
-        // Add CSS for ripple effect
-        const style = document.createElement('style');
-        style.textContent = `
-            .ripple {
-                position: absolute;
-                background: rgba(255, 255, 255, 0.7);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.6s linear;
-                pointer-events: none;
-                z-index: 1;
-            }
-
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    // Add page load animation
-    document.body.style.opacity = '0';
-    window.requestAnimationFrame(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    });
-
-    // Highlight email and phone on hover
-    const contactLinks = document.querySelectorAll('.contact-highlight a');
-    contactLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.textDecoration = 'none';
-        });
-
-        link.addEventListener('mouseleave', function() {
-            this.style.textDecoration = 'none';
-        });
-    });
-});
-</script>
+    </script>
 @endpush

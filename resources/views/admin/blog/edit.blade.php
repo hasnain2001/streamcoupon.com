@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 @section('title', 'Edit blog')
 @section('content')
-<div class="row">
+<div class="row text-capitalize">
     <div class="col-12">
         <div class="card">
             <div class="card-header bg-primary text-white">
@@ -22,9 +22,6 @@
                 <form action="{{ route('admin.blog.update', $blog->id) }}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
                     @csrf
                     @method('PUT')
-
-
-
                     <div class="row">
                         <!-- Left Column -->
                         <div class="col-md-6">
@@ -114,20 +111,20 @@
                                         </div>
                                     </div>
                                        <div class="mb-3">
-                                        <label for="store_id" class="form-label"> Add in store <span class="text-danger">*</span></label>
-                                        <select name="store_id" id="store_id" class="form-select" required>
+                                        <label for="store_id" class="form-label text-capitalize"> Add in store <span class="text-danger">*</span></label>
+                                        <select name="store_id" id="store_id" class="form-select text-capitalize" required>
                                             <option value="" disabled>-- Select store --</option>
                                             @foreach ($stores as $store)
                                                 <option value="{{ $store->id }}" data-category="{{ $store->category_id ?? '' }}"
                                                     data-language="{{ $store->language_id ?? '' }}" {{ old('store_id', $blog->store_id) == $store->id ? 'selected' : '' }}>
-                                                    {{ $store->name }}
+                                                    {{ $store->slug }}
                                                 </option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="category_id" class="form-label">Category <span class="text-danger">*</span></label>
-                                        <select name="category_id" id="category_id" class="form-select" required>
+                                        <label for="category_id" class="form-label text-capitalize">Category <span class="text-danger">*</span></label>
+                                        <select name="category_id" id="category_id" class="form-select text-capitalize" required>
                                             <option value="" disabled>-- Select Category --</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}" {{ old('category_id', $blog->category_id) == $category->id ? 'selected' : '' }}>
@@ -137,8 +134,8 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="language_id" class="form-label">Language <span class="text-danger">*</span></label>
-                                        <select name="language_id" id="language_id" class="form-select" required>
+                                        <label for="language_id" class="form-label text-capitalize">Language <span class="text-danger">*</span></label>
+                                        <select name="language_id" id="language_id" class="form-select text-capitalize" required>
                                             <option value="" disabled>-- Select Language --</option>
                                             @foreach ($languages as $language)
                                                 <option value="{{ $language->id }}" {{ old('language_id', $blog->language_id) == $language->id ? 'selected' : '' }}>
@@ -155,7 +152,7 @@
                                         @if($blog->image)
                                             <div class="mt-2">
                                                 <input type="hidden" name="previous_image" value="{{ $blog->image }}">
-                                                <img src="{{ asset('uploads/blogs/' . $blog->image) }}" alt="{{ $blog->name }}" class="img-thumbnail" style="max-width: 200px;">
+                                                <img src="{{ $blog->image_url ?? asset('front/assets/images/no-image-found.jpg') }}" alt="{{ $blog->name }}" class="img-thumbnail" style="max-width: 200px;">
                                                 <div class="form-check mt-2">
                                                     <input class="form-check-input" type="checkbox" name="remove_image" id="remove_image" value="1">
                                                     <label class="form-check-label text-danger" for="remove_image">
@@ -204,7 +201,7 @@
 <!-- end row-->
 @endsection
 
-@section('styles')
+@push('styles')
 <style>
     .card-header.bg-primary {
         color: white;
@@ -239,9 +236,9 @@
         height: auto;
     }
 </style>
-@endsection
+@endpush
 
-@section('scripts')
+@push('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const storeSelect = document.getElementById('store_id');
@@ -347,4 +344,4 @@
                 console.error(error);
             });
     </script>
-@endsection
+@endpush

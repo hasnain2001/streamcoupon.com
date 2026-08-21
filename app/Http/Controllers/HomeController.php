@@ -27,61 +27,88 @@ class HomeController extends Controller
             abort(404, 'Language not found');
         });
 
-        // Filter all models by language_id
-        $stores = Store::select('id', 'name', 'slug', 'category_id', 'image')
-            ->where('language_id', $language->id)
-            ->orderBy('created_at','desc')
-            ->limit(10)
-            ->get();
 
-        $sliders = Slider::where('status', 1)
-            ->where('language_id', $language->id)
-            ->orderBy('sort_order', 'asc')
-            ->where('status', 1)
-            ->get();
-
-        $categories = Category::where('top_category', 1)
-            ->limit(10)
-            ->get();
-
-        $couponscode = Coupon::where('status', 1)
-            ->where('language_id', $language->id)
-            ->orderByRaw('CAST(`top_coupons` AS SIGNED) DESC')
-            ->whereNotNull('code')
-            ->orderBy('created_at','desc')
-            ->limit(12)
-            ->get();
-        $couponsdeal = Coupon::where('status', 1)
-            ->where('language_id', $language->id)
-            ->orderByRaw('CAST(`top_coupons` AS SIGNED) ASC')
-            ->whereNull('code')
-            ->orderBy('created_at','desc')
-             ->limit(12)
-            ->get();
-        $blogs = Blog::orderBy('created_at', 'desc')
+        $latestblogs  = Blog::orderBy('created_at', 'desc')
          ->where('language_id', $language->id)
             ->take(6)
             ->get();
+        $topblogs = Blog::where('top_blog', 1)
+            ->orderBy('created_at', 'desc')
+         ->where('language_id', $language->id)
+            ->take(3)
+            ->get();
+         $fashionBlogs = Blog::whereHas('category', function ($q) {
+                $q->where('slug', 'fashion');
+            })
+            ->where('language_id', $language->id)
+            ->latest()
+            ->take(6)
+            ->get();
+            $GiftBlogs = Blog::whereHas('category', function ($q) {
+                $q->where('slug', 'gifts and flowers');
+            })
+            ->where('language_id', $language->id)
+            ->latest()
+            ->take(6)
+            ->get();
+         $TopStores = Store::where('top_store', 1)
+         ->where('language_id', $language->id)
+            ->get();
+         $sliders = Slider::where('language_id', $language->id)
+         ->where('language_id', $language->id)
+            ->orderBy('sort_order')
+            ->get(); 
 
-        return view('welcome', compact('stores', 'sliders', 'categories', 'couponscode', 'couponsdeal', 'blogs'));
+        return view('welcome', compact('latestblogs', 'topblogs','fashionBlogs','GiftBlogs', 'TopStores','sliders'));
     }
 
     public function stores(Request $request , $lang = 'en')
     {
         app()->setLocale($lang);
-        // Set the locale based on the provided language code
         $language = language::where('code', $lang)->first();
         if (!$language) {
             abort(404, 'Language not found');
         }
-        // Filter stores by language_id
-        $stores = Store::withCount('coupons')
+        $letter = $request->get('letter', 'all');
+        $query = Store::withCount('coupons')
                         ->where('language_id', $language->id)
-                        ->distinct()
-                        ->orderBy('created_at','desc')
-                        ->paginate(40);
+                        ->orderBy('name');
 
-        return view('front-end.stores', compact('stores'));
+        if ($letter && $letter !== 'all') {
+            if ($letter === '#') {
+                $query->whereRaw("LOWER(SUBSTRING(name, 1, 1)) NOT REGEXP '^[a-z]'");
+            } else {
+                $query->where('name', 'LIKE', $letter . '%');
+            }
+        }
+        
+        if ($letter === 'all') {
+            $allStores = $query->get();
+            
+            $stores = $query->paginate(40);
+            
+            $storesByLetter = [];
+            $totalStoresCount = $allStores->count();
+            
+            foreach ($allStores as $store) {
+                $firstChar = strtoupper(substr($store->name, 0, 1));
+                $letterKey = preg_match('/[A-Z]/', $firstChar) ? $firstChar : '#';
+                
+                if (!isset($storesByLetter[$letterKey])) {
+                    $storesByLetter[$letterKey] = [];
+                }
+                
+                $storesByLetter[$letterKey][] = $store;
+            }
+            ksort($storesByLetter);
+            
+            return view('front-end.stores', compact('stores', 'storesByLetter', 'letter', 'totalStoresCount'));
+        }
+
+        $stores = $query->paginate(40);
+        $storesByLetter = null; 
+        
+        return view('front-end.stores', compact('stores', 'storesByLetter', 'letter'));
     }
 
 
@@ -240,7 +267,7 @@ class HomeController extends Controller
         $blogs = Blog::with('language')
             ->where('language_id', $language->id)
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(12);
         return view('front-end.blog', compact('blogs'));
     }
 
@@ -268,7 +295,7 @@ class HomeController extends Controller
                 ->orderBy('created_at', 'desc')
                 ->take(5)
                 ->get();
-        $relatedstores = Store::where('category_id', $blog->category_id)
+        $relatedstores = Store::where('id', $blog->store_id)
         ->where('language_id', $blog->language_id)->get();
 
         return view('front-end.blog_detail', compact('blog', 'relatedBlogs','relatedstores'));
@@ -284,12 +311,12 @@ class HomeController extends Controller
         });
 
         // Filter blogs by language_id and status
-        $coupons = Coupon::with('language')
-            ->where('language_id', $language->id)
-            ->orderBy('created_at', 'desc')
-            ->whereNotNull('code')
-            ->where('status', 1)
-            ->paginate(10);
+            $coupons = Coupon::with(['language', 'stores'])
+                ->where('language_id', $language->id)
+                ->whereNotNull('code')
+                ->where('status', 1)
+                ->orderBy('created_at', 'desc')
+                ->paginate(10);
 
             return view('front-end.coupon', compact('coupons'));
     }

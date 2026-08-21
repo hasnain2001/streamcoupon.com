@@ -1,12 +1,12 @@
-  @foreach ($stores as $store)
+@foreach ($stores as $store)
                                 <tr id="store-row-{{ $store->id }}">
                                     <td><input type="checkbox" class="form-check-input select-checkbox" name="selected[]" value="{{ $store->id }}"></td>
                                     <td><small>{{ $store->id }}</small></td>
                                     <td><small>{{ $store->name }}</small></td>
                                     <td>{{ $store->slug }}</td>
-                                    <td><img src="{{ asset('uploads/stores/' . $store->image) }}" alt="{{ $store->name }}" class="img-thumbnail" width="50" height="50" loading="lazy"></td>
+                                    <td><img src="{{  $store->image_url }}" alt="{{ $store->name }}" class="img-thumbnail" width="50" height="50" loading="lazy"></td>
                                     <td>{{ $store->category->name ?? 'N/A' }}</td>
-                                    <td>{{ $store->network->title ?? 'N/A' }}</td>
+                                    <td>{{ $store->network->name ?? 'N/A' }}</td>
                                     <td>{{ $store->language->name ?? 'N/A' }}</td>
                                     <td>
                                         @if($store->status)
@@ -48,4 +48,4 @@
                                         </a>
                                     </td>
                                 </tr>
-                                @endforeach
+@endforeach

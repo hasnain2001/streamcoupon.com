@@ -19,12 +19,9 @@
                         </ul>
                     </div>
                 @endif
-<form action="{{ route('employee.blog.update', ['Blogs' => $blog->id]) }}" method="POST" enctype="multipart/form-data">
-    @csrf
-    @method('PUT')
-
-
-
+                <form action="{{ route('employee.blog.update', $blog->id) }}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    @csrf
+                    @method('PUT')
                     <div class="row">
                         <!-- Left Column -->
                         <div class="col-md-6">
@@ -155,7 +152,7 @@
                                         @if($blog->image)
                                             <div class="mt-2">
                                                 <input type="hidden" name="previous_image" value="{{ $blog->image }}">
-                                                <img src="{{ asset('uploads/' . $blog->image) }}" alt="{{ $blog->name }}" class="img-thumbnail" style="max-width: 200px;">
+                                                <img src="{{ $blog->image_url }}" alt="{{ $blog->name }}" class="img-thumbnail" style="max-width: 200px;">
                                                 <div class="form-check mt-2">
                                                     <input class="form-check-input" type="checkbox" name="remove_image" id="remove_image" value="1">
                                                     <label class="form-check-label text-danger" for="remove_image">

@@ -3,10 +3,14 @@
 @section('title', 'Blog Details')
 
 @section('content')
-<div class="container-fluid px-4">
+<div class="container-fluid px-4 text-capitalize">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="mt-4">Blog Details</h1>
+
         <div class="btn-group" role="group">
+                    <a href="{{ route('admin.blog.index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left me-1"></i> Back
+        </a>
             <a href="{{ route('admin.blog.edit', $blog->id) }}" class="btn btn-primary">
                 <i class="fas fa-edit me-1"></i> Edit
             </a>
@@ -17,9 +21,10 @@
                     <i class="fas fa-trash me-1"></i> Delete
                 </button>
             </form>
-            <a href="{{ route('admin.blog.index') }}" class="btn btn-secondary">
-                <i class="fas fa-arrow-left me-1"></i> Back
-            </a>
+            <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" class="btn btn-secondary"
+            target="_blank">
+                View on Live <i class="fas fa-arrow-right me-1"></i> 
+        </a>
         </div>
     </div>
 
@@ -28,12 +33,13 @@
             <h3 class="card-title mb-0">{{ $blog->name }}</h3>
             <div class="d-flex justify-content-between align-items-center mt-2">
                 <span class="badge bg-light text-dark">
-                    <i class="fas fa-user me-1"></i> {{ $blog->user->name ?? 'N/A'}}
+                    <i class="fas fa-calendar me-1"></i> Created
+                     {{ $blog->created_at->setTimezone('Asia/Karachi')->format('M d, Y') ?? 'N/A'}}
+                    <i class="fas fa-user me-1"></i> 
+                    {{ $blog->user->name ?? 'N/A'}}
+
                 </span>
-                {{-- <span class="badge bg-light text-dark">
-                    <i class="fas fa-calendar me-1"></i>
-                    {{ $blog->created_at->setTimezone('Asia/Karachi')->format('M d, Y') ?? 'N/A'}}
-                </span> --}}
+
                 @if ($blog->status == '1')
                     <span class="badge bg-success">
                         <i class="fas fa-check-circle me-1"></i> Active
@@ -43,6 +49,22 @@
                         <i class="fas fa-times-circle me-1"></i> Inactive
                     </span>
                 @endif
+                @if ($blog->top_blog == '1')
+                    <span class="badge bg-warning">
+                        <i class="fas fa-star me-1"></i> Top Blog
+                    </span>
+                @endif
+                <span class="badge bg-info">
+                    <i class="fas fa-language me-1"></i>
+                    {{ $blog->language->name ?? 'N/A'}}
+                </span>
+                <span class="badge bg-secondary">
+                    <i class="fas fa-tag me-1"></i>
+                    <i class="fas fa-calendar me-1"></i> Updated
+                     {{ $blog->updated_at->setTimezone('Asia/Karachi')->format('M d, Y') ?? 'N/A'}}
+                     <i class="fas fa-user me-1"></i> 
+                    {{ $blog->updatedby->name ?? 'N/A'}}
+                </span>
             </div>
         </div>
 
@@ -50,18 +72,29 @@
             <!-- Featured Image -->
             <div class="text-center mb-4">
                 <img class="img-fluid rounded shadow"
-                     src="{{ asset('storage/blogs/' . $blog->image) }}"
-                     style="max-height: 400px; width: auto; object-fit: cover;"
-                     alt="{{ $blog->name }}">
+                    src="{{  $blog->image_url }}"
+                    alt="{{ $blog->name }}"
+                    loading="lazy"
+                    onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
             </div>
 
-            <!-- Category and Description -->
+            <!-- Category -->
             <div class="row mb-4">
                 <div class="col-md-6">
                     <div class="card bg-light">
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-tag me-2"></i>Category</h5>
                             <p class="card-text">{{ $blog->category->name ?? 'N/A' }}</p>
+                        </div>
+                    </div>
+                </div>
+<!-- Store -->
+
+                <div class="col-md-6">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-tag me-2"></i>Store</h5>
+                            <p class="card-text">{{ $blog->store->name ?? 'N/A' }}</p>
                         </div>
                     </div>
                 </div>

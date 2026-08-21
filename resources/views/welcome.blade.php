@@ -1,348 +1,320 @@
 @extends('layouts.master')
-@section('title', 'Streamcoupon.com - Verified Promo Codes, Exclusive Discounts & Best Deals ' . date('Y'))
-@section('description', 'Save money with Streamcoupon.com. Discover verified coupon codes, exclusive discount deals, and top store offers updated daily to help you shop smarter.')
-@section('keywords', 'coupon codes, promo codes, discount coupons, deals, offers, voucher codes')
-@section('author', 'john doe')
+
+@section('title', __('welcome.meta_title'))
+@section('description', __('welcome.meta_description'))
+
 @push('styles')
- <link rel="stylesheet" href="{{ asset('assets/css/welcome.css') }}">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- AOS (optional scroll animations) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/welcome.css') }}">
 @endpush
+
 @section('content')
-<main class="text-capitalize">
-        <!-- Hero Slider Section -->
-    <section class="hero-slider">
-        <div class="container px-0 px-md-3">
-            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    @foreach ($sliders as $key => $slider)
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : '' }}" aria-current="{{ $key === 0 ? 'true' : '' }}" aria-label="Slide {{ $key + 1 }}"></button>
-                    @endforeach
-                </div>
-                <div class="carousel-inner rounded-xl">
-                    @foreach ($sliders as $key => $slider)
-                    <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
-                        <a href="{{ $slider->link }}" target="_blank" class="">
-                        <img src="{{ $slider->image ? asset('uploads/slider/' . $slider->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                            class="d-block w-100"
-                            alt="{{ $slider->title }}"
-                            loading="lazy">
-                        <div class="slide-overlay">
-                            <span class="fw-bold mb-2">{{ $slider->title }}</span>
-                            <p class="mb-0">{{ $slider->description }}</p>
-                        </div>
-                    </a>
-                    </div>
-                    @endforeach
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+<!-- ======== HERO SLIDER ======== -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);">
+    <div class="container">
+        <div id="heroSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                @foreach($topblogs as $key => $blog)
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="{{ $key }}" 
+                        class="{{ $key == 0 ? 'active' : '' }}" 
+                        style="background-color: var(--primary); width: 14px; height: 14px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                @endforeach
             </div>
-        </div>
-    </section>
-    <hr class="welcome-hr">
-    <!-- Stores Section -->
-    <section class="stores-section bg-light">
-        <div class="container">
-            <div class="text-center">
-                <div class="">
-                    <h1 class="fw-semibold text-dark">@lang('welcome.H1')</h1>
-                    <p>@lang('welcome.p1')</p>
-                </div>
-            </div>
-            <div class="position-relative">
-                <div class="swiper storesSwiper">
-                    <div class="swiper-wrapper pb-4">
-                        @foreach ($stores as $store)
-                        <div class="swiper-slide">
-                            <div class="card store-card h-100 border-0  overflow-hidden">
-                                <div class="store-image-container p-4">
-                                    <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" class="text-decoration-none text-dark">
-                                        <div class="ratio ratio-1x1">
-                                            <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('front/assets/img/no-image-found.jpg') }}"
-                                                class="img-fluid rounded-circle object-fit-fill shadow"
-                                                alt="{{ $store->name }}"
-                                                loading="lazy"
-                                                onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card-body text-center pt-0">
-                                    <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" class=" text-decoration-none text-dark">
-                                        <small class=" text-nowrap">{{ $store->name }}</small>
-                                    </a>
-                                    <p class="card-text text-muted mb-3">{{ Str::limit($store->description, 100) }}</p>
-                                </div>
+
+            <div class="carousel-inner rounded-4 overflow-hidden shadow-lg">
+                @foreach($topblogs as $key => $blog)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <!-- Mobile -->
+                    <div class="d-block d-lg-none position-relative">
+                        <div class="position-relative">
+                            <div class="category-badge">{{ __('welcome.featured') }}</div>
+                            <img src="{{ $blog->image_url }}" class="img-fluid w-100" alt="{{ $blog->name }}" style="height: 280px; object-fit: cover;">
+                        </div>
+                        <div class="p-4 bg-white">
+                            <span class="trending-badge mb-2 d-inline-block" style="background: var(--accent-gradient); color: white; padding: 4px 16px; border-radius: 30px; font-size:0.75rem; font-weight:600;">@lang('welcome.trending')</span>
+                            <h2 class="h4 fw-bold mt-2">{{ Str::limit($blog->name, 60) }}</h2>
+                            <p class="text-muted">{{ Str::limit(strip_tags($blog->description), 120) }}</p>
+                            <div class="d-flex gap-3 align-items-center mb-3">
+                                <span class="read-time"><i class="far fa-clock me-1"></i> {{ rand(3, 8) }} {{ __('welcome.min_read') }}</span>
+                                <span class="read-time"><i class="far fa-calendar me-1"></i> {{ $blog->created_at->format('M d, Y') }}</span>
                             </div>
-                        </div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-pagination position-relative mt-3"></div>
-                </div>
-
-                <!-- Custom navigation buttons -->
-                <button class="swiper-button-prev text-dark shadow-sm"></button>
-                <button class="swiper-button-next text-dark shadow-sm"></button>
-            </div>
-        </div>
-    </section>
-    <hr class="welcome-hr">
-    <!-- Featured Couponscode Section -->
-    <section class="couponcode container py-2">
-        <div class="text-center mb-5">
-                <div class="coupon-heading">
-                    <h2>@lang('welcome.H2')</h2>
-                </div>
-            </div>
-        <div class="row g-4">
-            @foreach ($couponscode as $coupon)
-            <div class="col-md-6 col-lg-3">
-                <div class="coupon-card position-relative h-100">
-                    <!-- Ribbon Badges -->
-                    <div class="ribbon-wrapper">
-                        <span class="ribbon verified"><i class="fas fa-check-circle me-1"></i> @lang('welcome.Verified')</span>
-                        <span class="ribbon exclusive">@lang('welcome.Exclusive')</span>
-                    </div>
-
-                    <!-- Store image -->
-                    <div class="store-logo text-center mb-3">
-                        <a href="{{ route('store.detail', ['slug' => Str::slug($coupon->stores->slug)]) }}">
-                            <img src="{{ $coupon->stores->image ? asset('uploads/stores/' . $coupon->stores->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                alt="{{ $coupon->stores->name }}"
-                                class="img-fluid store-img"
-                                loading="lazy"
-                                onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
-                        </a>
-                    </div>
-
-                    <!-- Coupon Info -->
-                    <div class="coupon-info px-3">
-                        <h5 class="coupon-title mb-2">{{ $coupon->name }}</h5>
-
-                        <!-- Expiry Info -->
-                        <div class="expiry-badge mb-3">
-                            <span class="badge bg-light text-dark">
-                                <i class="fas fa-clock me-1 text-warning"></i>
-                                @if(\Carbon\Carbon::parse($coupon->ending_date)->isPast())
-                                    Expired
-                                @else
-                                    Expires: {{ \Carbon\Carbon::parse($coupon->ending_date)->format('d M Y') }}
-                                @endif
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Get Code Button -->
-                    @if ($coupon->code)
-                    <div class="code-wrapper px-3 mb-3">
-                        <button class=" get-code-btn "
-                            onclick="handleRevealCode(event, {{ $coupon->id }}, '{{ $coupon->code }}', '{{ $coupon->name }}', '{{ asset('uploads/stores/' . $coupon->stores->image) }}', '{{ $coupon->stores->destination_url }}', '{{ $coupon->stores->name }}')">
-                            <span class="btn-text">Get Code</span>
-
-                            <span class="corner-flag"></span>
-                        </button>
-                    </div>
-                    @else
-                    <div class="code-wrapper px-3 mb-3">
-                        <a href="{{ $coupon->stores->destination_url }}" target="_blank" class=" deal-btn"
-                            onclick="updateClickCount({{ $coupon->id }})">
-                            Get Deal <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                    @endif
-
-                    <!-- Footer Stats -->
-                    <div class="coupon-footer px-3 pb-2">
-                        <div class="d-flex justify-content-between small">
-                            <span class="text-muted"><i class="fas fa-users me-1"></i> {{ $coupon->clicks ?? 0 }} used</span>
-                            <span class="text-success fw-bold"><i class="fas fa-bolt me-1"></i> Active</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </section>
-    <hr class="welcome-hr">
-    <!-- category Section -->
-    <section class="category-section py-2">
-        <div class="container">
-            <div class="text-center mb-5">
-                <div class="category-heading">
-                    <h3 class="fw-bold text-dark">@lang('welcome.H3')</h3>
-                </div>
-            </div>
-
-            <div class="position-relative">
-                <div class="swiper categorySwiper">
-                    <div class="swiper-wrapper pb-4">
-                        @foreach ($categories as $category)
-                        <div class="swiper-slide">
-                            <div class="card category-card h-100 border-0 overflow-hidden">
-                                <div class="category-image-container p-4">
-                                    <a href="{{ route('category.detail', ['slug' => Str::slug($category->slug)]) }}" class="text-decoration-none text-dark">
-                                        <div class="ratio ratio-1x1">
-                                            <img src="{{ $category->image ? asset('uploads/categories/' . $category->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                                class="img-fluid rounded-circle object-fit-fill"
-                                                alt="{{ $category->name }}"
-                                                loading="lazy"
-                                                onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card-body text-center pt-0">
-                                    <a href="{{ route('category.detail', ['slug' => Str::slug($category->slug)]) }}" class="text-decoration-none text-dark">
-                                        <span class="h6 card-title fw-bold mb-4 text-nowrap">{{ $category->name }}</span>
-                                    </a>
-                                    <p class="card-text text-muted mb-3">{{ Str::limit($category->description, 100) }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                    <div class="category-swiper-pagination swiper-pagination position-relative mt-3"></div>
-                </div>
-
-                <!-- Category specific navigation buttons -->
-                <button class="category-swiper-button-prev swiper-button-prev text-dark shadow-sm"></button>
-                <button class="category-swiper-button-next swiper-button-next text-dark shadow-sm"></button>
-            </div>
-        </div>
-    </section>
-
-    <hr class="welcome-hr">
-    <!-- Featured Couponscode Section -->
-    <section class="couponcode container py-2">
-            <div class="text-center mb-5">
-                <div class="coupon-heading">
-                    <h4>@lang('welcome.H4')</h4>
-                </div>
-            </div>
-        <div class="row g-4">
-            @foreach ($couponsdeal as $coupon)
-            <div class="col-md-6 col-lg-3">
-                <div class="coupon-card position-relative h-100">
-                    <!-- Ribbon Badges -->
-                    <div class="ribbon-wrapper">
-                        <span class="ribbon verified"><i class="fas fa-check-circle me-1"></i> @lang('welcome.Verified')</span>
-                        <span class="ribbon exclusive">@lang('welcome.Exclusive')</span>
-                    </div>
-
-                    <!-- Store image -->
-                    <div class="store-logo text-center mb-3">
-                        <a href="{{ route('store.detail', ['slug' => Str::slug($coupon->stores->slug)]) }}">
-                            <img src="{{ $coupon->stores->image ? asset('uploads/stores/' . $coupon->stores->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                alt="{{ $coupon->stores->name }}"
-                                class="img-fluid store-img"
-                                loading="lazy"
-                                onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
-                        </a>
-                    </div>
-
-                    <!-- Coupon Info -->
-                    <div class="coupon-info px-3">
-                        <h5 class="coupon-title mb-2">{{ $coupon->name }}</h5>
-
-                        <!-- Expiry Info -->
-                        <div class="expiry-badge mb-3">
-                            <span class="badge bg-light text-dark">
-                                <i class="fas fa-clock me-1 text-warning"></i>
-                                @if(\Carbon\Carbon::parse($coupon->ending_date)->isPast())
-                                    Expired
-                                @else
-                                    Expires: {{ \Carbon\Carbon::parse($coupon->ending_date)->format('d M Y') }}
-                                @endif
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Get Code Button -->
-                    @if ($coupon->code)
-                    <div class="code-wrapper px-3 mb-3">
-                        <button class=" get-code-btn "
-                            onclick="handleRevealCode(event, {{ $coupon->id }}, '{{ $coupon->code }}', '{{ $coupon->name }}', '{{ asset('uploads/' . $coupon->stores->image) }}', '{{ $coupon->stores->destination_url }}', '{{ $coupon->stores->name }}')">
-                            <span class="btn-text">Get Code</span>
-                            <span class="corner-flag"></span>
-                        </button>
-                    </div>
-                    @else
-                    <div class="code-wrapper px-3 mb-3">
-                        <a href="{{ $coupon->stores->destination_url }}" target="_blank" class=" deal-btn"
-                            onclick="updateClickCount({{ $coupon->id }})">
-                            Get Deal <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                    @endif
-
-                    <!-- Footer Stats -->
-                    <div class="coupon-footer px-3 pb-2">
-                        <div class="d-flex justify-content-between small">
-                            <span class="text-muted"><i class="fas fa-users me-1"></i> {{ $coupon->clicks ?? 0 }} @lang('welcome.used')</span>
-                            <span class="text-success fw-bold"><i class="fas fa-bolt me-1"></i> @if ($coupon->status = 1)
-                            @lang('welcome.active')
-                            @else
-                            @lang('welcome.inactive')
-                            @endif
-                        </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </section>
-    <hr class="welcome-hr">
-    <!-- Blog Section -->
-    <section class="blog-section py-2 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge bg-golden bg-opacity-10 text-white rounded-pill px-3 py-2 mb-3 d-inline-flex align-items-center">
-                    <i class="fas fa-newspaper me-2"></i>@lang('welcome.sp')
-                </span>
-                <h2 class="fw-bold mb-3">@lang('welcome.H5')</h2>
-                <p class="text-muted mb-0">@lang('welcome.blog-p')</p>
-            </div>
-
-            <div class="row g-4">
-                @foreach ($blogs as $blog)
-                <div class="col-lg-4 col-md-6">
-                    <div class="card blog-card h-100 border-0 shadow-sm overflow-hidden transition-all hover-shadow">
-                        <div class="card-img-top position-relative overflow-hidden" style="height: 220px;">
-                        <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}">
-                                <img src="{{ $blog->image ? asset('uploads/blogs/' . $blog->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                    alt="{{ $blog->name }}"
-                                    class="img-fluid w-100 h-100 object-fit-contain transition-scale"
-                                    loading="lazy"
-                                    onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
+                            <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" 
+                               class="btn btn-lg w-100 fw-semibold" 
+                               style="background: var(--primary-gradient); color: white; border: none; border-radius: 50px;">
+                                {{ __('welcome.read_full_article') }} <i class="fas fa-arrow-right ms-2"></i>
                             </a>
-                            <div class="card-img-overlay d-flex align-items-end p-0">
-                                <span class="badge bg-golden bg-opacity-90 position-absolute top-0 end-0 m-3">{{ $blog->category->name ?? 'General' }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Desktop -->
+                    <div class="d-none d-lg-block">
+                        <div class="row g-0 align-items-stretch" style="min-height: 400px;">
+                            <div class="col-lg-7 d-flex align-items-center hero-slide-content p-5 text-white" style="background: var(--primary-gradient); border-radius: 20px 0 0 20px;">
+                                <div>
+                                    <span class="badge bg-white text-primary mb-3 px-4 py-2 rounded-pill fw-semibold">{{ __('welcome.trending') }}</span>
+                                    <h1 class="display-5 fw-bold mb-4">{{ $blog->name }}</h1>
+                                    <p class="lead opacity-90 mb-4">{{ Str::limit(strip_tags($blog->description), 200) }}</p>
+                                    <div class="d-flex gap-3 align-items-center mb-4">
+                                        <span><i class="far fa-clock me-1"></i> {{ rand(3, 8) }} {{ __('welcome.min_read') }}</span>
+                                        <span><i class="far fa-calendar me-1"></i> {{ $blog->created_at->format('M d, Y') }}</span>
+                                    </div>
+                                    <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" 
+                                       class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm">
+                                        {{ __('welcome.read_full_article') }} <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 position-relative">
+                                <div class="category-badge">{{ __('welcome.featured') }}</div>
+                                <img src="{{ $blog->image_url }}" class="img-fluid w-100 h-100" alt="{{ $blog->name }}" style="object-fit: cover; border-radius: 0 20px 20px 0;">
                             </div>
                         </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
 
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <small class="text-muted">
-                                    <i class="far fa-calendar-alt me-2"></i>{{ $blog->created_at->format('M d, Y') }}
-                                </small>
-                                <small class="text-muted ms-3">
-                                    <i class="far fa-clock me-2"></i>{{ ceil(str_word_count($blog->description) / 200) }} min read
-                                </small>
+            <button class="carousel-control-prev d-none d-lg-flex" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon rounded-circle p-3" style="background: rgba(30,138,136,0.2); backdrop-filter: blur(4px);"></span>
+            </button>
+            <button class="carousel-control-next d-none d-lg-flex" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon rounded-circle p-3" style="background: rgba(30,138,136,0.2); backdrop-filter: blur(4px);"></span>
+            </button>
+
+            <!-- Mobile navigation -->
+            <div class="d-flex d-lg-none justify-content-center gap-3 mt-3">
+                <button class="btn btn-sm rounded-circle" style="background: var(--primary); color: white; width: 44px; height: 44px;" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="btn btn-sm rounded-circle" style="background: var(--primary); color: white; width: 44px; height: 44px;" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== STORES SECTION (3 per row) ======== -->
+<section class="stores-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h1 class="display-5 fw-bold text-gradient mb-3">🛍️ {{ __('welcome.store_title') ?? 'Latest Discount Codes & Promo Codes' }}</h1>
+            <p class="lead text-muted">{{ __('welcome.store_description') ?? 'Discover our curated stores offering the best products and services' }}</p>
+        </div>
+
+        <div class="position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper storesSwiper">
+                <div class="swiper-wrapper pb-4">
+                    @foreach ($TopStores as $store)
+                    <div class="swiper-slide">
+                        <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" class="text-decoration-none text-dark">
+                            <div class="card store-card h-100 border-0 shadow-sm overflow-hidden">
+                                @if($loop->index < 3)
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-3 rounded-pill px-3 py-2" style="font-weight:600; letter-spacing:0.5px; box-shadow:0 4px 12px rgba(220,53,69,0.3);">
+                                    🔥 @lang('welcome.trending')
+                                </span>
+                                @endif
+
+                                <div class="store-image-container p-3">
+                                    <div class="ratio ratio-1x1 rounded-circle bg-white shadow-sm p-3 d-flex align-items-center justify-content-center store-image-wrapper">
+                                        <img src="{{ $store->image_url }}" class="img-fluid rounded-circle" alt="{{ $store->name }}" loading="lazy" style="object-fit: contain; width: 100%; height: 100%;" onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center pt-0">
+                                    <h5 class="fw-bold mb-2 text-truncate">{{ $store->name }}</h5>
+                                    <div class="d-flex justify-content-center align-items-center gap-2 mb-2 flex-wrap">
+                                        <span class="badge bg-success bg-opacity-10 text-white rounded-pill px-3 py-2">
+                                            <i class="fas fa-tag me-1"></i> {{ rand(5, 30) }} {{ __('common.deals') }}
+                                        </span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-white rounded-pill px-3 py-2">
+                                            <i class="fas fa-star me-1"></i> {{ rand(4, 5) }}.0
+                                        </span>
+                                    </div>
+                                    <small class="text-muted">
+                                        <i class="far fa-clock me-1"></i> {{ __('common.updated') }} {{ $store->updated_at->diffForHumans() }}
+                                    </small>
+                                </div>
                             </div>
+                        </a>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="swiper-pagination position-relative mt-4"></div>
+            </div>
 
-                            <h5 class="card-title fw-bold mb-3">{{ Str::limit($blog->name, 60) }}</h5>
+            <button class="swiper-button-prev text-dark shadow-sm"></button>
+            <button class="swiper-button-next text-dark shadow-sm"></button>
+        </div>
 
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+            <a href="{{ route('stores', ['lang' => app()->getLocale()]) }}" class="btn btn-lg px-5 py-3 fw-bold rounded-pill text-white" style="background: var(--primary-gradient); border: none; box-shadow: 0 8px 25px rgba(30,138,136,0.3);">
+                {{ __('common.view_all_stores') }} <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
-                            <div class="d-flex align-items-center justify-content-between mt-auto">
-                                <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" class="btn btn-link-golden ">
-                                @lang('welcome.Read More')<i class="fas fa-arrow-right ms-2"></i>
+<!-- ======== FEATURED ARTICLES ======== -->
+<section class="container py-5">
+    <h2 class="section-title fw-bold" style="color: var(--text-primary);" data-aos="fade-right">{{ __('welcome.featured_articles') }}</h2>
+
+    <div class="row g-4">
+        @foreach($topblogs as $blog)
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+            <div class="card article-card h-100 shadow-sm border-0">
+                <div class="position-relative overflow-hidden">
+                    <span class="category-badge">{{ __('welcome.popular') }}</span>
+                    <img src="{{ $blog->image_url }}" class="card-img-top" alt="{{ $blog->title }}" style="height: 220px; object-fit: cover;">
+                </div>
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <small class="text-muted"><i class="far fa-calendar me-1"></i> {{ $blog->created_at->format('M d, Y') }}</small>
+                        <span class="badge rounded-pill px-3 py-2" style="background: rgba(30,138,136,0.1); color: var(--primary); font-weight:600;">{{ __('welcome.featured') }}</span>
+                    </div>
+                    <h4 class="card-title fw-bold mb-3" style="color: var(--text-primary);">{{ Str::limit($blog->name, 60) }}</h4>
+                    <p class="card-text text-muted mb-4">{{ Str::limit(strip_tags($blog->description), 100) }}</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <a href="{{ route('blog.detail',['slug' => Str::slug($blog->slug)]) }}" class="btn btn-sm px-4 py-2 fw-semibold rounded-pill" style="background: var(--primary-gradient); color: white; border: none;">
+                            @lang('common.read_more') <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                        <small class="text-muted"><i class="far fa-clock me-1"></i> {{ rand(3, 8) }} {{ __('welcome.min_read') }}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+<!-- ======== FASHION SECTION ======== -->
+<section class="py-5" style="background: linear-gradient(135deg, #ffffff 0%, var(--light-gray) 100%);">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-right">
+            <h2 class="section-title fw-bold mb-0" style="color: var(--text-primary);">{{ __('welcome.fashion') }}</h2>
+            <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="text-decoration-none fw-semibold" style="color: var(--primary);">
+                {{ __('common.view_all') }} <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+        </div>
+
+        <div class="row g-4">
+            @if($fashionBlogs->first())
+            <div class="col-lg-8" data-aos="fade-up">
+                <div class="card article-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-6 position-relative">
+                            <span class="category-badge">{{ __('welcome.trending') }}</span>
+                            <img src="{{ $fashionBlogs->first()->image_url }}" class="img-fluid h-100 w-100" style="object-fit: cover;" alt="{{ $fashionBlogs->first()->title }}">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body p-4 d-flex flex-column h-100">
+                                <div class="mb-3">
+                                    <span class="badge rounded-pill px-3 py-2 mb-2" style="background: var(--accent-gradient); color: white; font-weight:600;">{{ __('welcome.fashion') }}</span>
+                                    <small class="text-muted d-block"><i class="far fa-calendar me-1"></i> {{ $fashionBlogs->first()->created_at->format('M d, Y') }}</small>
+                                </div>
+                                <h3 class="card-title fw-bold mb-3" style="color: var(--text-primary);">{{ $fashionBlogs->first()->title }}</h3>
+                                <p class="card-text text-muted flex-grow-1">{{ Str::limit(strip_tags($fashionBlogs->first()->description), 180) }}</p>
+                                <a href="{{ route('blog.detail', ['slug' => Str::slug($fashionBlogs->first()->slug)]) }}" class="btn mt-3 px-4 py-2 fw-semibold align-self-start rounded-pill" style="background: var(--primary-gradient); color: white; border: none;">
+                                    {{ __('welcome.read_article') }}
                                 </a>
-                                <div class="d-flex">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
 
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-4" style="color: var(--text-primary);">{{ __('welcome.more_fashion') }}</h5>
+                        <div class="list-group list-group-flush">
+                            @foreach($fashionBlogs->skip(1)->take(4) as $index => $blog)
+                            <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" class="list-group-item list-group-item-action border-0 px-0 py-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="popular-number me-3">{{ $index + 1 }}</div>
+                                    <div>
+                                        <h6 class="fw-semibold mb-1" style="color: var(--text-primary);">{{ Str::limit($blog->title, 45) }}</h6>
+                                        <small class="text-muted"><i class="far fa-clock me-1"></i> {{ rand(3, 8) }} {{ __('welcome.min_read') }}</small>
+                                    </div>
+                                </div>
+                            </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======== GIFT SECTION ======== -->
+<section class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-right">
+        <h2 class="section-title fw-bold mb-0" style="color: var(--text-primary);">{{ __('welcome.gift_ideas_promo') }}</h2>
+        <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="text-decoration-none fw-semibold" style="color: var(--primary);">
+            {{ __('common.view_all') }} <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+    </div>
+
+    <div class="row g-4">
+        @foreach($GiftBlogs as $blog)
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+            <div class="card article-card h-100 border-0 shadow-sm">
+                <div class="position-relative overflow-hidden">
+                    <img src="{{ $blog->image_url }}" class="card-img-top" alt="{{ $blog->title }}" style="height: 220px; object-fit: cover;">
+                    <span class="badge rounded-pill position-absolute top-0 end-0 m-3 px-4 py-2" style="background: var(--secondary); color: white; font-weight:600; box-shadow: 0 4px 12px rgba(106,173,59,0.3);">
+                        {{ __('welcome.gift') }}
+                    </span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <small class="text-muted"><i class="far fa-calendar me-1"></i> {{ $blog->created_at->format('M d, Y') }}</small>
+                        <span class="badge rounded-pill px-3 py-2" style="background: rgba(106,173,59,0.1); color: var(--secondary); font-weight:600;">{{ __('welcome.promo_available') }}</span>
+                    </div>
+                    <h4 class="card-title fw-bold mb-3" style="color: var(--text-primary);">{{ Str::limit($blog->name, 50) }}</h4>
+                    <p class="card-text text-muted mb-4">{{ Str::limit(strip_tags($blog->description), 90) }}</p>
+                    <a href="{{ route('blog.detail',['slug' => Str::slug($blog->slug)]) }}" class="btn btn-sm px-3 py-2 fw-semibold w-100 rounded-pill" style="background: var(--secondary-gradient); color: white; border: none;">
+                        {{ __('welcome.view_deals') }} <i class="fas fa-gift ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+<!-- ======== LATEST ARTICLES & SIDEBAR ======== -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Latest Articles -->
+            <div class="col-lg-8">
+                <h2 class="section-title fw-bold mb-4" style="color: var(--text-primary);" data-aos="fade-right">{{ __('welcome.latest_articles') }}</h2>
+
+                @foreach($latestblogs as $blog)
+                <div class="card mb-4 border-0 shadow-sm latest-article" data-aos="fade-up" data-aos-delay="{{ $loop->index * 50 }}">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ $blog->image_url }}" class="img-fluid rounded-start h-100 w-100" style="object-fit: cover; min-height: 180px;" alt="{{ $blog->title }}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <small class="text-muted"><i class="far fa-calendar me-1"></i> {{ $blog->created_at->format('M d, Y') }}</small>
+                                    <span class="badge rounded-pill px-3 py-2" style="background: rgba(30,138,136,0.1); color: var(--primary); font-weight:600;">{{ __('welcome.new') }}</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-3" style="color: var(--text-primary);">{{ $blog->title }}</h5>
+                                <p class="card-text text-muted mb-3">{{ Str::limit(strip_tags($blog->description), 120) }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" class="text-decoration-none fw-semibold" style="color: var(--primary);">
+                                        {{ __('welcome.read_full_story') }} <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                    <small class="text-muted"><i class="far fa-clock me-1"></i> {{ rand(3, 8) }} {{ __('welcome.min_read') }}</small>
                                 </div>
                             </div>
                         </div>
@@ -351,131 +323,74 @@
                 @endforeach
             </div>
 
-            <div class="text-center mt-5">
-                <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="btn btn-golden px-4 py-2 rounded-pill">
-                    <i class="fas fa-book-open me-2"></i>@lang('welcome.View All Articles')
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-    <!-- Coupon Code Modal -->
-    <div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4 shadow border-0">
-                <!-- Modal Header -->
-                <div class="modal-header position-relative bg-primary text-white border-0 rounded-top-4">
-                    <div class="position-absolute top-0 start-50 translate-middle mt-n4">
-                        <span class="badge bg-danger px-3 py-2 shadow-sm">
-                            <i class="fas fa-bolt me-1"></i> LIMITED TIME
-                        </span>
-                    </div>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Modal Body -->
-                <div class="modal-body text-center py-4 px-5">
-                    <!-- Logo -->
-                    <div class="mb-4">
-                        <img src="" alt="Brand Logo" id="storeImage" class="img-fluid rounded-circle shadow border-4 border-light" style="width: 80px; height: 80px; object-fit: contain;">
-                    </div>
-                    <!-- Title -->
-                    <h5 class="fw-bold text-dark mb-3" id="couponName"></h5>
-                    <!-- Coupon Code Section -->
-                    <div class="bg-light rounded-3 p-3 mb-4">
-                        <p class="small text-muted mb-2">
-                            <i class="fas fa-tag me-1"></i> YOUR COUPON CODE
-                        </p>
-                        <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                            <span id="couponCode" class="fw-bold fs-4 text-dark"></span>
-                            <button class="btn btn-sm btn-outline-primary" onclick="copyToClipboard()">
-                                <i class="fas fa-copy"></i>
-                            </button>
+            <!-- Popular Sidebar -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 20px;">
+                    <div class="card border-0 shadow-sm mb-4" data-aos="fade-left">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4" style="color: var(--text-primary);">
+                                <i class="fas fa-fire text-danger me-2"></i> {{ __('welcome.popular_now') }}
+                            </h5>
+                            <div class="list-group list-group-flush popular-list">
+                                @foreach($latestblogs->take(6) as $index => $blog)
+                                <a href="{{ route('blog.detail', $blog->slug) }}" class="list-group-item list-group-item-action border-0 px-0 py-3">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="popular-number">{{ $index + 1 }}</div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="fw-semibold mb-1" style="color: var(--text-primary);">{{ Str::limit($blog->title, 50) }}</h6>
+                                            <div class="d-flex justify-content-between">
+                                                <small class="text-muted">{{ $blog->created_at->diffForHumans() }}</small>
+                                                <small class="text-primary fw-semibold">{{ rand(100, 999) }} {{ __('welcome.views') }}</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                @endforeach
+                            </div>
                         </div>
-                        <p id="copyMessage" class="small text-success fw-bold mb-0" style="display: none;">
-                            <i class="fas fa-check-circle me-1"></i> Copied to clipboard!
-                        </p>
                     </div>
-                    <!-- Instructions -->
-                    <p class="small text-muted mb-0">
-                        <i class="fas fa-info-circle me-1"></i> Use this code at checkout on
-                        <a href="" id="couponUrl" class="text-decoration-none fw-semibold text-dark"></a>
-                    </p>
-                </div>
-                <!-- Modal Footer -->
-                <div class="modal-footer bg-light rounded-bottom-4 justify-content-center">
-                    <a href="" id="storeLink" target="_blank" class="btn-deal rounded-pill px-4">
-                        <i class="fas fa-external-link-alt me-2"></i> Go to Store
-                    </a>
+
+                    <!-- Newsletter card -->
+                    <div class="card border-0 shadow-sm" style="background: var(--accent-gradient);" data-aos="fade-left" data-aos-delay="100">
+                        <div class="card-body p-4 text-center text-white">
+                            <div class="display-6 mb-3"><i class="fas fa-envelope-open-text"></i></div>
+                            <h5 class="fw-bold mb-3">{{ __('welcome.never_miss_deal') }}</h5>
+                            <p class="mb-4 opacity-75">{{ __('welcome.newsletter_text') }}</p>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control border-0 py-3 rounded-start-pill" placeholder="{{ __('enter_email') }}">
+                                <button class="btn px-4 py-3 fw-semibold rounded-end-pill" style="background: var(--primary-gradient); color: white; border: none;">
+                                    {{ __('subscribe') }}
+                                </button>
+                            </div>
+                            <small class="opacity-75">{{ __('welcome.no_spam') }}</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- ======== NEWSLETTER CTA ======== -->
+<section class="container py-5" data-aos="fade-up">
+    <div class="cta-card text-center text-white">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="fw-bold display-6 mb-3">{{ __('welcome.ready_to_save') }}</h2>
+                <p class="lead opacity-90 mb-4">{{ __('welcome.newsletter_cta_text') }}</p>
+                <a href="#" class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-pill shadow-lg">
+                    {{ __('welcome.explore_all_deals') }} <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
+
 @push('scripts')
-    <script src="{{ asset('assets/js/welcom.js') }}"></script>
-    <script>
-            let couponModal = null;
-
-            document.addEventListener('DOMContentLoaded', function() {
-                couponModal = new bootstrap.Modal(document.getElementById('couponModal'));
-            });
-
-            function handleRevealCode(event, couponId, couponCode, couponName, storeImage, destinationUrl, storeName) {
-                event.preventDefault();
-
-                // Update modal content
-                document.getElementById('couponCode').textContent = couponCode;
-                document.getElementById('couponName').textContent = couponName;
-                document.getElementById('storeImage').src = storeImage;
-                document.getElementById('couponUrl').href = destinationUrl;
-                document.getElementById('couponUrl').textContent = storeName;
-                document.getElementById('storeLink').href = destinationUrl;
-
-                // Update click count
-                updateClickCount(couponId);
-
-                // Show modal
-                if (couponModal) {
-                    couponModal.show();
-                    // Redirect to destination_url after showing modal
-                    setTimeout(function() {
-                        window.open(destinationUrl, '_blank');
-                    }, 500); // Adjust delay as needed
-                } else {
-                    window.open(destinationUrl, '_blank');
-                }
-            }
-
-            function updateClickCount(couponId) {
-                fetch('{{ route("update.clicks") }}', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    body: JSON.stringify({ coupon_id: couponId })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        const usedCountElement = document.getElementById('usedCount' + couponId);
-                        if (usedCountElement) {
-                            usedCountElement.innerHTML = `<i class="fas fa-users me-1"></i> ${data.clicks}`;
-                        }
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-            }
-
-            function copyToClipboard() {
-                const code = document.getElementById('couponCode').textContent;
-                navigator.clipboard.writeText(code).then(() => {
-                    const copyMessage = document.getElementById('copyMessage');
-                    copyMessage.style.display = 'block';
-                    setTimeout(() => {
-                        copyMessage.style.display = 'none';
-                    }, 3000);
-                });
-            }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ asset('assets/js/welcome.js') }}"></script>
 @endpush

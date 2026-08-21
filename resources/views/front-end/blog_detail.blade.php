@@ -1,8 +1,34 @@
 @extends('layouts.master')
-@section('title', $blog->name . ' | ' . config('app.name'))
-@section('description', 'Explore our latest blog post: ' . $blog->name . '. ' . $blog->description)
-@section('keywords', $blog->keywords)
-@section('author', $blog->author ?? 'Unknown')
+
+@section('title')
+  @if ($blog->title)
+      {{ $blog->title }}
+  @else
+        {{ $blog->name }} - {{ config('app.name') }} - {{ date('Y') }}
+  @endif
+@endsection
+
+@section('description')
+  @if ($blog->description)
+    {{ $blog->description }}
+  @else
+    {{ __('blog-detail.meta_description_fallback', [
+        'name' => $blog->name,
+        'app' => config('app.name'),
+        'category' => $blog->category->name ?? __('blog-detail.default_category')
+    ]) }}
+  @endif
+@endsection
+
+@section('keywords')
+    @if ($blog->keywords)
+        {{ $blog->keywords }}
+    @else
+        {{ $blog->name }}, {{ $blog->category->name ?? '' }}, blog, articles, insights, tips, trends, {{ config('app.name') }}
+    @endif
+@endsection
+
+@section('author', $blog->author ?? __('blog-detail.unknown_author'))
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/blog-detail.css') }}">
@@ -16,12 +42,17 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="/" class="text-decoration-none">
-                        <i class="fas fa-home me-1"></i>@lang('nav.home')
+                        <i class="fas fa-home me-1"></i>{{ __('home') }}
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{{ route('category', ['slug' => Str::slug($blog->category->slug)]) }}" class="text-decoration-none">
+                        <i class="fas fa-folder-open me-1"></i> {{ $blog->category->name }}
                     </a>
                 </li>
                 <li class="breadcrumb-item">
                     <a href="{{ route('blog', ['lang' => app()->getLocale()]) }}" class="text-decoration-none">
-                        <i class="fas fa-blog me-1"></i> @lang('nav.blogs')
+                        <i class="fas fa-blog me-1"></i> {{ __('blogs') }}
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
@@ -35,7 +66,7 @@
             <div class="col-12 col-lg-8">
                 <article class="blog-main-card">
                     <div class="blog-image-container">
-                        <img src="{{ $blog->image ? asset('uploads/blogs/' . $blog->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                        <img src="{{ $blog->image_url }}"
                              alt="{{ $blog->name }}"
                              class="blog-image"
                              loading="lazy"
@@ -56,7 +87,7 @@
                             </span>
                             <span class="meta-badge author">
                                 <i class="fas fa-user"></i>
-                                {{ $blog->user->name ?? 'Unknown' }}
+                                {{ $blog->user->name ?? __('blog-detail.unknown_author') }}
                             </span>
                         </div>
 
@@ -68,11 +99,11 @@
             </div>
 
             <div class="col-12 col-lg-4">
-                <!-- Related Stores -->
+                <!-- Related Stores (commented out, but kept for future use) -->
                 <div class="sidebar-card">
                     <div class="card-header">
                         <h5 class="card-title">
-                            <i class="fas fa-store"></i>@lang('message.Related Stores')
+                            <i class="fas fa-store"></i>{{ __('blog-detail.related_stores') }}
                         </h5>
                     </div>
                     <div class="card-body">
@@ -80,7 +111,7 @@
                             <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" 
                                class="text-decoration-none">
                                 <div class="related-item">
-                                    <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                                    <img src="{{ $store->image_url }}"
                                          alt="{{ $store->name }}"
                                          class="item-image"
                                          loading="lazy"
@@ -97,7 +128,7 @@
                         @empty
                             <div class="no-items">
                                 <i class="fas fa-store-slash"></i>
-                                @lang('message.No related stores found.')
+                                {{ __('blog-detail.no_related_stores') }}
                             </div>
                         @endforelse
                     </div>
@@ -107,7 +138,7 @@
                 <div class="sidebar-card">
                     <div class="card-header">
                         <h5 class="card-title">
-                            <i class="fas fa-blog"></i>@lang('message.related blogs')
+                            <i class="fas fa-blog"></i>{{ __('blog-detail.related_blogs') }}
                         </h5>
                     </div>
                     <div class="card-body">
@@ -115,8 +146,8 @@
                             <a href="{{ route('blog.detail', ['slug' => Str::slug($relatedBlog->slug)]) }}" 
                                class="text-decoration-none">
                                 <div class="related-item">
-                                    <img src="{{ $relatedBlog->image ? asset('uploads/blogs/' . $relatedBlog->image) : asset('front/assets/images/no-image-found.jpg') }}"
-                                         alt="{{ $relatedBlog->name }}"
+                                    <img src="{{ $relatedBlog->image_url }}"
+                                         alt="{{ $relatedBlog->name }}"x
                                          class="item-image"
                                          loading="lazy"
                                          onerror="this.src='{{ asset('assets/img/no-image-found.png') }}'">
@@ -132,7 +163,7 @@
                         @empty
                             <div class="no-items">
                                 <i class="fas fa-file-alt"></i>
-                                @lang('message.No related blogs found.')
+                                {{ __('blog-detail.no_related_blogs') }}
                             </div>
                         @endforelse
                     </div>

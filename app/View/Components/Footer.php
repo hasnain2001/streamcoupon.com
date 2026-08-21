@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\App;
 use App\Models\Language;
 use App\Models\Category;
 use App\Models\Store;
+use App\Models\Blog;
 
 
 class Footer extends Component
@@ -17,6 +18,7 @@ class Footer extends Component
     public $currentLang;
     public $allcategories;
     public $populorstores;
+    public $footerblogs;
     /**
      * Create a new component instance.
      */
@@ -33,6 +35,12 @@ class Footer extends Component
             ->where('status', 'enable')
             ->orderByDesc('created_at')
             ->limit(8)
+            ->get();
+        $this->footerblogs = Blog::where('language_id', $languageId)
+            ->where('top_blog', '>', 0)
+            ->where('status', 1)
+            ->orderByDesc('created_at')
+            ->limit(5)
             ->get();
     }
 

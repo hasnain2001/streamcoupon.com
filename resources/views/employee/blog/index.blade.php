@@ -128,10 +128,11 @@
                             <tr>
                                 <th class="border-0">#</th>
                                 <th class="border-0">Blog Info</th>
+                                <th class="border-0">slug</th>
                                 <th class="border-0">Category</th>
                                 <th class="border-0">Status</th>
                                 <th class="border-0">Language</th>
-                                <th class="border-0">Audit Info</th>
+                                <th class="border-0">Store</th>
                                 <th class="border-0 text-center">Actions</th>
                             </tr>
                         </thead>
@@ -145,7 +146,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-3">
                                             <img class="rounded shadow-sm border"
-                                                 src="{{ asset('uploads/' . $blog->image) }}"
+                                                 src="{{ $blog->image_url }}"
                                                  style="width: 50px; height: 50px; object-fit: cover;"
                                                  alt="{{ $blog->name }}"
                                                  onerror="this.src='{{ asset('employee/img/default-blog.png') }}'">
@@ -155,6 +156,9 @@
                                             <small class="text-muted">ID: {{ $blog->id }}</small>
                                         </div>
                                     </div>
+                                </td>
+                                <td class="align-middle">
+                                    <small class="text-muted">{{ Str::limit($blog->slug, 50) }}</small>
                                 </td>
                                 <td class="align-middle">
                                     @if ($blog->category)
@@ -190,24 +194,15 @@
                                     @endif
                                 </td>
                                 <td class="align-middle">
-                                    <div class="audit-info">
-                                        <div class="d-flex align-items-center mb-2">
-
-                                            <div>
-                                                <div class="fw-semibold small">{{ $blog->user->name }}</div>
-                                                <small class="text-muted">{{ $blog->created_at->format('M d, Y') }}</small>
-                                            </div>
-                                        </div>
-                                        @if($blog->updatedby)
-                                        <div class="d-flex align-items-center">
-
-                                            <div>
-                                                <div class="fw-semibold small">{{ $blog->updatedby->name }}</div>
-                                                <small class="text-muted">{{ $blog->updated_at->format('M d, Y') }}</small>
-                                            </div>
-                                        </div>
-                                        @endif
-                                    </div>
+                                    @if(isset($blog->store) && !empty($blog->store->name))
+                                        <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill">
+                                            <i class="fas fa-store me-1"></i>{{ $blog->store->name }}
+                                        </span>
+                                    @else
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary px-3 py-2 rounded-pill">
+                                            <i class="fas fa-store me-1"></i>N/A
+                                        </span>
+                                    @endif
                                 </td>
                                 <td class="align-middle text-center">
                                     <div class="btn-group" role="group">

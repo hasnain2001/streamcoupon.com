@@ -46,7 +46,7 @@
 
                                     <div class="mb-3">
                                         <label for="description" class="form-label text-dark fw-bold">Short Description</label>
-                                        <textarea name="description" id="description" class="form-control" rows="2" placeholder="Brief description of the store" required>{{ old('description') }}</textarea>
+                                        <textarea name="description" id="description" class="form-control" rows="2" placeholder="Brief description of the store" >{{ old('description') }}</textarea>
                                     </div>
 
                                     <div class="mb-3">

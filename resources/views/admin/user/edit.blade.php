@@ -221,15 +221,12 @@
                                     <div class="col-md-4 text-center mb-3 mb-md-0">
                                         <div class="avatar-preview shadow-sm rounded-circle mx-auto position-relative"
                                              style="width: 120px; height: 120px; background: #f8f9fa; border: 2px dashed #dee2e6; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                            @if($user->avatar)
-                                                <img src="{{ asset('storage/' . $user->avatar) }}" alt="Current Avatar" id="avatarPreview" style="width: 100%; height: 100%; object-fit: cover;">
+                                            
+                                                <img src="{{$user->avatar_url }}" alt="Current Avatar" id="avatarPreview" style="width: 100%; height: 100%; object-fit: cover;">
                                                 <div class="position-absolute top-0 end-0 m-1">
                                                     <span class="badge bg-success">Current</span>
                                                 </div>
-                                            @else
-                                                <i class="fas fa-user fa-3x text-muted" id="avatarPreviewIcon"></i>
-                                                <img src="" alt="Avatar Preview" id="avatarPreview" style="display: none; width: 100%; height: 100%; object-fit: cover;">
-                                            @endif
+                                         
                                         </div>
                                         @if($user->avatar)
                                             <div class="mt-2">

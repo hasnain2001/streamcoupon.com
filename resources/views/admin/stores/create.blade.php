@@ -20,7 +20,12 @@
                         </ul>
                     </div>
                 @endif
-
+                 @if(session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <strong>Success!</strong> {{ session('success') }}
+                    </div>
+                @endif
                 <form name="CreateStore" id="CreateStore" method="POST" enctype="multipart/form-data" action="{{ route('admin.store.store') }}">
                     @csrf
                     <div class="row">

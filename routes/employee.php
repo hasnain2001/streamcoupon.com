@@ -23,11 +23,19 @@ Route::middleware(['auth','role:employee'])->prefix('employee')->group(function(
     Route::delete('/blog/deleteSelected', [BlogController::class, 'deleteSelected'])->name('employee.blog.deleteSelected');
 
     Route::resource('/language', LanguageController::class)->names('employee.language');
-     Route::controller(SearchController::class)->name('employee.')->group(function () {
-    Route::get('/search/store', 'searchStores')->name('search.store');
-    Route::get('/search/store/coupons', 'searchStoresCoupons')->name('search.store.coupons');
-    Route::get('/search',  'search')->name('search');
-    Route::get('/search_results',  'searchResults')->name('search_results');
+ Route::controller(SearchController::class)->name('employee.')->group(function () {
+        // Main search routes
+        Route::get('/search', 'search')->name('search');
+        Route::get('/search/results', 'searchResults')->name('search.results');
+        
+        // AJAX search endpoints    
+        Route::get('/search/stores', 'searchStores')->name('search.stores');
+        Route::get('/search/coupons', 'searchCoupons')->name('search.coupons');
+        Route::get('/search/stores-coupons', 'searchStoresCoupons')->name('search.stores-coupons');
+        Route::get('/search/autocomplete', 'autocomplete')->name('search.autocomplete');
+        
+        // Alternative search index (for backward compatibility)
+        Route::get('/search/index', 'searchResults')->name('search.index');
     });
 
 });

@@ -23,7 +23,7 @@
     @stack('styles')
 
 </head>
-<body>
+<body class="text-capitalize">
     <div class="overlay"></div>
     <!-- Sidebar -->
     @include('admin.layouts.sidebar')

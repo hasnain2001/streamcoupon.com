@@ -36,6 +36,11 @@
                                     </button>
                                 </form>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" target="_blank">
+                                    <i class="fas fa-eye me-2"></i> View Store
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -118,7 +123,7 @@
                     <div class="card-body">
                         <div class="text-center mb-4">
                             <img class="img-thumbnail rounded-circle border-4 border-primary shadow-sm"
-                                 src="{{ asset('uploads/stores/' . $store->image) }}"
+                                 src="{{ $store->image_url }}"
                                  style="width: 120px; height: 120px; object-fit: contain;"
                                  loading="lazy"
                                  alt="{{ $store->name }}"

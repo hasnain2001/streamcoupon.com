@@ -1,12 +1,11 @@
 @extends('layouts.master')
-{{-- 🏷️ Page Title --}}
 @section('title')
 @if (!empty($category->meta_title))
     {{ ucwords($category->meta_title) }} | {{ date('Y') }} Coupons, Deals & Offers
 @elseif (!empty($category->title))
     {{ ucwords($category->title) }} | {{ date('Y') }} Coupons & Discount Codes
 @else
-    {{ ucwords($category->name) }} | {{ date('Y') }} Deals, Offers & Promo Codes
+    {{ __('category.meta_title_fallback', ['category' => ucwords($category->name), 'year' => date('Y')]) }}
 @endif
 @endsection
 
@@ -15,8 +14,11 @@
 @if (!empty($category->meta_description))
     {{ ucfirst($category->meta_description) }}
 @else
-    Find the best {{ ucwords($category->name) }} deals and verified discount codes for {{ date('Y') }}.
-    Save money with exclusive {{ strtolower($category->name) }} coupons, vouchers, and promo offers updated daily.
+    {{ __('category.meta_description_fallback', [
+        'category' => ucwords($category->name),
+        'year' => date('Y'),
+        'category_lower' => strtolower($category->name)
+    ]) }}
 @endif
 @endsection
 
@@ -25,9 +27,7 @@
 @if (!empty($category->meta_keywords))
     {{ strtolower($category->meta_keywords) }}
 @else
-    {{ strtolower($category->name) }}, {{ strtolower($category->name) }} coupons,
-    {{ strtolower($category->name) }} promo codes, {{ strtolower($category->name) }} vouchers,
-    discount offers, {{ strtolower($category->name) }} deals, save money online
+    {{ __('category.meta_keywords_fallback', ['category' => strtolower($category->name)]) }}
 @endif
 @endsection
 
@@ -62,7 +62,7 @@
                 <h1 class="text-uppercase">{{ $category->name }}</h1>
                 <div class="stats-badge">
                     <i class="fas fa-store"></i>
-                    {{ $stores->count() }} Stores Available
+                    {{ $relatedblogs->count() }} @lang('category-detail.blogs_available')
                 </div>
             </div>
         </div>
@@ -70,7 +70,12 @@
         <!-- Store Count -->
         <div class="store-count">
             <i class="fas fa-tags"></i>
-            @lang('message.total store') <strong>{{ $stores->count() }}</strong>
+            @lang('category-detail.total_stores') <strong>{{ $stores->count() }}</strong>
+        </div>
+         <!-- Blog Count -->
+        <div class="store-count">
+            <i class="fas fa-tags"></i>
+            @lang('category-detail.total_blogs') <strong> {{ $relatedblogs->count() }}</strong>
         </div>
 
         <!-- Stores Grid -->
@@ -80,7 +85,7 @@
                     <a href="{{ route('store.detail', ['slug' => Str::slug($store->slug)]) }}" class="text-decoration-none">
                         <div class="store-card">
                             <div class="store-img-container">
-                                <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                                <img src="{{ $store->image_url }}"
                                     class="store-img"
                                     alt="{{ $store->name }}"
                                     loading="lazy"
@@ -109,12 +114,12 @@
         <!-- Blog Section -->
         @if($relatedblogs->count() > 0)
             <section class="blog-section">
-                <h2 class="section-title">@lang('message.Shopping Hacks & Savings Tips & Tricks')</h2>
+                <h2 class="section-title">@lang('category-detail.section_title')</h2>
                 <div class="blog-grid">
                     @foreach ($relatedblogs as $blog)
                         <article class="blog-card">
                             <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}">
-                                <img src="{{ asset('uploads/blogs/' . $blog->image) }}" 
+                                <img src="{{ $blog->image_url }}" 
                                      class="blog-img" 
                                      alt="{{ $blog->title }}"
                                      loading="lazy">
@@ -136,143 +141,143 @@
 
 @push('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Image error handling
-    document.querySelectorAll('.store-img').forEach(img => {
-        img.addEventListener('error', function() {
-            this.src = '{{ asset("assets/img/no-image-found.png") }}';
-        });
-    });
-
-    // Intersection Observer for animations
-    if ('IntersectionObserver' in window) {
-        // Observe store cards
-        const storeGrid = document.querySelector('.stores-grid');
-        if (storeGrid) {
-            const gridObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const cards = entry.target.querySelectorAll('.store-card');
-                        cards.forEach((card, index) => {
-                            card.style.animationDelay = `${index * 0.1}s`;
-                        });
-                        gridObserver.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
+    document.addEventListener('DOMContentLoaded', function() {
+        // Image error handling
+        document.querySelectorAll('.store-img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = '{{ asset("assets/img/no-image-found.png") }}';
             });
-            
-            gridObserver.observe(storeGrid);
-        }
+        });
 
-        // Observe store count
-        const storeCount = document.querySelector('.store-count');
-        if (storeCount) {
-            const countObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                    }
+        // Intersection Observer for animations
+        if ('IntersectionObserver' in window) {
+            // Observe store cards
+            const storeGrid = document.querySelector('.stores-grid');
+            if (storeGrid) {
+                const gridObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const cards = entry.target.querySelectorAll('.store-card');
+                            cards.forEach((card, index) => {
+                                card.style.animationDelay = `${index * 0.1}s`;
+                            });
+                            gridObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1
                 });
-            }, {
-                threshold: 0.5
-            });
-            
-            countObserver.observe(storeCount);
-        }
+                
+                gridObserver.observe(storeGrid);
+            }
 
-        // Observe blog section
-        const blogSection = document.querySelector('.blog-section');
-        if (blogSection) {
-            const blogObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                    }
+            // Observe store count
+            const storeCount = document.querySelector('.store-count');
+            if (storeCount) {
+                const countObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                        }
+                    });
+                }, {
+                    threshold: 0.5
                 });
-            }, {
-                threshold: 0.3
-            });
-            
-            blogObserver.observe(blogSection);
-        }
-    }
+                
+                countObserver.observe(storeCount);
+            }
 
-    // Add hover effect to store cards
-    const storeCards = document.querySelectorAll('.store-card');
-    storeCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.zIndex = '10';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.zIndex = '1';
-        });
-    });
-
-    // Add parallax effect to category header
-    const categoryHeader = document.querySelector('.category-header');
-    if (categoryHeader) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            categoryHeader.style.backgroundPosition = `50% ${rate}px`;
-        });
-    }
-
-    // Add page load animation
-    document.body.style.opacity = '0';
-    window.requestAnimationFrame(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    });
-
-    // Add ripple effect to buttons
-    const buttons = document.querySelectorAll('.read-more-btn, .explore-stores-link');
-    buttons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const ripple = document.createElement('span');
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            ripple.classList.add('ripple');
-            this.appendChild(ripple);
-            
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
-
-    // Add CSS for ripple effect
-    const style = document.createElement('style');
-    style.textContent = `
-        .ripple {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 0.6s linear;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
+            // Observe blog section
+            const blogSection = document.querySelector('.blog-section');
+            if (blogSection) {
+                const blogObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                        }
+                    });
+                }, {
+                    threshold: 0.3
+                });
+                
+                blogObserver.observe(blogSection);
             }
         }
-        
-        .read-more-btn,
-        .explore-stores-link {
-            position: relative;
-            overflow: hidden;
+
+        // Add hover effect to store cards
+        const storeCards = document.querySelectorAll('.store-card');
+        storeCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.zIndex = '10';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+
+        // Add parallax effect to category header
+        const categoryHeader = document.querySelector('.category-header');
+        if (categoryHeader) {
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                categoryHeader.style.backgroundPosition = `50% ${rate}px`;
+            });
         }
-    `;
-    document.head.appendChild(style);
-});
+
+        // Add page load animation
+        document.body.style.opacity = '0';
+        window.requestAnimationFrame(() => {
+            document.body.style.transition = 'opacity 0.5s ease';
+            document.body.style.opacity = '1';
+        });
+
+        // Add ripple effect to buttons
+        const buttons = document.querySelectorAll('.read-more-btn, .explore-stores-link');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+                z-index: 1;
+            }
+            
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            .read-more-btn,
+            .explore-stores-link {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+    });
 </script>
 @endpush

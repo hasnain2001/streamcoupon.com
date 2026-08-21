@@ -1,13 +1,14 @@
 @extends('layouts.master')
 
-@section('title', 'Best Categories & Brands Offers ' . date('Y') . ' - Streamcoupon.com')
-@section('description', 'Discover amazing categories with exclusive offers, discounts, and coupons. Find the best deals from top brands and stores in one place.')
-@section('keywords', 'categories, brands, offers, discounts, coupons, deals, shopping, savings')
-@section('author', 'Your Brand Name')
+@section('title', __('categories.meta_title', ['year' => date('Y')]))
+@section('description', __('categories.meta_description'))
+@section('keywords', __('categories.meta_keywords'))
+@section('author', __('categories.meta_author'))
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}">
 @endpush
+
 @section('content')
 <!-- Schema.org Breadcrumb -->
 <nav aria-label="breadcrumb" class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -15,12 +16,12 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="{{ url('/') }}" itemprop="item">
-                    <span itemprop="name">@lang('nav.home')</span>
+                    <span itemprop="name">{{ __('common.home') }}</span>
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
             <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <span itemprop="name">@lang('nav.cateories')</span>
+                <span itemprop="name">{{ __('common.categories') }}</span>
                 <meta itemprop="position" content="2" />
             </li>
         </ol>
@@ -31,10 +32,10 @@
 <header class="page-header" role="banner">
     <div class="container">
         <h1 class="page-title" itemprop="headline">
-            @lang('message.Best Discounts For Every Category')
+            {{ __('categories.page_title') }}
         </h1>
         <p class="page-subtitle" itemprop="description">
-            Discover exclusive offers and amazing deals across all our categories. Save big with our curated collection of discounts and coupons.
+            {{ __('categories.page_subtitle') }}
         </p>
     </div>
 </header>
@@ -48,22 +49,22 @@
                 <i class="fas fa-layer-group"></i>
                 <div>
                     <strong>{{ count($categories) }}</strong>
-                    <span>Categories</span>
+                    <span>{{ __('categories.stat_categories') }}</span>
                 </div>
             </div>
 
             <div class="stat-item">
                 <i class="fas fa-tags"></i>
                 <div>
-                    <strong>Latest {{ date('Y') }}</strong>
-                    <span>Offers</span>
+                    <strong>{{ __('categories.stat_offers', ['year' => date('Y')]) }}</strong>
+                    <span>{{ __('categories.stat_offers_label') }}</span>
                 </div>
             </div>
             <div class="stat-item">
                 <i class="fas fa-percent"></i>
                 <div>
-                    <strong>Verified</strong>
-                    <span>Discounts</span>
+                    <strong>{{ __('categories.stat_verified') }}</strong>
+                    <span>{{ __('categories.stat_discounts') }}</span>
                 </div>
             </div>
         </div>
@@ -76,8 +77,8 @@
                         <div class="category-header">
                             <!-- Category Image -->
                             <div class="category-img-container">
-                                @if ($category->image && file_exists(public_path('storage/categories/' . $category->image)))
-                                    <img src="{{ asset('storage/categories/' . $category->image) }}"
+                                @if ($category->image && file_exists(public_path('storage/categories/' . $category->image_url)))
+                                    <img src="{{ $category->image_url }}"
                                          class="category-img"
                                          alt="{{ $category->name }} - Category Image"
                                          itemprop="image"
@@ -99,16 +100,16 @@
 
                                 <div class="store-count">
                                     <i class="fas fa-store"></i>
-                                    <span>{{ $category->stores()->count()?? 0 }} @lang('nav.stores')</span>
+                                    <span>{{ $category->stores()->count() ?? 0 }} {{ __('common.stores') }}</span>
                                 </div>
 
                                 <meta itemprop="url" content="{{ route('category.detail', ['slug' => Str::slug($category->slug)]) }}">
 
                                 <a href="{{ route('category.detail', ['slug' => Str::slug($category->slug)]) }}"
                                    class="view-more-btn"
-                                   aria-label="Explore {{ $category->name }} category"
+                                   aria-label="{{ __('categories.view_more_aria', ['category' => $category->name]) }}"
                                    itemprop="url">
-                                    <span>@lang('message.View more')</span>
+                                    <span>{{ __('common.view_more') }}</span>
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -120,10 +121,10 @@
 
         <!-- SEO Content Section -->
         <section class="seo-content" aria-labelledby="seo-title">
-            <h2 id="seo-title" class="seo-title">Find the Best Deals Across All Categories</h2>
+            <h2 id="seo-title" class="seo-title">{{ __('categories.seo_title') }}</h2>
             <div class="seo-text">
-                <p>Explore our comprehensive collection of categories featuring exclusive discounts, promotional offers, and money-saving coupons. Whether you're looking for electronics, fashion, home goods, or specialty items, we've curated the best deals from trusted retailers to help you save time and money.</p>
-                <p>Our platform continuously updates offers across all categories to ensure you get access to the latest promotions and discount codes. Browse through our organized categories to find exactly what you're looking for with guaranteed savings.</p>
+                <p>{{ __('categories.seo_text_1') }}</p>
+                <p>{{ __('categories.seo_text_2') }}</p>
             </div>
         </section>
     </div>

@@ -80,11 +80,11 @@
                 </li>
 
                 <li class="menu-title mt-3">Apps</li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('employee.language.index') }}">
                         <i class="fa fa-language" aria-hidden="true"></i> language
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('employee.network.index') }}">
                         <i class="fas fa-network-wired"></i> network

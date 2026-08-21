@@ -1,29 +1,30 @@
 <?php
-return [
+ return [
     // nav //
     'home' => 'Home',
-    'contact' => 'Contacteer ons',
-    'blogs' => 'Blogs',
-    'stores' => 'Winkels',
-    'cateories' => 'Categorieën',
-    'Coupons' => 'Kortingscodes',
-    'deal' => 'Deal',
-    'Popular-Categories' => 'Populaire categorieën',
-    'Featured' => 'Uitgelicht',
-    'New-Arrivals' => 'Nieuwe aankomsten',
-    'Special-Offers' => 'Speciale aanbiedingen',
+    'contact' => 'Contact Us',
+    'blogs' => 'blogs',
+    'stores' =>'stores',
+    'cateories' => 'categories',
+    'Coupons' => 'Coupons',
+    'deal' => 'deal',
+    'Popular-Categories' =>'Popular Categories',
+    'Featured' => 'Featured',
+    'New-Arrivals' => 'New Arrivals',
+    'Special-Offers' => 'Special Offers',
     'Dashboard' => 'Dashboard',
-    'Login' => 'Inloggen',
-    'register' => 'Registreren',
-    'Search here' => 'Zoek winkels voor kortingscodes, deals...',
+    'Login' => 'Login',
+    'register' =>'Register',
+   'Search here' => 'Search blog here...',
 
-    // footer //
-    'support' => 'Ondersteuning',
-    'about' => 'Over ons',
-    'Privacy Policy' => 'Privacybeleid',
-    'Terms of Service' => 'Gebruiksvoorwaarden',
-    'Imprint' => 'Afdruk',
-    'Quick Links' => 'Snelle links',
-    'Company Name. All rights reserved' => 'retailtosave.com. Alle rechten voorbehouden',
-    'about-f' => 'Ontdek topkortingscodes, exclusieve deals en kortingen van je favoriete online winkels.',
-];
+    //footer//
+   'support'=> 'support',
+    'about'=> 'about',
+    'Privacy Policy'=>'Privacy Policy',
+    'Terms of Service' => 'Terms of Service',
+    'Imprint' => "Imprint",
+    'Quick Links' => 'Quick Links',
+    'Company Name. All rights reserved' => 'streamcoupon.com. All rights reserved',
+    'about-f' =>'Discover top coupons, exclusive deals, and discounts from your favorite online stores.',
+
+  ];

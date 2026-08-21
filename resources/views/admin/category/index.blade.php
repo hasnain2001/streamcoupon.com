@@ -13,19 +13,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        {{-- <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="language_filter">Filter by Language:</label>
-                                <select class="form-control" id="language_filter" name="language_id">
-                                    <option value="">All Languages</option>
-                                    @foreach($languages as $language)
-                                        <option value="{{ $language->id }}" {{ $selectedLanguage == $language->id ? 'selected' : '' }}>
-                                            {{ $language->name }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div> --}}
+
                            <!-- Alerts -->
                 @if(session('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -65,8 +53,7 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Slug</th>
-                                    <th>image</th>
-                                    <th>Language</th>
+                                    <th>Image</th>
                                     <th>Status</th>
                                     <th>Created By</th>
                                     <th>Last Updated</th>

@@ -20,13 +20,12 @@
         <div class="d-flex align-items-center">
             <!-- Image -->
             <div class="me-3">
-                <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('images/default-store.png') }}"
-                     alt="{{ $store->name }}"
-                     class="store-image"
-                     width="50"
-                     height="50"
-                     loading="lazy"
-                     onerror="this.onerror=null;this.src='{{ asset('assets/img/no-image-found.png') }}'">
+                <img src="{{ $store->image_url }}"
+                    alt="{{ $store->name }}"
+                    class="store-image"
+                    width="50"
+                    height="50"
+                    loading="lazy">
             </div>
 
             <!-- Name & Slug -->

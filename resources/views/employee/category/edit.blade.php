@@ -50,15 +50,6 @@
                             <label for="meta_keyword" class="form-label fw-semibold">Meta Keyword</label>
                             <input type="text" class="form-control" name="meta_keyword" id="meta_keyword" value="{{ $category->meta_keyword }}">
                         </div>
-                        <div class="col-md-6">
-                            <label for="language" class="form-label fw-semibold">Language</label>
-                            <select name="language_id" id="language" class="form-select">
-                                <option value="">-- Select Language --</option>
-                                @foreach($languages as $language)
-                                    <option value="{{ $language->id }}" {{ $category->language_id == $language->id ? 'selected' : '' }}>{{ $language->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
                         <div class="col-12">
                             <label for="meta_description" class="form-label fw-semibold">Meta Description</label>
                             <textarea name="meta_description" id="meta_description" class="form-control" rows="3" style="resize: none;">{{ $category->meta_description }}</textarea>
@@ -69,7 +60,7 @@
                             @if($category->image)
                                 <input type="hidden" name="previous_image" value="{{ $category->image }}">
                                 <div class="mt-2">
-                                    <img src="{{ asset('uploads/' . $category->image) }}" alt="Current Category Image" class="img-thumbnail" style="max-width: 120px;">
+                                    <img src="{{ $category->image_url }}" alt="Current Category Image" class="img-thumbnail" style="max-width: 120px;">
                                 </div>
                             @else
                                 <p class="text-muted mt-2">No image uploaded</p>

@@ -5,7 +5,7 @@
     <td>{{ $category->slug }}</td>
          <td>
                                     @if($category->image)
-                                    <img src="{{ asset('storage/categories/' . $category->image) }}"
+                                    <img src="{{ $category->image_url }}"
                                          alt="{{ $category->name }}"
                                          width="80"
                                          height="80"
@@ -15,14 +15,7 @@
                                     @else
                                     <span class="text-muted">No image</span>
                                     @endif
-                                </td>
-    <td>
-        @if($category->language)
-            <span class="badge badge-info text-dark">{{ $category->language->name }}</span>
-        @else
-            <span class="badge badge-secondary">N/A</span>
-        @endif
-    </td>
+         </td>
     <td>
         @if($category->status)
             <span class="badge badge-success text-dark">Active</span>
@@ -31,13 +24,13 @@
         @endif
     </td>
   <td>
-        {{ $category->created_at->format('Y-m-d H:i') }}
+       {{ $category->created_at_karachi->format('Y-m-d H:i') }}
         @if($category->user)
             <br><small>by {{ $category->user->name }}</small>
         @endif
     </td>
     <td>
-        {{ $category->updated_at->format('Y-m-d H:i') }}
+        {{ $category->updated_at_karachi->format('Y-m-d H:i') }}
         @if($category->updatedby)
             <br><small>by {{ $category->updatedby->name }}</small>
         @endif

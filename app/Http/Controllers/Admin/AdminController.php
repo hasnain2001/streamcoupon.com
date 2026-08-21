@@ -12,6 +12,7 @@ use App\Models\Category;
 use App\Models\Network;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -47,10 +48,9 @@ class AdminController extends Controller
         ));
     }
 
-
-    /** ---------------------------------------------
-     * USER MANAGEMENT
-     * --------------------------------------------- */
+    /* ---------------------------------------------
+       USER MANAGEMENT
+    --------------------------------------------- */
 
     public function index()
     {
@@ -79,25 +79,29 @@ class AdminController extends Controller
         $user->role  = $request->role;
         $user->password = bcrypt($request->password);
 
-        /** ✅ Upload avatar if exists */
+        // Handle avatar upload using Storage
         if ($request->hasFile('avatar')) {
             $avatarName = Str::slug($request->name) . '-' . time() . '.' . $request->avatar->extension();
-            $request->avatar->move(public_path('uploads/avatar'), $avatarName);
-            $user->avatar = $avatarName;
+            
+            // Store in storage/app/public/avatars
+            $path = $request->avatar->storeAs('avatars', $avatarName, 'public');
+            
+            if ($path) {
+                $user->avatar = $avatarName;
+            }
         }
 
         $user->save();
 
-        return redirect()->route('admin.user.index')->with('success', 'User created successfully.');
+        return redirect()->route('admin.user.index')
+                         ->with('success', 'User created successfully.');
     }
-
 
     public function edit($id)
     {
         $user = User::findOrFail($id);
         return view('admin.user.edit', compact('user'));
     }
-
 
     public function update(Request $request, $id)
     {
@@ -111,47 +115,51 @@ class AdminController extends Controller
 
         $user = User::findOrFail($id);
 
-        /** Basic update fields */
+        // Update basic fields
         $user->name  = $request->name ?? $user->name;
         $user->email = $request->email ?? $user->email;
         $user->role  = $request->role ?? $user->role;
 
-        /** 🔒 Update password only if provided */
+        // Update password if provided
         if ($request->filled('password')) {
             $user->password = bcrypt($request->password);
         }
 
-        /** 🖼 FIXED — update avatar */
+        // Handle avatar update using Storage
         if ($request->hasFile('avatar')) {
-
             // Delete old avatar if exists
-            if ($user->avatar && file_exists(public_path('uploads/avatar/' . $user->avatar))) {
-                unlink(public_path('uploads/avatar/' . $user->avatar));
+            if (!empty($user->avatar)) {
+                Storage::disk('public')->delete('avatars/' . $user->avatar);
             }
 
             $avatarName = Str::slug($user->name) . '-' . time() . '.' . $request->avatar->extension();
-            $request->avatar->move(public_path('uploads/avatar'), $avatarName);
-
-            $user->avatar = $avatarName; // Save to DB
+            
+            // Store new avatar
+            $path = $request->avatar->storeAs('avatars', $avatarName, 'public');
+            
+            if ($path) {
+                $user->avatar = $avatarName;
+            }
         }
 
         $user->save();
 
-        return redirect()->route('admin.user.index')->with('success', 'User updated successfully.');
+        return redirect()->route('admin.user.index')
+                         ->with('success', 'User updated successfully.');
     }
-
 
     public function destroy($id)
     {
         $user = User::findOrFail($id);
 
-        /** Delete avatar file */
-        if ($user->avatar && file_exists(public_path('uploads/avatar/' . $user->avatar))) {
-            unlink(public_path('uploads/avatar/' . $user->avatar));
+        // Delete avatar from storage if exists
+        if (!empty($user->avatar)) {
+            Storage::disk('public')->delete('avatars/' . $user->avatar);
         }
 
         $user->delete();
 
-        return redirect()->route('admin.user.index')->with('success', 'User deleted successfully.');
+        return redirect()->route('admin.user.index')
+                         ->with('success', 'User deleted successfully.');
     }
 }

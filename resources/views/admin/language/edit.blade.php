@@ -64,7 +64,7 @@
                         <label for="flag">Flag Image</label>
                         @if($language->flag)
                             <div class="mb-2">
-                                <img src="{{ Storage::disk('public')->url($language->flag) }}"
+                                <img src="{{ $language->flag_url }}"
                                      alt="{{ $language->name }}"
                                      width="60"
                                      class="rounded border">

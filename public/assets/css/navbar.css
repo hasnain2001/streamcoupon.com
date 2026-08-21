@@ -1518,3 +1518,41 @@
         display: none !important;
     }
 }
+/* Mobile Dropdown Styles */
+.mobile-nav-dropdown {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-dropdown .mobile-nav-link {
+    cursor: pointer;
+}
+
+.mobile-nav-dropdown .mobile-nav-link[aria-expanded="true"] .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-content {
+    padding-left: 50px;
+    background: rgba(30, 138, 136, 0.03);
+}
+
+.mobile-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-item:hover {
+    background: rgba(30, 138, 136, 0.08);
+    padding-left: 25px;
+    color: var(--primary-dark);
+}
+
+.mobile-dropdown-item:last-child {
+    border-bottom: none;
+}

@@ -84,8 +84,8 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
                                     @if ($slider->image)
-                                    <a href="{{ asset('uploads/slider/' . $slider->image) }}" data-fancybox="gallery">
-                                        <img src="{{ asset('uploads/slider/' . $slider->image) }}"
+                                    <a href="{{  $slider->image_url }}" data-fancybox="gallery">
+                                        <img src="{{  $slider->image_url }}"
                                              class="rounded me-2 img-thumbnail"
                                              alt="{{ $slider->title }}"
                                              width="60" height="40"

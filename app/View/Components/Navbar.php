@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 use App\Models\Language;
 use App\Models\Category;
 use App\Models\Store;
+use App\Models\Blog;
 
 class Navbar extends Component
 {
@@ -16,6 +17,7 @@ class Navbar extends Component
     public $currentLang;
     public $allcategories;
     public $populorstores;
+    public $navblogs;
     /**
      * Create a new component instance.
      */
@@ -47,6 +49,12 @@ class Navbar extends Component
             ->orderByDesc('created_at')
             ->limit(8)
             ->get();
+        $this->navblogs = Blog::where('language_id', $languageId)
+            ->where('top_blog', '>', 0)
+            ->where('status', 1)
+            ->orderByDesc('created_at')
+            ->limit(5)
+            ->get();    
     }
 
     /**

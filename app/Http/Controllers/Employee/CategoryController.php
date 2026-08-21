@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -47,18 +48,8 @@ class CategoryController extends Controller
         $category->save(); // save first to get ID
 
         // Handle Image Upload
-        if ($request->hasFile('image')) {
-
-            $file = $request->file('image');
-
-            // Save image using category slug
-            $imageName = $category->slug . '.' . $file->getClientOriginalExtension();
-
-            $file->move(public_path('uploads/categories/'), $imageName);
-
-            // Update DB with filename
-            $category->image = $imageName;
-            $category->save();
+          if ($request->hasFile('image')) {
+            $this->uploadImage($request->file('image'), $category);
         }
 
         return redirect()
@@ -95,20 +86,10 @@ class CategoryController extends Controller
 
         // Handle Image update
         if ($request->hasFile('image')) {
-
             // Delete old image if exists
-            if ($category->image) {
-                $oldPath = public_path('uploads/categories/' . $category->image);
-                if (file_exists($oldPath)) {
-                    unlink($oldPath);
-                }
-            }
-
-            $file = $request->file('image');
-            $imageName = $category->slug . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('uploads/categories/'), $imageName);
-
-            $category->image = $imageName;
+            $this->deleteImage($category);
+            // Upload new image
+            $this->uploadImage($request->file('image'), $category);
         }
 
         $category->save();
@@ -132,5 +113,29 @@ class CategoryController extends Controller
         return redirect()
             ->route('employee.category.index')
             ->with('success', 'Category deleted successfully.');
+    }
+        private function uploadImage($image, Category $category)
+    {
+
+        $imageName = Str::slug($category->slug) . '.' . $image->getClientOriginalExtension();
+        
+        // Store in storage/app/public/categories (matching your existing folder structure)
+        $path = $image->storeAs('categories', $imageName, 'public');
+        
+        // Save only the filename in database
+        $category->update(['image' => $imageName]);
+        
+        return $path;
+    }
+
+    /**
+     * Delete image from storage.
+     */
+    private function deleteImage(Category $category)
+    {
+        if ($category->image) {
+            // Delete from categories folder
+            Storage::disk('public')->delete('categories/' . $category->image);
+        }
     }
 }

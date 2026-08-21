@@ -24,9 +24,9 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <title>hello</title>
-                                        <label for="Title">Title<span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" required>
-                                        @error('title')
+                                        <label for="name">name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}" required>
+                                        @error('name')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
                                     </div>

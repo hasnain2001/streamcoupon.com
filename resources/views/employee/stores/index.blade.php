@@ -103,73 +103,110 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-$(document).ready(function () {
-    // Filter by language
-    $('#languageSelect').on('change', function () {
-        const languageId = $(this).val();
-        fetch(`{{ route('employee.store.index') }}?language_id=${languageId}`, {
-            headers: { 'X-Requested-With': 'XMLHttpRequest' }
-        })
-        .then(response => response.json())
-        .then(data => $('#storeList').html(data.html));
-    });
+    $(document).ready(function () {
+        // Filter by language
+        $('#languageSelect').on('change', function () {
+            const languageId = $(this).val();
+            fetch(`{{ route('employee.store.index') }}?language_id=${languageId}`, {
+                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+            })
+            .then(response => response.json())
+            .then(data => $('#storeList').html(data.html));
+        });
 
-    // Select all checkboxes
-    $('#selectAll').on('click', function () {
-        $('.select-checkbox').prop('checked', this.checked);
-    });
+        // Select all checkboxes
+        $('#selectAll').on('click', function () {
+            $('.select-checkbox').prop('checked', this.checked);
+        });
 
-    // Bulk delete
-    $('#deleteSelected').click(function (e) {
-        e.preventDefault();
-        const selected = $('.select-checkbox:checked').length;
-        if (selected > 0) {
+        // Bulk delete
+        $('#deleteSelected').click(function (e) {
+            e.preventDefault();
+            const selected = $('.select-checkbox:checked').length;
+            if (selected > 0) {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: `You are about to delete ${selected} store(s).`,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Yes, delete them!'
+                }).then(result => {
+                    if (result.isConfirmed) $('#deleteForm').submit();
+                });
+            } else {
+                Swal.fire('No Selection', 'Please select at least one store to delete.', 'info');
+            }
+        });
+
+        // Single delete via anchor tag
+        $(document).on('click', '.delete-store-btn', function () {
+            const id = $(this).data('id');
             Swal.fire({
-                title: 'Are you sure?',
-                text: `You are about to delete ${selected} store(s).`,
+                title: 'Delete Store?',
+                text: 'This action cannot be undone!',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#d33',
                 cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete them!'
-            }).then(result => {
-                if (result.isConfirmed) $('#deleteForm').submit();
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: `/employee/store/${id}`,
+                        type: 'DELETE',
+                        data: { _token: '{{ csrf_token() }}' },
+                        success: function () {
+                            $(`#store-row-${id}`).remove();
+                            Swal.fire('Deleted!', 'Store has been deleted.', 'success');
+                        },
+                        error: function () {
+                            Swal.fire('Error!', 'Something went wrong while deleting.', 'error');
+                        }
+                    });
+                }
             });
-        } else {
-            Swal.fire('No Selection', 'Please select at least one store to delete.', 'info');
-        }
-    });
-
-    // Single delete via anchor tag
-    $(document).on('click', '.delete-store-btn', function () {
-        const id = $(this).data('id');
-        Swal.fire({
-            title: 'Delete Store?',
-            text: 'This action cannot be undone!',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                $.ajax({
-                    url: `/employee/store/${id}`,
-                    type: 'DELETE',
-                    data: { _token: '{{ csrf_token() }}' },
-                    success: function () {
-                        $(`#store-row-${id}`).remove();
-                        Swal.fire('Deleted!', 'Store has been deleted.', 'success');
-                    },
-                    error: function () {
-                        Swal.fire('Error!', 'Something went wrong while deleting.', 'error');
-                    }
-                });
-            }
         });
     });
-});
+        $(document).ready(function () {
+           const table = $('#basic-datatable').DataTable({
+            responsive: true,
+            paging: true,
+            lengthChange: true,
+            searching: true,
+            ordering: true,
+            info: true,
+            autoWidth: false,
+            pageLength: 10
+        });
+
+            // Make table body sortable
+            $('#tablecontents').sortable({
+                items: 'tr.row1',
+                cursor: 'move',
+                opacity: 0.8,
+                handle: '.handle',
+                helper: function(e, tr) {
+                    var $originals = tr.children();
+                    var $helper = tr.clone();
+                    $helper.children().each(function(index) {
+                        $(this).width($originals.eq(index).width());
+                    });
+                    return $helper;
+                },
+                start: function(e, ui){
+                    ui.placeholder.height(ui.item.height());
+                },
+                update: function () {
+                    sendOrderToServer();
+                }
+            });
+
+
+        });
 </script>
+
 @endpush
 
 @push('styles')

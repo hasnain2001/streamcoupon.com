@@ -27,23 +27,23 @@
                 <div class="create-form-section mb-4">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-3">
-                            <form name="CreateStore" id="CreateStore" method="POST" action="{{ route('employee.network.store') }}" class="needs-validation" novalidate>
+                            <form name="CreateNetwork" id="CreateNetwork" method="POST" action="{{ route('employee.network.store') }}" class="needs-validation" novalidate>
                                 @csrf
                                 <div class="row g-2 align-items-end">
                                     <div class="col-md-5">
                                         <div class="form-floating">
                                             <input type="text"
-                                                   class="form-control shadow-sm @error('title') is-invalid @enderror"
-                                                   name="title"
-                                                   id="title"
-                                                   placeholder="Enter network title"
-                                                   value="{{ old('title') }}"
+                                                   class="form-control shadow-sm @error('name') is-invalid @enderror"
+                                                   name="name"
+                                                   id="name"
+                                                   placeholder="Enter network name"
+                                                   value="{{ old('name') }}"
                                                    required>
-                                            <label for="title" class="form-label">
-                                                <i class="fas fa-heading me-2 text-primary"></i>Network Title
+                                            <label for="name" class="form-label">
+                                                <i class="fas fa-heading me-2 text-primary"></i>Network name
                                                 <span class="text-danger">*</span>
                                             </label>
-                                            @error('title')
+                                            @error('name')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
@@ -93,7 +93,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>
-                                    <span class="fw-semibold">{{ $network->title }}</span>
+                                    <span class="fw-semibold">{{ $network->name }}</span>
                                 </td>
                                 <td>
                                     @if($network->status == 1)
@@ -114,7 +114,7 @@
                                         </span>
                                         <span class="text-muted">
                                             <i class="fas fa-user-edit me-1"></i>
-                                            {{ $network->updatedby->name ?? 'N/A'}}
+                                            {{ $network->updatedUser->name ?? 'N/A'}}
                                         </span>
                                     </div>
                                 </td>
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
 })()
 
 // Add loading state to form submission
-document.getElementById('CreateStore').addEventListener('submit', function(e) {
+document.getElementById('CreateNetwork').addEventListener('submit', function(e) {
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
 

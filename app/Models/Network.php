@@ -12,6 +12,17 @@ class Network extends Model
         'user_id',
         'updated_id',
     ];
+    protected $casts = [
+        'status' => 'boolean',
+        'user_id' => 'integer',
+        'updated_id' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
+    protected $dates = [
+        'created_at',
+        'updated_at',
+    ];
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');

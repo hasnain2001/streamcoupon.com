@@ -73,17 +73,6 @@
                                     <small class="text-muted">Recommended size: 800x800px</small>
                                     <div class="mt-2" id="image-preview"></div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="language" class="form-label">Language</label>
-                                    <select name="language_id" id="language" class="form-select" required>
-                                        <option value="">-- Select Language --</option>
-                                        @foreach($languages as $language)
-                                            <option value="{{ $language->id }}">{{ $language->name }}</option>
-                                        @endforeach
-                                    </select>
-                                    <small class="text-muted">Select a language for the category</small>
-                                </div>
-
                             </div>
 
                             <!-- Right Column -->

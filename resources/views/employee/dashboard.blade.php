@@ -258,7 +258,7 @@
                     <div class="recent-stores">
                         @forelse($recentStores as $store)
                         <div class="store-item d-flex align-items-center p-3 border rounded-3 mb-3">
-                            <img src="{{ $store->image ? asset('uploads/stores/' . $store->image) : asset('assets/img/no-image-found.png') }}"
+                            <img src="{{ $store->image_url }}"
                                  alt="{{ $store->name }}"
                                  class="store-avatar rounded-circle me-3"
                                  width="50"
@@ -471,7 +471,7 @@
     }
 
     .store-avatar {
-        object-fit: cover;
+        object-fit: contain;
         border: 2px solid #e9ecef;
     }
 

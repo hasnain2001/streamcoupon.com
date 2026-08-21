@@ -1,38 +1,112 @@
 <?php
 
 return [
-'heading-1' => 'Welcome to streamcoupon: Your Shopping Guru',
+    // Meta
+    'meta_title'       => 'About Us - Best Deals and Discounts :year | :app',
+    'meta_description' => 'Learn more about streamcoupon, your go-to source for the best deals and discounts. Discover our mission, values, and how we help you save more.',
+    'meta_keywords'    => 'deals, discounts, coupons, savings, affiliate marketing',
 
-'heading-2' => ' Tired of paying full price? We hear you! streamcoupon is your trusted companion in the world of discounts, deals, promo codes, bundle offers, and invaluable money-saving tips. We are more than just a website; we empower you to be a smart and informed shopper, making your shopping sprees more fulfilling and budget-friendly.',
-'heading-3' => 'Our Vision: Empowering Smarter Shopping',
-'heading-4'=>'Our mission is clear: to provide a one-stop destination where shoppers can find a diverse range of coupons that cater to their unique needs and preferences. We believe that saving money should be effortless, exciting, and rewarding. By connecting consumers with exclusive offers and partnering with top retailers, we aim to redefine the way people approach online shopping.',
-'heading-5'=>'Unleash Your Savings Potential with streamcoupon',
-'heading-6'=>'',
-'heading-7' => ' Discount Codes',
-'heading-8'=> ' We curate and provide a wide range of discount codes from your favorite brands and retailers.',
-'heading-9' =>'2. Deals and Promotions',
-'heading-10' => 'Discover the latest and hottest deals on streamcoupon. Save big on everything you need and love.',
-'heading-11' => '3. Bundle Offers',
+    // Header
+    'header_title'     => 'The Story Behind Your Savings: Welcome to streamcoupon',
+    'header_subtitle'  => 'Where Every Deal Tells a Story and Every Savings Has a Journey',
 
-'heading-12' =>'Save even more by exploring our bundle offers. Find fantastic deals on complementary products.',
-'heading-13' => '4.Product Comparisons',
-'heading-14' => 'Making informed decisions is crucial when shopping. We offer detailed product comparisons to help you choose the best option that fits your needs and budget.',
-'heading-15' => '',
-'heading-16'=>'Why Make streamcoupon Your Shopping Ally?',
-'heading-17' => '',
-'Access promotions you wont find anywhere else' =>'Trustworthy Information',
-'Personalized Recommendations:' => 'Diverse Range of Deals',
-'Tailored deals based on your preferences.' =>'Tailored deals based on your preferences.',
-'Real-Time Savings:'=>'Real-Time Savings:',
-'Stay ahead with the latest and most up-to-date coupons.'=> 'Stay ahead with the latest and most up-to-date coupons.',
-'Community Engagement:'=> 'Community and Support',
-' Connect with fellow savers, share tips, and celebrate your successes.'=>' Connect with fellow savers, share tips, and celebrate your successes.',
-'heading-18' =>'',
-'heading-19' => '',
-'heading-20' => '',
-'heading-21'  => '',
-'heading-22' => '',
+    // Breadcrumb
+    'breadcrumb'       => 'Our Story',
 
+    // Page heading
+    'page_heading'     => 'From Frustration to Celebration: The streamcoupon Journey',
 
+    // Introduction
+    'intro_heading'    => 'The Day That Changed Everything',
+    'intro_text'       => 'It started with a simple online shopping experience that turned into a wild goose chase for savings. I remember spending hours scouring the internet for a working coupon code, only to find expired offers, broken links, and empty promises. That frustration sparked an idea: <strong>What if there was one place where all deals were verified, updated, and actually worked?</strong>',
+    'intro_text_2'     => 'streamcoupon was born from that moment of frustration. What began as a personal spreadsheet of working coupons has transformed into a thriving community of smart shoppers who\'ve collectively saved millions.',
 
+    // Mission & Vision
+    'mission_title'    => 'Our Mission',
+    'mission_text'     => 'To transform shopping from a chore into a celebration of smart decisions. We\'re not just about saving money—we\'re about <strong>giving you back the most precious resource: your time</strong>.',
+    'vision_title'     => 'Our Vision',
+    'vision_text'      => 'Imagine a world where no one pays full price. Where every purchase feels like a victory. That\'s the world we\'re building—one coupon, one smile, one saved dollar at a time.',
+
+    // What Sets Us Apart
+    'different_heading' => 'Why We\'re Different: The Human Touch in a Digital World',
+    'different_intro'   => 'In an age of automated deal aggregators, we\'ve chosen a different path. Here\'s what makes our approach special:',
+
+    'detectives_title' => 'The Deal Detectives',
+    'detectives_text'  => 'We don\'t just collect coupons; we curate them. Our team of shopping enthusiasts personally tests and verifies every single offer before it goes live. Think of us as your personal shopping assistant who\'s always on the hunt for the next great deal.',
+
+    'community_title'  => 'Community-Powered Savings',
+    'community_text'   => 'Some of our best finds come from our amazing community members. When you share a working coupon with us, you\'re not just helping yourself—you\'re helping thousands of fellow shoppers. It\'s like having millions of eyes looking out for deals 24/7.',
+
+    'sauce_title'      => 'The "Secret Sauce"',
+    'sauce_text'       => 'Through years of experience, we\'ve developed relationships with hundreds of brands. These partnerships mean we often get early access to sales, exclusive coupon codes you won\'t find anywhere else, and special perks just for our community members.',
+
+    'beyond_title'     => 'Beyond the Numbers',
+    'beyond_text'      => 'We track more than just savings. We celebrate the <strong>stories behind those savings</strong>: the student who could afford textbooks, the family that stretched their budget further, the small business that got the equipment they needed. Every statistic has a human story.',
+
+    // Why Choose
+    'why_heading'      => 'Join the Smart Shopping Revolution',
+    'why_intro'        => 'Becoming a streamcoupon member isn\'t just about accessing deals—it\'s about joining a movement of intentional, savvy consumers who value both quality and savings.',
+    'features'         => [
+        '<strong>Early Bird Access:</strong> Be the first to know about flash sales and limited-time offers',
+        '<strong>Personalized Discovery:</strong> Our algorithm learns your preferences to surface deals you\'ll actually love',
+        '<strong>Verified Quality:</strong> Every deal is hand-checked for validity and value',
+        '<strong>Community Wisdom:</strong> Access real reviews and shopping tips from actual users',
+        '<strong>Sustainability Focus:</strong> We promote brands that value quality and longevity over fast fashion',
+    ],
+
+    // Stats
+    'stats_title'      => 'Savings That Tell a Story',
+    'stats_subtitle'   => 'These numbers represent real people, real purchases, and real impact',
+    'stat_shoppers'    => 'Smart Shoppers',
+    'stat_deals'       => 'Verified Deals',
+    'stat_savings'     => 'Community Savings',
+    'stat_partners'    => 'Trusted Partners',
+
+    // Values
+    'values_heading'   => 'The Principles That Guide Us',
+    'values'           => [
+        [
+            'icon'  => 'fa-hand-holding-heart',
+            'title' => 'Transparency First',
+            'text'  => 'No hidden fees, no misleading offers. We believe in clear, honest communication about every deal.',
+        ],
+        [
+            'icon'  => 'fa-seedling',
+            'title' => 'Sustainable Savings',
+            'text'  => 'We promote quality over quantity, helping you make purchases that last and reduce waste.',
+        ],
+        [
+            'icon'  => 'fa-hands-helping',
+            'title' => 'Community First',
+            'text'  => 'When one of us saves, we all celebrate. Our platform grows through shared success.',
+        ],
+        [
+            'icon'  => 'fa-lightbulb',
+            'title' => 'Continuous Learning',
+            'text'  => 'We\'re constantly evolving based on your feedback and changing shopping trends.',
+        ],
+    ],
+
+    // The Future
+    'future_heading'   => 'What\'s Next on Our Journey',
+    'future_intro'     => 'We\'re not done yet. In the coming months, you can expect:',
+    'future_badge'     => 'Coming Soon:',
+    'future_list'      => [
+        '<strong>Personal Savings Assistant:</strong> AI-powered deal matching based on your shopping habits',
+        '<strong>Local Deals Network:</strong> Connecting you with savings at nearby brick-and-mortar stores',
+        '<strong>Sustainability Score:</strong> Helping you make eco-friendly purchasing decisions',
+        '<strong>Community Challenges:</strong> Fun savings goals with real rewards',
+    ],
+
+    // Your Story
+    'story_heading'    => 'Your Savings Story Starts Here',
+    'story_text'       => 'Every great journey begins with a single step. Yours started when you landed on this page. Now it\'s time to write your savings story.',
+    'testimonial'      => '"I used to dread online shopping. Now, with streamcoupon, it feels like a treasure hunt where I always win. Last month alone, I saved enough for a weekend getaway!"<br><strong style="color: var(--primary);">- Sarah M., streamcoupon member since 2022</strong>',
+
+    // CTA
+    'cta_title'        => 'Ready to Write Your Savings Story?',
+    'cta_text'         => 'Join thousands who\'ve turned shopping from a necessity into an adventure. Your next great deal—and your next great story—awaits.',
+    'cta_primary'      => 'Explore Featured Stores',
+    'cta_secondary'    => 'Discover Today\'s Best Deals',
+    'cta_ps'           => 'P.S. Check back often—new stories (and savings) are added daily!',
 ];

@@ -141,7 +141,7 @@
                                             <option value="" disabled {{ !$store->network_id ? 'selected' : '' }}>-- Select Network --</option>
                                             @foreach ($networks as $network)
                                                 <option value="{{ $network->id }}" {{ $store->network_id == $network->id ? 'selected' : '' }}>
-                                                    {{ $network->title }}
+                                                    {{ $network->name }}
                                                 </option>
                                             @endforeach
                                         </select>
@@ -180,7 +180,7 @@
                                         @if($store->image)
                                             <div class="mt-2">
                                                 <input type="hidden" name="previous_image" value="{{ $store->image }}">
-                                                <img src="{{ asset('uploads/' . $store->image) }}" alt="Current Store Image" class="img-thumbnail" style="max-width: 200px;">
+                                                <img src="{{ $store->image_url }}" alt="Current Store Image" class="img-thumbnail" style="max-width: 200px;">
 
                                             </div>
                                         @else

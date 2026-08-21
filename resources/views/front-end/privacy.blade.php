@@ -1,8 +1,9 @@
 @extends('layouts.master')
-@section('title', 'Privacy Policy')
-@section('description', 'Read our privacy policy to understand how we handle your data and protect your privacy.')
-@section('keywords', 'privacy, policy, data protection')
-@section('author', 'John Doe')
+
+@section('title', __('privacy.meta_title'))
+@section('description', __('privacy.meta_description'))
+@section('keywords', __('privacy.meta_keywords'))
+@section('author', __('privacy.meta_author'))
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/privacy.css') }}">
@@ -13,10 +14,10 @@
 <div class="privacy-header">
     <div class="container">
         <div class="privacy-header-content">
-            <h1>Privacy Policy</h1>
-            <p class="lead">Your privacy is important to us. Learn how we protect and handle your data.</p>
+            <h1>{{ __('privacy.header_title') }}</h1>
+            <p class="lead">{{ __('privacy.header_subtitle') }}</p>
             <div class="last-updated">
-                <i class="fas fa-calendar-alt me-2"></i>Last updated on {{ now()->format('F d, Y') }}
+                <i class="fas fa-history me-2"></i>{{ __('privacy.last_updated', ['date' => now()->format('F d, Y')]) }}
             </div>
         </div>
     </div>
@@ -30,18 +31,24 @@
             <div class="card policy-card">
                 <!-- Card Header -->
                 <div class="card-header policy-card-header">
-                    <i class="fas fa-shield-alt policy-icon"></i>
-                    <h2>Your Data Protection & Privacy</h2>
+                    <i class="fas fa-user-shield policy-icon"></i>
+                    <h2>{{ __('privacy.card_title') }}</h2>
+                    <p class="card-subtitle">{{ __('privacy.card_subtitle') }}</p>
                 </div>
 
                 <!-- Card Body -->
                 <div class="card-body policy-card-body">
-                    <!-- Information Alert -->
-                    <div class="alert policy-alert">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-info-circle me-3"></i>
-                            <div>
-                                <strong>Transparency Matters:</strong> This policy explains how we collect, use, and protect your information in clear, simple terms.
+                    <!-- Opening Note -->
+                    <div class="author-note">
+                        <div class="note-header">
+                            <i class="fas fa-quote-left"></i>
+                            <h4>{{ __('privacy.note_title') }}</h4>
+                        </div>
+                        <div class="note-content">
+                            <p>{{ __('privacy.note_text') }}</p>
+                            <div class="author-signature">
+                                <strong>{{ __('privacy.note_author_name') }}</strong>
+                                <span>{{ __('privacy.note_author_title') }}</span>
                             </div>
                         </div>
                     </div>
@@ -52,19 +59,35 @@
                         <div class="policy-section">
                             <div class="section-header">
                                 <div class="section-icon primary">
-                                    <i class="fas fa-database"></i>
+                                    <i class="fas fa-handshake"></i>
                                 </div>
-                                <h3 class="section-title">Information We Collect</h3>
+                                <h3 class="section-title">{{ __('privacy.collection_title') }}</h3>
                             </div>
                             <div class="section-content">
-                                <p>We collect information that helps us provide better services and improve your experience. This includes:</p>
-                                <ul>
-                                    <li><strong>Personal Information:</strong> Name, email address, and contact details when you register or contact us</li>
-                                    <li><strong>Usage Data:</strong> How you interact with our website, pages visited, and features used</li>
-                                    <li><strong>Technical Information:</strong> Browser type, device information, and IP address for security purposes</li>
-                                    <li><strong>Communication Data:</strong> Messages, feedback, and inquiries you send to us</li>
-                                </ul>
-                                <p>We only collect information that's necessary to provide our services and enhance your experience.</p>
+                                <p>{{ __('privacy.collection_intro') }}</p>
+                                
+                                <div class="info-blocks">
+                                    <div class="info-block">
+                                        <i class="fas fa-user-circle"></i>
+                                        <h5>{{ __('privacy.collection_essentials_title') }}</h5>
+                                        <p>{{ __('privacy.collection_essentials_text') }}</p>
+                                    </div>
+                                    <div class="info-block">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h5>{{ __('privacy.collection_learning_title') }}</h5>
+                                        <p>{{ __('privacy.collection_learning_text') }}</p>
+                                    </div>
+                                    <div class="info-block">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <h5>{{ __('privacy.collection_safety_title') }}</h5>
+                                        <p>{{ __('privacy.collection_safety_text') }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="privacy-tip">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p><strong>{{ __('privacy.tip_label') }}</strong> {{ __('privacy.tip_text') }}</p>
+                                </div>
                             </div>
                         </div>
 
@@ -72,21 +95,50 @@
                         <div class="policy-section">
                             <div class="section-header">
                                 <div class="section-icon success">
-                                    <i class="fas fa-cogs"></i>
+                                    <i class="fas fa-magic"></i>
                                 </div>
-                                <h3 class="section-title">How We Use Your Information</h3>
+                                <h3 class="section-title">{{ __('privacy.usage_title') }}</h3>
                             </div>
                             <div class="section-content">
-                                <p>Your information helps us deliver excellent service and improve our platform. We use it to:</p>
-                                <ul>
-                                    <li>Respond to your inquiries and provide personalized customer support</li>
-                                    <li>Process transactions and deliver the services you request</li>
-                                    <li>Improve our website functionality and user experience</li>
-                                    <li>Send important updates about our services (you can opt-out anytime)</li>
-                                    <li>Protect against fraud and ensure platform security</li>
-                                    <li>Analyze usage patterns to enhance our offerings</li>
-                                </ul>
-                                <p class="highlight-text">We do not and will never sell your personal information to third parties.</p>
+                                <p>{{ __('privacy.usage_intro') }}</p>
+                                
+                                <div class="usage-examples">
+                                    <div class="example-card">
+                                        <div class="example-icon">
+                                            <i class="fas fa-bell"></i>
+                                        </div>
+                                        <div class="example-content">
+                                            <h6>{{ __('privacy.usage_notifications_title') }}</h6>
+                                            <p>{{ __('privacy.usage_notifications_text') }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="example-card">
+                                        <div class="example-icon">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                        <div class="example-content">
+                                            <h6>{{ __('privacy.usage_discovery_title') }}</h6>
+                                            <p>{{ __('privacy.usage_discovery_text') }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="example-card">
+                                        <div class="example-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="example-content">
+                                            <h6>{{ __('privacy.usage_community_title') }}</h6>
+                                            <p>{{ __('privacy.usage_community_text') }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="policy-promise">
+                                    <i class="fas fa-hand-paper"></i>
+                                    <div class="promise-content">
+                                        <h5>{{ __('privacy.promise_title') }}</h5>
+                                        <p><strong>{{ __('privacy.promise_text') }}</strong></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -94,20 +146,48 @@
                         <div class="policy-section">
                             <div class="section-header">
                                 <div class="section-icon warning">
-                                    <i class="fas fa-lock"></i>
+                                    <i class="fas fa-fortress-alt"></i>
                                 </div>
-                                <h3 class="section-title">Data Security & Protection</h3>
+                                <h3 class="section-title">{{ __('privacy.security_title') }}</h3>
                             </div>
                             <div class="section-content">
-                                <p>We take your data security seriously and implement robust measures to protect it:</p>
-                                <ul>
-                                    <li><strong>Encryption:</strong> All sensitive data is encrypted during transmission and storage</li>
-                                    <li><strong>Secure Servers:</strong> Your information is stored on protected servers with limited access</li>
-                                    <li><strong>Access Controls:</strong> Strict internal policies control who can access your data</li>
-                                    <li><strong>Regular Audits:</strong> We conduct security assessments to maintain protection standards</li>
-                                    <li><strong>Employee Training:</strong> Our team is trained in data protection best practices</li>
-                                </ul>
-                                <p>While we implement industry-standard security measures, no method of transmission over the internet is 100% secure. We recommend using strong passwords and keeping your login information confidential.</p>
+                                <p>{{ __('privacy.security_intro') }}</p>
+                                
+                                <div class="security-showcase">
+                                    <div class="security-layer">
+                                        <span class="layer-number">1</span>
+                                        <div class="layer-content">
+                                            <h6>{{ __('privacy.security_encryption_title') }}</h6>
+                                            <p>{{ __('privacy.security_encryption_text') }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="security-layer">
+                                        <span class="layer-number">2</span>
+                                        <div class="layer-content">
+                                            <h6>{{ __('privacy.security_need_title') }}</h6>
+                                            <p>{{ __('privacy.security_need_text') }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="security-layer">
+                                        <span class="layer-number">3</span>
+                                        <div class="layer-content">
+                                            <h6>{{ __('privacy.security_vigilance_title') }}</h6>
+                                            <p>{{ __('privacy.security_vigilance_text') }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="security-layer">
+                                        <span class="layer-number">4</span>
+                                        <div class="layer-content">
+                                            <h6>{{ __('privacy.security_redundancy_title') }}</h6>
+                                            <p>{{ __('privacy.security_redundancy_text') }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="security-tip">
+                                    <i class="fas fa-user-lock"></i>
+                                    <p><strong>{{ __('privacy.security_tip_label') }}</strong> {{ __('privacy.security_tip_text') }}</p>
+                                </div>
                             </div>
                         </div>
 
@@ -115,88 +195,202 @@
                         <div class="policy-section">
                             <div class="section-header">
                                 <div class="section-icon info">
-                                    <i class="fas fa-cookie-bite"></i>
+                                    <i class="fas fa-cookie"></i>
                                 </div>
-                                <h3 class="section-title">Cookies & Tracking Technologies</h3>
+                                <h3 class="section-title">{{ __('privacy.cookies_title') }}</h3>
                             </div>
                             <div class="section-content">
-                                <p>We use cookies and similar technologies to enhance your browsing experience:</p>
-                                <ul>
-                                    <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
-                                    <li><strong>Performance Cookies:</strong> Help us understand how visitors use our site</li>
-                                    <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
-                                    <li><strong>Analytics Cookies:</strong> Provide insights to improve our services</li>
-                                </ul>
-                                <p>You can manage cookie preferences through your browser settings. However, disabling essential cookies may affect website functionality.</p>
+                                <p>{{ __('privacy.cookies_intro') }}</p>
+                                
+                                <div class="cookie-types">
+                                    <div class="cookie-type essential">
+                                        <h6><i class="fas fa-cog"></i> {{ __('privacy.cookies_essential_title') }}</h6>
+                                        <p>{{ __('privacy.cookies_essential_text') }}</p>
+                                    </div>
+                                    <div class="cookie-type performance">
+                                        <h6><i class="fas fa-tachometer-alt"></i> {{ __('privacy.cookies_performance_title') }}</h6>
+                                        <p>{{ __('privacy.cookies_performance_text') }}</p>
+                                    </div>
+                                    <div class="cookie-type functional">
+                                        <h6><i class="fas fa-heart"></i> {{ __('privacy.cookies_functional_title') }}</h6>
+                                        <p>{{ __('privacy.cookies_functional_text') }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="cookie-control">
+                                    <div class="control-header">
+                                        <i class="fas fa-sliders-h"></i>
+                                        <h5>{{ __('privacy.cookies_control_title') }}</h5>
+                                    </div>
+                                    <p>{{ __('privacy.cookies_control_text') }}</p>
+                                    <div class="browser-links">
+                                        <a href="#" class="browser-link"><i class="fab fa-chrome"></i> Chrome</a>
+                                        <a href="#" class="browser-link"><i class="fab fa-firefox"></i> Firefox</a>
+                                        <a href="#" class="browser-link"><i class="fab fa-safari"></i> Safari</a>
+                                        <a href="#" class="browser-link"><i class="fab fa-edge"></i> Edge</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Third-Party Links -->
-                        <div class="policy-section">
-                            <div class="section-header">
-                                <div class="section-icon danger">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </div>
-                                <h3 class="section-title">Third-Party Links & Services</h3>
-                            </div>
-                            <div class="section-content">
-                                <p>Our website may contain links to external sites and services. Important notes:</p>
-                                <ul>
-                                    <li>We carefully select our partners but cannot control their privacy practices</li>
-                                    <li>External sites have their own privacy policies we don't control</li>
-                                    <li>We're not responsible for content or practices of linked websites</li>
-                                    <li>We recommend reviewing third-party privacy policies before sharing information</li>
-                                </ul>
-                                <p>When you leave our site through these links, our privacy policy no longer applies to your activities on those external sites.</p>
-                            </div>
-                        </div>
-
-                        <!-- Policy Updates -->
+                        <!-- Third-Party Relationships -->
                         <div class="policy-section">
                             <div class="section-header">
                                 <div class="section-icon secondary">
-                                    <i class="fas fa-sync-alt"></i>
+                                    <i class="fas fa-handshake-alt"></i>
                                 </div>
-                                <h3 class="section-title">Policy Updates & Changes</h3>
+                                <h3 class="section-title">{{ __('privacy.third_party_title') }}</h3>
                             </div>
                             <div class="section-content">
-                                <p>We may update this privacy policy to reflect changes in our practices or legal requirements:</p>
-                                <ul>
-                                    <li>Significant changes will be notified via email or prominent website notice</li>
-                                    <li>Continued use of our services after changes constitutes acceptance</li>
-                                    <li>We maintain version history of all policy updates</li>
-                                    <li>The "Last Updated" date at the top indicates the latest revision</li>
-                                </ul>
-                                <p>We encourage you to review this policy periodically to stay informed about how we're protecting your information.</p>
+                                <p>{{ __('privacy.third_party_intro') }}</p>
+                                
+                                <div class="partner-guidelines">
+                                    <div class="guideline">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>{{ __('privacy.third_party_guideline_1') }}</span>
+                                    </div>
+                                    <div class="guideline">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>{{ __('privacy.third_party_guideline_2') }}</span>
+                                    </div>
+                                    <div class="guideline">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>{{ __('privacy.third_party_guideline_3') }}</span>
+                                    </div>
+                                    <div class="guideline">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>{{ __('privacy.third_party_guideline_4') }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="transparency-box">
+                                    <h6><i class="fas fa-binoculars"></i> {{ __('privacy.transparency_title') }}</h6>
+                                    <p>{{ __('privacy.transparency_text') }}</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Contact Section -->
-                        <div class="contact-section">
+                        <!-- Your Rights -->
+                        <div class="policy-section">
                             <div class="section-header">
-                                <div class="section-icon primary">
-                                    <i class="fas fa-envelope"></i>
+                                <div class="section-icon danger">
+                                    <i class="fas fa-user-cog"></i>
                                 </div>
-                                <h3 class="section-title">Questions & Contact Information</h3>
+                                <h3 class="section-title">{{ __('privacy.rights_title') }}</h3>
                             </div>
                             <div class="section-content">
-                                <p>We're committed to being transparent about our privacy practices. If you have questions or concerns:</p>
-                                <ul>
-                                    <li><strong>Email:</strong> <a href="mailto:contact@Streamcoupon.com" class="contact-email">contact@Streamcoupon.com</a></li>
-                                    <li><strong>Data Protection Officer:</strong> John Smith</li>
-                                    <li><strong>Mail:</strong> 123 Privacy Lane, Data City, DC 12345</li>
-                                    <li><strong>Response Time:</strong> We aim to respond within 48 hours</li>
-                                </ul>
-                                <p>You have the right to access, correct, or delete your personal information. Contact us to exercise these rights.</p>
+                                <p>{{ __('privacy.rights_intro') }}</p>
+                                
+                                <div class="rights-grid">
+                                    <div class="right-card view">
+                                        <i class="fas fa-eye"></i>
+                                        <h6>{{ __('privacy.rights_view_title') }}</h6>
+                                        <p>{{ __('privacy.rights_view_text') }}</p>
+                                    </div>
+                                    <div class="right-card correct">
+                                        <i class="fas fa-edit"></i>
+                                        <h6>{{ __('privacy.rights_correct_title') }}</h6>
+                                        <p>{{ __('privacy.rights_correct_text') }}</p>
+                                    </div>
+                                    <div class="right-card delete">
+                                        <i class="fas fa-trash-alt"></i>
+                                        <h6>{{ __('privacy.rights_delete_title') }}</h6>
+                                        <p>{{ __('privacy.rights_delete_text') }}</p>
+                                    </div>
+                                    <div class="right-card port">
+                                        <i class="fas fa-download"></i>
+                                        <h6>{{ __('privacy.rights_port_title') }}</h6>
+                                        <p>{{ __('privacy.rights_port_text') }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="action-call">
+                                    <div class="action-content">
+                                        <h5><i class="fas fa-bolt"></i> {{ __('privacy.action_title') }}</h5>
+                                        <p>{{ __('privacy.action_text') }}</p>
+                                        <a href="mailto:privacy@streamcoupon.com" class="action-btn">
+                                            <i class="fas fa-paper-plane"></i> {{ __('privacy.action_button') }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Human Touch -->
+                        <div class="policy-section">
+                            <div class="section-header">
+                                <div class="section-icon primary">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h3 class="section-title">{{ __('privacy.contact_title') }}</h3>
+                            </div>
+                            <div class="section-content">
+                                <p>{{ __('privacy.contact_intro') }}</p>
+                                
+                                <div class="contact-card">
+                                    <div class="contact-header">
+                                        {{-- <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="{{ __('privacy.contact_avatar_alt') }}" class="contact-avatar"> --}}
+                                        <div class="contact-info">
+                                            <h5>{{ __('privacy.contact_team_title') }}</h5>
+                                            <p>{{ __('privacy.contact_team_subtitle') }}</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-details">
+                                        <div class="contact-method">
+                                            <i class="fas fa-envelope-open-text"></i>
+                                            <div>
+                                                <strong>{{ __('privacy.contact_general') }}</strong>
+                                                <a href="mailto:privacy@streamcoupon.com">privacy@streamcoupon.com</a>
+                                            </div>
+                                        </div>
+                                        <div class="contact-method">
+                                            <i class="fas fa-user-tie"></i>
+                                            <div>
+                                                <strong>{{ __('privacy.contact_dpo') }}</strong>
+                                                <span>{{ __('privacy.contact_dpo_name') }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="contact-method">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <div>
+                                                <strong>{{ __('privacy.contact_location') }}</strong>
+                                                <span>3000 Hoffman Dr,Plano, Tx USA 75074 ,United States of America</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="response-promise">
+                                        <i class="fas fa-clock"></i>
+                                        <span>{{ __('privacy.contact_response') }}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Back to Home Button -->
-                    <div class="text-center mt-5">
-                        <a href="{{ url(app()->getLocale() . '/') }}" class="back-btn">
-                            <i class="fas fa-arrow-left me-2"></i> Return to Homepage
-                        </a>
+                    <!-- Closing Thoughts -->
+                    <div class="closing-thoughts">
+                        <h4><i class="fas fa-heart"></i> {{ __('privacy.closing_title') }}</h4>
+                        <p>{{ __('privacy.closing_text_1') }}</p>
+                        <p>{{ __('privacy.closing_text_2') }}</p>
+                        <p>{{ __('privacy.closing_text_3') }}</p>
+                    </div>
+
+                    <!-- Quick Action Footer -->
+                    <div class="policy-footer">
+                        <div class="footer-actions">
+                            <a href="{{ url(app()->getLocale() . '/') }}" class="footer-btn home-btn">
+                                <i class="fas fa-home"></i> {{ __('privacy.footer_home') }}
+                            </a>
+                            <a href="mailto:questions@streamcoupon.com" class="footer-btn question-btn">
+                                <i class="fas fa-question-circle"></i> {{ __('privacy.footer_questions') }}
+                            </a>
+                        </div>
+                        <div class="footer-reminder">
+                            <i class="fas fa-history"></i>
+                            <p>{{ __('privacy.footer_reminder', ['date' => now()->format('F d, Y')]) }}</p>
+                        </div>
                     </div>
                 </div>
             </div>

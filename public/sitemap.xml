@@ -1,2511 +1,2673 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-    <loc>http://localhost:8000/en/blog</loc>
+    <loc>http://127.0.0.1:8000/en/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/stores</loc>
+    <loc>http://127.0.0.1:8000/en/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/category</loc>
+    <loc>http://127.0.0.1:8000/en/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/about</loc>
+    <loc>http://127.0.0.1:8000/en/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/contact</loc>
+    <loc>http://127.0.0.1:8000/en/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/en/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/privacy</loc>
+    <loc>http://127.0.0.1:8000/en/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/cookies</loc>
+    <loc>http://127.0.0.1:8000/en/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/en/imprint</loc>
+    <loc>http://127.0.0.1:8000/en/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/blog</loc>
+    <loc>http://127.0.0.1:8000/fr/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/stores</loc>
+    <loc>http://127.0.0.1:8000/fr/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/category</loc>
+    <loc>http://127.0.0.1:8000/fr/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/about</loc>
+    <loc>http://127.0.0.1:8000/fr/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/contact</loc>
+    <loc>http://127.0.0.1:8000/fr/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/fr/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/privacy</loc>
+    <loc>http://127.0.0.1:8000/fr/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/cookies</loc>
+    <loc>http://127.0.0.1:8000/fr/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/imprint</loc>
+    <loc>http://127.0.0.1:8000/fr/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/blog</loc>
+    <loc>http://127.0.0.1:8000/nl/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/stores</loc>
+    <loc>http://127.0.0.1:8000/nl/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/category</loc>
+    <loc>http://127.0.0.1:8000/nl/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/about</loc>
+    <loc>http://127.0.0.1:8000/nl/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/contact</loc>
+    <loc>http://127.0.0.1:8000/nl/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/nl/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/privacy</loc>
+    <loc>http://127.0.0.1:8000/nl/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/cookies</loc>
+    <loc>http://127.0.0.1:8000/nl/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/imprint</loc>
+    <loc>http://127.0.0.1:8000/nl/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/blog</loc>
+    <loc>http://127.0.0.1:8000/de/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/stores</loc>
+    <loc>http://127.0.0.1:8000/de/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/category</loc>
+    <loc>http://127.0.0.1:8000/de/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/about</loc>
+    <loc>http://127.0.0.1:8000/de/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/contact</loc>
+    <loc>http://127.0.0.1:8000/de/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/de/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/privacy</loc>
+    <loc>http://127.0.0.1:8000/de/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/cookies</loc>
+    <loc>http://127.0.0.1:8000/de/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/de/imprint</loc>
+    <loc>http://127.0.0.1:8000/de/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/blog</loc>
+    <loc>http://127.0.0.1:8000/es/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/stores</loc>
+    <loc>http://127.0.0.1:8000/es/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/category</loc>
+    <loc>http://127.0.0.1:8000/es/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/about</loc>
+    <loc>http://127.0.0.1:8000/es/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/contact</loc>
+    <loc>http://127.0.0.1:8000/es/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/es/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/privacy</loc>
+    <loc>http://127.0.0.1:8000/es/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/cookies</loc>
+    <loc>http://127.0.0.1:8000/es/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/es/imprint</loc>
+    <loc>http://127.0.0.1:8000/es/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/blog</loc>
+    <loc>http://127.0.0.1:8000/pl/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/stores</loc>
+    <loc>http://127.0.0.1:8000/pl/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/category</loc>
+    <loc>http://127.0.0.1:8000/pl/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/about</loc>
+    <loc>http://127.0.0.1:8000/pl/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/contact</loc>
+    <loc>http://127.0.0.1:8000/pl/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/pl/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/privacy</loc>
+    <loc>http://127.0.0.1:8000/pl/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/cookies</loc>
+    <loc>http://127.0.0.1:8000/pl/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/imprint</loc>
+    <loc>http://127.0.0.1:8000/pl/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/blog</loc>
+    <loc>http://127.0.0.1:8000/it/blog</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/stores</loc>
+    <loc>http://127.0.0.1:8000/it/stores</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/category</loc>
+    <loc>http://127.0.0.1:8000/it/category</loc>
     <priority>1.0</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/about</loc>
+    <loc>http://127.0.0.1:8000/it/about</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/contact</loc>
+    <loc>http://127.0.0.1:8000/it/contact</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/terms-and-condition</loc>
+    <loc>http://127.0.0.1:8000/it/terms-and-condition</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/privacy</loc>
+    <loc>http://127.0.0.1:8000/it/privacy</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/cookies</loc>
+    <loc>http://127.0.0.1:8000/it/cookies</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/it/imprint</loc>
+    <loc>http://127.0.0.1:8000/it/imprint</loc>
     <priority>0.8</priority>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mycityhunt-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/mycityhunt-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/discipline-industries-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/discipline-industries-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/emed-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/emed-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/glowria-promo-code</loc>
+    <loc>http://127.0.0.1:8000/fr/store/glowria-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/lancome-promo-code</loc>
+    <loc>http://127.0.0.1:8000/de/store/lancome-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ration1-de-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/ration1-de-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/smart-protein-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/smart-protein-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dermatica-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/dermatica-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/skin-and-me-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/skin-and-me-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/clarks-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/clarks-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/love-bonito-coupon</loc>
+    <loc>http://127.0.0.1:8000/store/love-bonito-coupon</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ganga-fashions-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/ganga-fashions-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lilysilk-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/lilysilk-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/noracora-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/noracora-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/littrendy-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/littrendy-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/vvcloth-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/vvcloth-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jashanmal-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/jashanmal-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/the-deal-outlet-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/the-deal-outlet-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aigner-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/aigner-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/techwear-club-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/techwear-club-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fabindia-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/fabindia-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cotosen-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/cotosen-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/italo-jewerly-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/italo-jewerly-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sweaty-betty-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/sweaty-betty-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fatface-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/fatface-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rebellious-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/rebellious-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aumi4-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/aumi4-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/menalvin-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/menalvin-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/2-putt-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/2-putt-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/signature-menswear-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/signature-menswear-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/findercube-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/findercube-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pretty-you-london-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/pretty-you-london-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jaded-london-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/jaded-london-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/oxygen-boutique-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/oxygen-boutique-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/celio-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/celio</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/akova-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/akova-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/luxx-curves-coupon</loc>
+    <loc>http://127.0.0.1:8000/store/luxx-curves-coupon</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/alltrueist-coupon-code</loc>
+    <loc>http://127.0.0.1:8000/store/alltrueist-coupon-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/champion-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/champion-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dubarry-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/dubarry-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/leota-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/leota-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/topvintage-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/topvintage-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/damart-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/damart-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hidesign-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/hidesign-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pooch-and-mutt-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/pooch-and-mutt-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/warmies-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/warmies-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/samsung-us-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/samsung-us-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/xiaomi-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/xiaomi-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lisa-says-gah-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/lisa-says-gah-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/makari-coupon</loc>
+    <loc>http://127.0.0.1:8000/store/makari-coupon</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/melinda-maria-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/melinda-maria-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/luxedecor-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/luxedecor-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/original-mattress-factory-coupon</loc>
+    <loc>http://127.0.0.1:8000/store/original-mattress-factory-coupon</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/title-nine-promo-code</loc>
+    <loc>http://127.0.0.1:8000/store/title-nine-promo-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/annie-haak-designs-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/annie-haak-designs-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dryrobe-uk</loc>
+    <loc>http://127.0.0.1:8000/store/dryrobe-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/outdoor-master-us</loc>
+    <loc>http://127.0.0.1:8000/store/outdoor-master-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bloomchic-us</loc>
+    <loc>http://127.0.0.1:8000/store/bloomchic-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ekster-us</loc>
+    <loc>http://127.0.0.1:8000/store/ekster-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/champneys-uk</loc>
+    <loc>http://127.0.0.1:8000/store/champneys-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/lenovo-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/lenovo-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/oneplus-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/oneplus-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/neiman-marcus-us</loc>
+    <loc>http://127.0.0.1:8000/store/neiman-marcus-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/house-of-cavani-uk</loc>
+    <loc>http://127.0.0.1:8000/store/house-of-cavani-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bargainfox-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bargainfox-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/treatwell-discount-code</loc>
+    <loc>http://127.0.0.1:8000/store/treatwell-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/yoursurprise-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/yoursurprise-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/handball-store-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/handball-store-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/yumeko-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/yumeko-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/black-circles-uk</loc>
+    <loc>http://127.0.0.1:8000/store/black-circles-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/quiz-clothing-uk</loc>
+    <loc>http://127.0.0.1:8000/store/quiz-clothing-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bentgo-us</loc>
+    <loc>http://127.0.0.1:8000/store/bentgo-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/island-importer-us</loc>
+    <loc>http://127.0.0.1:8000/store/island-importer-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mooslover-uk</loc>
+    <loc>http://127.0.0.1:8000/store/mooslover-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/josera-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/josera-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/jotex-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/jotex-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/anker-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/anker-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lego-us</loc>
+    <loc>http://127.0.0.1:8000/store/lego-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/gobi-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/gobi-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/sport2000-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/sport2000-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/camplify-au</loc>
+    <loc>http://127.0.0.1:8000/store/camplify-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sportstech-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sportstech-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/komfortkissen-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/komfortkissen-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lumen-us</loc>
+    <loc>http://127.0.0.1:8000/store/lumen-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/zendure-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/zendure-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/overnight-glasses-us</loc>
+    <loc>http://127.0.0.1:8000/store/overnight-glasses-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/xchair-us</loc>
+    <loc>http://127.0.0.1:8000/store/xchair-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sports-memorabilia-us</loc>
+    <loc>http://127.0.0.1:8000/store/sports-memorabilia-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/just4men-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/just4men-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/outnorth-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/outnorth-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/groundies-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/groundies-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/viator-uk</loc>
+    <loc>http://127.0.0.1:8000/store/viator-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/goddiva-uk</loc>
+    <loc>http://127.0.0.1:8000/store/goddiva-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/love-your-melon-us</loc>
+    <loc>http://127.0.0.1:8000/store/love-your-melon-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/parfumswinkel-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/parfumswinkel-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/lampentotaal-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/lampentotaal-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/all4golf-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/all4golf-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/oneskin-us</loc>
+    <loc>http://127.0.0.1:8000/store/oneskin-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jd-sports-my</loc>
+    <loc>http://127.0.0.1:8000/store/jd-sports-my</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/kkday-my</loc>
+    <loc>http://127.0.0.1:8000/store/kkday-my</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/forme-us</loc>
+    <loc>http://127.0.0.1:8000/store/forme-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/zquite-us</loc>
+    <loc>http://127.0.0.1:8000/store/zquite-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/mustang-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/mustang-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/yoto-uk</loc>
+    <loc>http://127.0.0.1:8000/store/yoto-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/leitermann-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/leitermann-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/11teamsports-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/11teamsports-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/saily-us</loc>
+    <loc>http://127.0.0.1:8000/store/saily-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sisley-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sisley-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/layla-sleep-us</loc>
+    <loc>http://127.0.0.1:8000/store/layla-sleep-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/goldcar-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/goldcar-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/poco-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/poco-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/billyoh-uk</loc>
+    <loc>http://127.0.0.1:8000/store/billyoh-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/vueling-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/vueling-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ruffle-butts-us</loc>
+    <loc>http://127.0.0.1:8000/store/ruffle-butts-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hape-us</loc>
+    <loc>http://127.0.0.1:8000/store/hape-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/kardia-us</loc>
+    <loc>http://127.0.0.1:8000/store/kardia-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/liderlamp-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/liderlamp-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/lingoda-ww</loc>
+    <loc>http://127.0.0.1:8000/de/store/lingoda-ww</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/acer-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/acer-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/remarkable-us</loc>
+    <loc>http://127.0.0.1:8000/store/remarkable-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/osabina-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/osabina-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/samsung-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/samsung-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pockets-uk</loc>
+    <loc>http://127.0.0.1:8000/store/pockets-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/legend-footwear-uk</loc>
+    <loc>http://127.0.0.1:8000/store/legend-footwear-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hometree-uk</loc>
+    <loc>http://127.0.0.1:8000/store/hometree-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/carmellimo-us</loc>
+    <loc>http://127.0.0.1:8000/store/carmellimo-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cello-electronics-us</loc>
+    <loc>http://127.0.0.1:8000/store/cello-electronics-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ranger-station-supply-us</loc>
+    <loc>http://127.0.0.1:8000/store/ranger-station-supply-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/go-ape-us</loc>
+    <loc>http://127.0.0.1:8000/store/go-ape-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/hugendubel-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/hugendubel-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pique-life-us</loc>
+    <loc>http://127.0.0.1:8000/store/pique-life-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/mona-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/mona-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hume-health-us</loc>
+    <loc>http://127.0.0.1:8000/store/hume-health-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/psylos1-us</loc>
+    <loc>http://127.0.0.1:8000/store/psylos1-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ogl-us</loc>
+    <loc>http://127.0.0.1:8000/store/ogl-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ming-wang-us</loc>
+    <loc>http://127.0.0.1:8000/store/ming-wang-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jmp-the-label-us</loc>
+    <loc>http://127.0.0.1:8000/store/jmp-the-label-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/huug-us</loc>
+    <loc>http://127.0.0.1:8000/store/huug-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/berlook-us</loc>
+    <loc>http://127.0.0.1:8000/store/berlook-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jessica-simpson-us</loc>
+    <loc>http://127.0.0.1:8000/store/jessica-simpson-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ac-milan-us</loc>
+    <loc>http://127.0.0.1:8000/store/ac-milan-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lily-and-me-clothing-uk</loc>
+    <loc>http://127.0.0.1:8000/store/lily-and-me-clothing-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/costway-uk</loc>
+    <loc>http://127.0.0.1:8000/store/costway-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/furniture-in-fashion-uk</loc>
+    <loc>http://127.0.0.1:8000/store/furniture-in-fashion-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/genuine-style-uk</loc>
+    <loc>http://127.0.0.1:8000/store/genuine-style-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/step-one-au</loc>
+    <loc>http://127.0.0.1:8000/store/step-one-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/lastminute-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/lastminute-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/hut-styler-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/hut-styler-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/mondial-tourisme-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/mondial-tourisme-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mystery-tackle-box-us</loc>
+    <loc>http://127.0.0.1:8000/store/mystery-tackle-box-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/secret-flight-club-us</loc>
+    <loc>http://127.0.0.1:8000/store/secret-flight-club-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/lampenlicht-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/lampenlicht-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/klook-uk</loc>
+    <loc>http://127.0.0.1:8000/store/klook-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/harfington-us</loc>
+    <loc>http://127.0.0.1:8000/store/harfington-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/calyx-flowers-us</loc>
+    <loc>http://127.0.0.1:8000/store/calyx-flowers-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cutely-covered-us</loc>
+    <loc>http://127.0.0.1:8000/store/cutely-covered-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cape-robbin-us</loc>
+    <loc>http://127.0.0.1:8000/store/cape-robbin-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/giuseppe-zanotti-us</loc>
+    <loc>http://127.0.0.1:8000/store/giuseppe-zanotti-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cynthia-rowley-us</loc>
+    <loc>http://127.0.0.1:8000/store/cynthia-rowley-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/milanoo-us</loc>
+    <loc>http://127.0.0.1:8000/store/milanoo-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/juicy-couture-uk</loc>
+    <loc>http://127.0.0.1:8000/store/juicy-couture-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/heavenly-london-uk</loc>
+    <loc>http://127.0.0.1:8000/store/heavenly-london-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/grandi-navi-veloci-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/grandi-navi-veloci-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/temu-globle</loc>
+    <loc>http://127.0.0.1:8000/store/temu-globle</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bocomal-us</loc>
+    <loc>http://127.0.0.1:8000/store/bocomal-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aliexpress-uk</loc>
+    <loc>http://127.0.0.1:8000/store/aliexpress-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/lucky-bike-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/lucky-bike-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/pikolin-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/pikolin-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/konesso-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/konesso-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/ostrovit-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/ostrovit-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/one2track-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/one2track-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sunny-sports-us</loc>
+    <loc>http://127.0.0.1:8000/store/sunny-sports-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/galaxus-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/galaxus-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/handyhuellen-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/handyhuellen-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/hauptstadtkoffer-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/hauptstadtkoffer-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/her-one-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/her-one-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/home-deluxe-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/home-deluxe-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/medimops-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/medimops-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/more-and-more-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/more-and-more-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/pflanzen-kolle-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/pflanzen-kolle-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dobell-uk</loc>
+    <loc>http://127.0.0.1:8000/store/dobell-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bunches-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bunches-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ancestry-uk</loc>
+    <loc>http://127.0.0.1:8000/store/ancestry-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hogan-uk</loc>
+    <loc>http://127.0.0.1:8000/store/hogan-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tractor-supply-us</loc>
+    <loc>http://127.0.0.1:8000/store/tractor-supply-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mcgee-and-co-us</loc>
+    <loc>http://127.0.0.1:8000/store/mcgee-and-co-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/grunt-style-us</loc>
+    <loc>http://127.0.0.1:8000/store/grunt-style-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hunter-boots-uk</loc>
+    <loc>http://127.0.0.1:8000/store/hunter-boots-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/castlery-us</loc>
+    <loc>http://127.0.0.1:8000/store/castlery-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bearhug-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bearhug-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bumboo-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bumboo-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cernucci-uk</loc>
+    <loc>http://127.0.0.1:8000/store/cernucci-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/xtool-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/xtool-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/senetic-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/senetic-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/never-fully-dressed-uk</loc>
+    <loc>http://127.0.0.1:8000/store/never-fully-dressed-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/clarks-uae</loc>
+    <loc>http://127.0.0.1:8000/store/clarks-uae</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/nazih-ae</loc>
+    <loc>http://127.0.0.1:8000/store/nazih-ae</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/storeus-ae</loc>
+    <loc>http://127.0.0.1:8000/store/storeus-ae</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/beneunder-us</loc>
+    <loc>http://127.0.0.1:8000/store/beneunder-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/massivmoebel24-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/massivmoebel24-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/petlibro-us</loc>
+    <loc>http://127.0.0.1:8000/store/petlibro-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/vivtone-us</loc>
+    <loc>http://127.0.0.1:8000/store/vivtone-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/miomente-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/miomente-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/built-us</loc>
+    <loc>http://127.0.0.1:8000/store/built-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/nutribullet-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/nutribullet-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/hans-voortman-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/hans-voortman-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tiqets-us</loc>
+    <loc>http://127.0.0.1:8000/store/tiqets-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/stanley-us</loc>
+    <loc>http://127.0.0.1:8000/store/stanley-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/24bottles-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/24bottles-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lola-and-the-boys-us</loc>
+    <loc>http://127.0.0.1:8000/store/lola-and-the-boys-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bike-angebot-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bike-angebot-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/anine-bing-us</loc>
+    <loc>http://127.0.0.1:8000/store/anine-bing-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/primallypure-us</loc>
+    <loc>http://127.0.0.1:8000/store/primallypure-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/missoma-uk</loc>
+    <loc>http://127.0.0.1:8000/store/missoma-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/songmics-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/songmics-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/cenpac-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/cenpac-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/argento-uk</loc>
+    <loc>http://127.0.0.1:8000/store/argento-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/salty-in</loc>
+    <loc>http://127.0.0.1:8000/store/salty-in</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/frs-clipper-us</loc>
+    <loc>http://127.0.0.1:8000/store/frs-clipper-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/giraffe-tools-us</loc>
+    <loc>http://127.0.0.1:8000/store/giraffe-tools-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/addison-ross-us</loc>
+    <loc>http://127.0.0.1:8000/store/addison-ross-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/purple-leaf-us</loc>
+    <loc>http://127.0.0.1:8000/store/purple-leaf-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/chantelle-lingerie-us</loc>
+    <loc>http://127.0.0.1:8000/store/chantelle-lingerie-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/montirex-uk</loc>
+    <loc>http://127.0.0.1:8000/store/montirex-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/retro-stage-us</loc>
+    <loc>http://127.0.0.1:8000/store/retro-stage-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/xgimi-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/xgimi-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/eschuhe-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/eschuhe-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/handtuchwelt-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/handtuchwelt-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/homedeco-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/homedeco-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/birdies-us</loc>
+    <loc>http://127.0.0.1:8000/store/birdies-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mint-and-lily-us</loc>
+    <loc>http://127.0.0.1:8000/store/mint-and-lily-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/undercovertourist-us</loc>
+    <loc>http://127.0.0.1:8000/store/undercovertourist-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/curlsmith-us</loc>
+    <loc>http://127.0.0.1:8000/store/curlsmith-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/aromatico-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/aromatico-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/saguaro-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/saguaro-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/fc-moto-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/fc-moto-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/le-petit-chef-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/le-petit-chef-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/omorpho-us</loc>
+    <loc>http://127.0.0.1:8000/store/omorpho-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/velvet-caviar-us</loc>
+    <loc>http://127.0.0.1:8000/store/velvet-caviar-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rowabi-us</loc>
+    <loc>http://127.0.0.1:8000/store/rowabi-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/iscooter-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/iscooter-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/tostadora-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/tostadora-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/oilo-studio-us</loc>
+    <loc>http://127.0.0.1:8000/store/oilo-studio-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dansko-us</loc>
+    <loc>http://127.0.0.1:8000/store/dansko-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sweaty-betty-us</loc>
+    <loc>http://127.0.0.1:8000/store/sweaty-betty-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hanacure-us</loc>
+    <loc>http://127.0.0.1:8000/store/hanacure-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/elemis-us</loc>
+    <loc>http://127.0.0.1:8000/store/elemis-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/core-home-fitness-us</loc>
+    <loc>http://127.0.0.1:8000/store/core-home-fitness-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/circus-ny-us</loc>
+    <loc>http://127.0.0.1:8000/store/circus-ny-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/rowenta-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/rowenta-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/hirmer-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/hirmer-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/realtruck-us</loc>
+    <loc>http://127.0.0.1:8000/store/realtruck-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sunday-citizen-us</loc>
+    <loc>http://127.0.0.1:8000/store/sunday-citizen-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/grown-brilliance-us</loc>
+    <loc>http://127.0.0.1:8000/store/grown-brilliance-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/waipu-tv-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/waipu-tv-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bagsmart-us</loc>
+    <loc>http://127.0.0.1:8000/store/bagsmart-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/oneill-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/oneill-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lyposol-uk</loc>
+    <loc>http://127.0.0.1:8000/store/lyposol-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/terracycle-us</loc>
+    <loc>http://127.0.0.1:8000/store/terracycle-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rosewe-us</loc>
+    <loc>http://127.0.0.1:8000/store/rosewe-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/better-pickleball-us</loc>
+    <loc>http://127.0.0.1:8000/store/better-pickleball-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/barker-shoes-us</loc>
+    <loc>http://127.0.0.1:8000/store/barker-shoes-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pmd-beauty-us</loc>
+    <loc>http://127.0.0.1:8000/store/pmd-beauty-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/nightfox-us</loc>
+    <loc>http://127.0.0.1:8000/store/nightfox-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/petit-bateau-uk</loc>
+    <loc>http://127.0.0.1:8000/store/petit-bateau-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/desktronic-uk</loc>
+    <loc>http://127.0.0.1:8000/store/desktronic-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dupray-us</loc>
+    <loc>http://127.0.0.1:8000/store/dupray-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/westmore-beauty-us</loc>
+    <loc>http://127.0.0.1:8000/store/westmore-beauty-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fioboc-us</loc>
+    <loc>http://127.0.0.1:8000/store/fioboc-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bellami-us</loc>
+    <loc>http://127.0.0.1:8000/store/bellami-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/beautyforever-hair-us</loc>
+    <loc>http://127.0.0.1:8000/store/beautyforever-hair-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aletha-us</loc>
+    <loc>http://127.0.0.1:8000/store/aletha-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/woodstore24-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/woodstore24-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/timberland-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/timberland-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ecoflow-us</loc>
+    <loc>http://127.0.0.1:8000/store/ecoflow-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/rewe-reisen-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/rewe-reisen-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/patiowell-us</loc>
+    <loc>http://127.0.0.1:8000/store/patiowell-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jovs-us</loc>
+    <loc>http://127.0.0.1:8000/store/jovs-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/havaianas-uk</loc>
+    <loc>http://127.0.0.1:8000/store/havaianas-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/siroko-uk</loc>
+    <loc>http://127.0.0.1:8000/store/siroko-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aspinal-of-london-us</loc>
+    <loc>http://127.0.0.1:8000/store/aspinal-of-london-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/scancom-uk</loc>
+    <loc>http://127.0.0.1:8000/store/scancom-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/viator-us</loc>
+    <loc>http://127.0.0.1:8000/store/viator-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/all-plus-uk</loc>
+    <loc>http://127.0.0.1:8000/store/all-plus-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rugs-direct-us</loc>
+    <loc>http://127.0.0.1:8000/store/rugs-direct-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/levis-us</loc>
+    <loc>http://127.0.0.1:8000/store/levis-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tyroola-us</loc>
+    <loc>http://127.0.0.1:8000/store/tyroola-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/maxtrix-kids-furniture-us</loc>
+    <loc>http://127.0.0.1:8000/store/maxtrix-kids-furniture-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pakt-us</loc>
+    <loc>http://127.0.0.1:8000/store/pakt-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/interior-icons-us</loc>
+    <loc>http://127.0.0.1:8000/store/interior-icons-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/vivint-us</loc>
+    <loc>http://127.0.0.1:8000/store/vivint-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/firmabs-us</loc>
+    <loc>http://127.0.0.1:8000/store/firmabs-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/universal-yums-us</loc>
+    <loc>http://127.0.0.1:8000/store/universal-yums-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/coolmod-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/coolmod-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/sercotel-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/sercotel-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/acer-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/acer-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/atmosfera-sports-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/atmosfera-sports-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/desigual-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/desigual-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/cocunat-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/cocunat-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/tripcom-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/tripcom-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tripcom-us</loc>
+    <loc>http://127.0.0.1:8000/store/tripcom-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bershka-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bershka-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/autobatterienbilliger-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/autobatterienbilliger-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/biovea-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/biovea-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/finn-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/finn-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/heimwerkertools-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/heimwerkertools-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/daily-objects-in</loc>
+    <loc>http://127.0.0.1:8000/store/daily-objects-in</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hyperoptic-uk</loc>
+    <loc>http://127.0.0.1:8000/store/hyperoptic-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/reebok-uae</loc>
+    <loc>http://127.0.0.1:8000/store/reebok-uae</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/new-balance-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/new-balance-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/ombre-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/ombre-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/light11-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/light11-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/mattenlager-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/mattenlager-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/radisson-hotels-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/radisson-hotels-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/samsung-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/samsung-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/lenstore-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/lenstore-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/neve-cosmetics-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/neve-cosmetics-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/primadonna-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/primadonna-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/mybeautybox-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/mybeautybox-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/hebe-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/hebe-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/123pneus-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/123pneus-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sabina-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sabina-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/miravia-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/miravia-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/capalus-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/capalus-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/lycamobile-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/lycamobile-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/grover-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/grover-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/prolonlife-us</loc>
+    <loc>http://127.0.0.1:8000/store/prolonlife-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/anker-uk</loc>
+    <loc>http://127.0.0.1:8000/store/anker-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/temu-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/temu-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/scalextric-uk</loc>
+    <loc>http://127.0.0.1:8000/store/scalextric-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lesportsac-us</loc>
+    <loc>http://127.0.0.1:8000/store/lesportsac-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/the-diamond-store-uk</loc>
+    <loc>http://127.0.0.1:8000/store/the-diamond-store-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/farmacia-loreto-gallo-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/farmacia-loreto-gallo-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/autoparti-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/autoparti-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/urban-moonshine-us</loc>
+    <loc>http://127.0.0.1:8000/store/urban-moonshine-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/heldengruen-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/heldengruen-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/auto-europe-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/auto-europe-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/philips-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/philips-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/stanartis-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/stanartis-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/davids-bridal-us</loc>
+    <loc>http://127.0.0.1:8000/store/davids-bridal-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/motoin-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/motoin-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/corsica-ferries-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/corsica-ferries-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/burrow-us</loc>
+    <loc>http://127.0.0.1:8000/store/burrow-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/capri-blue-us</loc>
+    <loc>http://127.0.0.1:8000/store/capri-blue-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/marika-us</loc>
+    <loc>http://127.0.0.1:8000/store/marika-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/katin-us</loc>
+    <loc>http://127.0.0.1:8000/store/katin-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/isdin-us</loc>
+    <loc>http://127.0.0.1:8000/store/isdin-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/driftaway-us</loc>
+    <loc>http://127.0.0.1:8000/store/driftaway-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/eight-sleep-us</loc>
+    <loc>http://127.0.0.1:8000/store/eight-sleep-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/quiksilver-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/quiksilver-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/maple-parking-uk</loc>
+    <loc>http://127.0.0.1:8000/store/maple-parking-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/firestar-toys-uk</loc>
+    <loc>http://127.0.0.1:8000/store/firestar-toys-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cello-electronics-uk</loc>
+    <loc>http://127.0.0.1:8000/store/cello-electronics-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/type-one-style-uk</loc>
+    <loc>http://127.0.0.1:8000/store/type-one-style-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/stylevana-uk</loc>
+    <loc>http://127.0.0.1:8000/store/stylevana-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/milanoo-uk</loc>
+    <loc>http://127.0.0.1:8000/store/milanoo-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sowell-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sowell-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/zwilling-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/zwilling-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/singularu-es</loc>
+    <loc>http://127.0.0.1:8000/store/singularu-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/the-minifigure-store-uk</loc>
+    <loc>http://127.0.0.1:8000/store/the-minifigure-store-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/boori-uk</loc>
+    <loc>http://127.0.0.1:8000/store/boori-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/alpinestars</loc>
+    <loc>http://127.0.0.1:8000/store/alpinestars</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/evenia-hotel-es</loc>
+    <loc>http://127.0.0.1:8000/store/evenia-hotel-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/ibood-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/ibood-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/irun-be</loc>
+    <loc>http://127.0.0.1:8000/store/irun-be</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/divan-beds-centre-uk</loc>
+    <loc>http://127.0.0.1:8000/store/divan-beds-centre-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pong-cheese-uk</loc>
+    <loc>http://127.0.0.1:8000/store/pong-cheese-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/flexispot-uk</loc>
+    <loc>http://127.0.0.1:8000/store/flexispot-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/chesca-direct-uk</loc>
+    <loc>http://127.0.0.1:8000/store/chesca-direct-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lawn-mowers-uk</loc>
+    <loc>http://127.0.0.1:8000/store/lawn-mowers-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/best-heating-uk</loc>
+    <loc>http://127.0.0.1:8000/store/best-heating-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fitville-uk</loc>
+    <loc>http://127.0.0.1:8000/store/fitville-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/green-blacks-uk</loc>
+    <loc>http://127.0.0.1:8000/store/green-blacks-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/calzedonia-uk</loc>
+    <loc>http://127.0.0.1:8000/store/calzedonia-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tezenis-uk</loc>
+    <loc>http://127.0.0.1:8000/store/tezenis-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/siksilk-uk</loc>
+    <loc>http://127.0.0.1:8000/store/siksilk-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/h-hotels-uk</loc>
+    <loc>http://127.0.0.1:8000/store/h-hotels-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/es/store/hipercalzado-es</loc>
+    <loc>http://127.0.0.1:8000/es/store/hipercalzado-es</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/soda-stream-it</loc>
+    <loc>http://127.0.0.1:8000/store/soda-stream-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/happy-garden-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/happy-garden-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/hailo-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/hailo-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/carrefour-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/carrefour-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/congstar-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/congstar-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/retrofete-us</loc>
+    <loc>http://127.0.0.1:8000/store/retrofete-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cosabella-us</loc>
+    <loc>http://127.0.0.1:8000/store/cosabella-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/beefbandits-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/beefbandits-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/public-desire-us</loc>
+    <loc>http://127.0.0.1:8000/store/public-desire-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sachin-babi-us</loc>
+    <loc>http://127.0.0.1:8000/store/sachin-babi-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/karaca-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/karaca-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/angelplatz-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/angelplatz-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/lusini-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/lusini-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/mister-spex-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/mister-spex-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/luis-trenker-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/luis-trenker-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/linsenplatz-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/linsenplatz-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/kushel-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/kushel-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/isinwheel-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/isinwheel-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/burnhard-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/burnhard-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/buch-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/buch-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/aubade-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/aubade-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bottles-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bottles-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dermstore-us</loc>
+    <loc>http://127.0.0.1:8000/store/dermstore-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cult-gaia-us</loc>
+    <loc>http://127.0.0.1:8000/store/cult-gaia-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/american-dream-us</loc>
+    <loc>http://127.0.0.1:8000/store/american-dream-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bravissimo-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bravissimo-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/huda-beauty</loc>
+    <loc>http://127.0.0.1:8000/store/huda-beauty</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bjrn-borg-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bjrn-borg-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/aimn-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/aimn-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/thread-wallets-us</loc>
+    <loc>http://127.0.0.1:8000/store/thread-wallets-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/stadium-goods-us</loc>
+    <loc>http://127.0.0.1:8000/store/stadium-goods-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/zerorez-us</loc>
+    <loc>http://127.0.0.1:8000/store/zerorez-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/psd-us</loc>
+    <loc>http://127.0.0.1:8000/store/psd-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/franklin-sports-us</loc>
+    <loc>http://127.0.0.1:8000/store/franklin-sports-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/isinwheel-us</loc>
+    <loc>http://127.0.0.1:8000/store/isinwheel-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/caledonian-travel-uk</loc>
+    <loc>http://127.0.0.1:8000/store/caledonian-travel-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/canvas-holidays-uk</loc>
+    <loc>http://127.0.0.1:8000/store/canvas-holidays-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/js-health-uk</loc>
+    <loc>http://127.0.0.1:8000/store/js-health-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/springbok-puzzle-us</loc>
+    <loc>http://127.0.0.1:8000/store/springbok-puzzle-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/wacom-us</loc>
+    <loc>http://127.0.0.1:8000/store/wacom-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/turkish-towels-us</loc>
+    <loc>http://127.0.0.1:8000/store/turkish-towels-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bagmodo-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bagmodo-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lancome-my</loc>
+    <loc>http://127.0.0.1:8000/store/lancome-my</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/nathan-james-us</loc>
+    <loc>http://127.0.0.1:8000/store/nathan-james-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/into-the-blue-uk</loc>
+    <loc>http://127.0.0.1:8000/store/into-the-blue-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ties-planet-uk</loc>
+    <loc>http://127.0.0.1:8000/store/ties-planet-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/allpowers-uk</loc>
+    <loc>http://127.0.0.1:8000/store/allpowers-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/philipkingsley-uk</loc>
+    <loc>http://127.0.0.1:8000/store/philipkingsley-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sargasso-grey-uk</loc>
+    <loc>http://127.0.0.1:8000/store/sargasso-grey-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/myzone-uk</loc>
+    <loc>http://127.0.0.1:8000/store/myzone-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/shytobuy-uk</loc>
+    <loc>http://127.0.0.1:8000/store/shytobuy-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/weightworld-uk</loc>
+    <loc>http://127.0.0.1:8000/store/weightworld-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/keurig-us</loc>
+    <loc>http://127.0.0.1:8000/store/keurig-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/everlane-us</loc>
+    <loc>http://127.0.0.1:8000/store/everlane-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/brunt-us</loc>
+    <loc>http://127.0.0.1:8000/store/brunt-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/blackview-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/blackview-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/fiido-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/fiido-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/navimow-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/navimow-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/cadbury-gifts-direct-uk</loc>
+    <loc>http://127.0.0.1:8000/store/cadbury-gifts-direct-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/missy-empire-uk</loc>
+    <loc>http://127.0.0.1:8000/store/missy-empire-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bradshaw-direct-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bradshaw-direct-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/neafs-uk</loc>
+    <loc>http://127.0.0.1:8000/store/neafs-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/light-in-the-box-uk</loc>
+    <loc>http://127.0.0.1:8000/store/light-in-the-box-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jarlo-london-uk</loc>
+    <loc>http://127.0.0.1:8000/store/jarlo-london-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/interior-define-us</loc>
+    <loc>http://127.0.0.1:8000/store/interior-define-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mint-lily-us</loc>
+    <loc>http://127.0.0.1:8000/store/mint-lily-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/gazelle-us</loc>
+    <loc>http://127.0.0.1:8000/store/gazelle-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/philosophy-us</loc>
+    <loc>http://127.0.0.1:8000/store/philosophy-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/unique-vintage-us</loc>
+    <loc>http://127.0.0.1:8000/store/unique-vintage-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lensmart-us</loc>
+    <loc>http://127.0.0.1:8000/store/lensmart-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/nautica-us</loc>
+    <loc>http://127.0.0.1:8000/store/nautica-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/baublebar-us</loc>
+    <loc>http://127.0.0.1:8000/store/baublebar-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/los-angeles-apparel-us</loc>
+    <loc>http://127.0.0.1:8000/store/los-angeles-apparel-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/pitboss-us</loc>
+    <loc>http://127.0.0.1:8000/store/pitboss-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/proozy-us</loc>
+    <loc>http://127.0.0.1:8000/store/proozy-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/als-us</loc>
+    <loc>http://127.0.0.1:8000/store/als-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/turtle-beach-us</loc>
+    <loc>http://127.0.0.1:8000/store/turtle-beach-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/baggu-us</loc>
+    <loc>http://127.0.0.1:8000/store/baggu-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/life-is-good-us</loc>
+    <loc>http://127.0.0.1:8000/store/life-is-good-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sam-edelman-us</loc>
+    <loc>http://127.0.0.1:8000/store/sam-edelman-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tous-us</loc>
+    <loc>http://127.0.0.1:8000/store/tous-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/vueling-uk</loc>
+    <loc>http://127.0.0.1:8000/store/vueling-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/quip-us</loc>
+    <loc>http://127.0.0.1:8000/store/quip-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/eighty-us</loc>
+    <loc>http://127.0.0.1:8000/store/eighty-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/garden-goods-direct-us</loc>
+    <loc>http://127.0.0.1:8000/store/garden-goods-direct-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fair-harbor-us</loc>
+    <loc>http://127.0.0.1:8000/store/fair-harbor-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/athleta-us</loc>
+    <loc>http://127.0.0.1:8000/store/athleta-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/ziengs-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/ziengs-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/xtool-us</loc>
+    <loc>http://127.0.0.1:8000/store/xtool-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sportsmans-guide-us</loc>
+    <loc>http://127.0.0.1:8000/store/sportsmans-guide-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rebel-us</loc>
+    <loc>http://127.0.0.1:8000/store/rebel-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/carls-golf-land-us</loc>
+    <loc>http://127.0.0.1:8000/store/carls-golf-land-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/nomatic-us</loc>
+    <loc>http://127.0.0.1:8000/store/nomatic-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mizuno-us</loc>
+    <loc>http://127.0.0.1:8000/store/mizuno-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/viagogo-us</loc>
+    <loc>http://127.0.0.1:8000/store/viagogo-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/lingoda-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/lingoda-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/airalo-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/airalo-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/gstar-raw-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/gstar-raw-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/tiqets-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/tiqets-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mamas-and-papas-uk</loc>
+    <loc>http://127.0.0.1:8000/store/mamas-and-papas-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/polar-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/polar-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/kfzteile-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/kfzteile-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bofrost-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bofrost-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/crocs-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/crocs-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/direct-ferries-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/direct-ferries-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/hd-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/hd-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/yoursurprise-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/yoursurprise-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/we-cycle-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/we-cycle-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/naturecan-de</loc>
+    <loc>http://127.0.0.1:8000/fr/store/naturecan-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/kinderkraft-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/kinderkraft-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sans-complexe-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sans-complexe-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/lenovo-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/lenovo-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/oneplus-fr</loc>
+    <loc>http://127.0.0.1:8000/store/oneplus-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/zumub-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/zumub-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/maxiscoot-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/maxiscoot-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/hudson-reed-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/hudson-reed-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/youprice-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/youprice-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/andre-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/andre-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/alpinestar-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/alpinestar-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/motointegrator-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/motointegrator-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/am-nutrition-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/am-nutrition-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/optic-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/optic-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/rue-des-puzzles-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/rue-des-puzzles-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/solbari-us</loc>
+    <loc>http://127.0.0.1:8000/store/solbari-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/collars-co-us</loc>
+    <loc>http://127.0.0.1:8000/store/collars-co-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/inmotion-us</loc>
+    <loc>http://127.0.0.1:8000/store/inmotion-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hartmann-us</loc>
+    <loc>http://127.0.0.1:8000/store/hartmann-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/kaabo-us</loc>
+    <loc>http://127.0.0.1:8000/store/kaabo-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mustela-us</loc>
+    <loc>http://127.0.0.1:8000/store/mustela-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/major-fitness-us</loc>
+    <loc>http://127.0.0.1:8000/store/major-fitness-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/jb-tools-us</loc>
+    <loc>http://127.0.0.1:8000/store/jb-tools-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fanttik-us</loc>
+    <loc>http://127.0.0.1:8000/store/fanttik-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/colon-broom-us</loc>
+    <loc>http://127.0.0.1:8000/store/colon-broom-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/polynesian-cultural-center-us</loc>
+    <loc>http://127.0.0.1:8000/store/polynesian-cultural-center-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/butcherbox-us</loc>
+    <loc>http://127.0.0.1:8000/store/butcherbox-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/omaha-steaks-us</loc>
+    <loc>http://127.0.0.1:8000/store/omaha-steaks-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/osprey-us</loc>
+    <loc>http://127.0.0.1:8000/store/osprey-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hydro-flask-us</loc>
+    <loc>http://127.0.0.1:8000/store/hydro-flask-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/legion-athletics-us</loc>
+    <loc>http://127.0.0.1:8000/store/legion-athletics-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ecco-us</loc>
+    <loc>http://127.0.0.1:8000/store/ecco-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/massivmoebel-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/massivmoebel-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/charles-keith-uk</loc>
+    <loc>http://127.0.0.1:8000/store/charles-keith-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/grover-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/grover-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/merit-us</loc>
+    <loc>http://127.0.0.1:8000/store/merit-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dr-marten-uk</loc>
+    <loc>http://127.0.0.1:8000/store/dr-marten-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/happy-mammoth-us</loc>
+    <loc>http://127.0.0.1:8000/store/happy-mammoth-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/happy-mammoth-au</loc>
+    <loc>http://127.0.0.1:8000/store/happy-mammoth-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/nutribullet-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/nutribullet-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/yoek-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/yoek-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/best-western-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/best-western-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bake-me-a-wish-us</loc>
+    <loc>http://127.0.0.1:8000/store/bake-me-a-wish-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/my-trip-uk</loc>
+    <loc>http://127.0.0.1:8000/store/my-trip-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hey-big-day-uk</loc>
+    <loc>http://127.0.0.1:8000/store/hey-big-day-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/dormeo-uk</loc>
+    <loc>http://127.0.0.1:8000/store/dormeo-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/swanky-badger-us</loc>
+    <loc>http://127.0.0.1:8000/store/swanky-badger-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/safariland-us</loc>
+    <loc>http://127.0.0.1:8000/store/safariland-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/shefit-us</loc>
+    <loc>http://127.0.0.1:8000/store/shefit-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/eufy-uk</loc>
+    <loc>http://127.0.0.1:8000/store/eufy-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/efteling-uk</loc>
+    <loc>http://127.0.0.1:8000/store/efteling-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rihoas-us</loc>
+    <loc>http://127.0.0.1:8000/store/rihoas-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/parfumsclub-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/parfumsclub-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/perfumsclub-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/perfumsclub-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/concept-usine-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/concept-usine-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/wiggins-hair-us</loc>
+    <loc>http://127.0.0.1:8000/store/wiggins-hair-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aarp-us</loc>
+    <loc>http://127.0.0.1:8000/store/aarp-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ethika-us</loc>
+    <loc>http://127.0.0.1:8000/store/ethika-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/frs-clippers-us</loc>
+    <loc>http://127.0.0.1:8000/store/frs-clippers-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/treatwell-discount-code-us</loc>
+    <loc>http://127.0.0.1:8000/store/treatwell-discount-code-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aliexpress-us</loc>
+    <loc>http://127.0.0.1:8000/store/aliexpress-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/juicy-couture-us</loc>
+    <loc>http://127.0.0.1:8000/store/juicy-couture-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/scentbox-us</loc>
+    <loc>http://127.0.0.1:8000/store/scentbox-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/astound-us</loc>
+    <loc>http://127.0.0.1:8000/store/astound-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/strand-au</loc>
+    <loc>http://127.0.0.1:8000/store/strand-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/stanley-ca</loc>
+    <loc>http://127.0.0.1:8000/store/stanley-ca</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/dogfy-diet-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/dogfy-diet-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/houzz-us</loc>
+    <loc>http://127.0.0.1:8000/store/houzz-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/sage-uk</loc>
+    <loc>http://127.0.0.1:8000/store/sage-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/alpinestar-uk</loc>
+    <loc>http://127.0.0.1:8000/store/alpinestar-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bloomchic-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bloomchic-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/on-us</loc>
+    <loc>http://127.0.0.1:8000/store/on-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/vooglam-us</loc>
+    <loc>http://127.0.0.1:8000/store/vooglam-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/unice-us</loc>
+    <loc>http://127.0.0.1:8000/store/unice-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/barker-stonehouse-uk</loc>
+    <loc>http://127.0.0.1:8000/store/barker-stonehouse-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/iscooter-uk</loc>
+    <loc>http://127.0.0.1:8000/store/iscooter-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/isinwheel-uk</loc>
+    <loc>http://127.0.0.1:8000/store/isinwheel-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/deutschlandmuseum-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/deutschlandmuseum-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/fashionette-uk</loc>
+    <loc>http://127.0.0.1:8000/store/fashionette-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/seidensticker-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/seidensticker-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/andie-swim-au</loc>
+    <loc>http://127.0.0.1:8000/store/andie-swim-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mpb-us</loc>
+    <loc>http://127.0.0.1:8000/store/mpb-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/oxford-online-pharmacy-uk</loc>
+    <loc>http://127.0.0.1:8000/store/oxford-online-pharmacy-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/costway-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/costway-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/duxx-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/duxx-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/engelsrufer-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/engelsrufer-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/roborock-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/roborock-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/expondo-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/expondo-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/choc-on-choc-uk</loc>
+    <loc>http://127.0.0.1:8000/store/choc-on-choc-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/novomins-uk</loc>
+    <loc>http://127.0.0.1:8000/store/novomins-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/soundcore-uk</loc>
+    <loc>http://127.0.0.1:8000/store/soundcore-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hughes-uk</loc>
+    <loc>http://127.0.0.1:8000/store/hughes-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/target-darts-uk</loc>
+    <loc>http://127.0.0.1:8000/store/target-darts-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/dogo-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/dogo-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/euroclinix-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/euroclinix-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/h-hotels-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/h-hotels-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/quai-sud-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/quai-sud-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/seranova-us</loc>
+    <loc>http://127.0.0.1:8000/store/seranova-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/just-spices-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/just-spices-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/isinwheel-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/isinwheel-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/milan-spiele-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/milan-spiele-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/atmosfera-sports-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/atmosfera-sports-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/pneus-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/pneus-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/damart-uk</loc>
+    <loc>http://127.0.0.1:8000/store/damart-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/good-tuesday-uk</loc>
+    <loc>http://127.0.0.1:8000/store/good-tuesday-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/md-london-uk</loc>
+    <loc>http://127.0.0.1:8000/store/md-london-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/doughnut-us</loc>
+    <loc>http://127.0.0.1:8000/store/doughnut-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/road-angel-uk</loc>
+    <loc>http://127.0.0.1:8000/store/road-angel-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/weird-fish-uk</loc>
+    <loc>http://127.0.0.1:8000/store/weird-fish-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/coolibar-us</loc>
+    <loc>http://127.0.0.1:8000/store/coolibar-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/stuarts-london-us</loc>
+    <loc>http://127.0.0.1:8000/store/stuarts-london-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ergoflex-uk</loc>
+    <loc>http://127.0.0.1:8000/store/ergoflex-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/after-eden-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/after-eden-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/harts-of-stur-uk</loc>
+    <loc>http://127.0.0.1:8000/store/harts-of-stur-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/estay-on-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/estay-on-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/kapten-son-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/kapten-son-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/direct-volley-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/direct-volley-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/cecil-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/cecil-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sneakids-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sneakids-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/belleek-uk</loc>
+    <loc>http://127.0.0.1:8000/store/belleek-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/tokyo-laundry-uk</loc>
+    <loc>http://127.0.0.1:8000/store/tokyo-laundry-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/theatre-tickets-direct-uk</loc>
+    <loc>http://127.0.0.1:8000/store/theatre-tickets-direct-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/purr-mutt-uk</loc>
+    <loc>http://127.0.0.1:8000/store/purr-mutt-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/perfumes-club-uk</loc>
+    <loc>http://127.0.0.1:8000/store/perfumes-club-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/new-leaf-uk</loc>
+    <loc>http://127.0.0.1:8000/store/new-leaf-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/mr-central-heating-uk</loc>
+    <loc>http://127.0.0.1:8000/store/mr-central-heating-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bling-king-uk</loc>
+    <loc>http://127.0.0.1:8000/store/bling-king-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/watchnation-uk</loc>
+    <loc>http://127.0.0.1:8000/store/watchnation-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bilderwelten-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bilderwelten-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/teamsports-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/teamsports-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/fidelis-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/fidelis-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/fossibot-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/fossibot-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/fotofabrik-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/fotofabrik-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/happybrush-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/happybrush-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/nostalux-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/nostalux-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/plopsa-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/plopsa-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/sabina-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/sabina-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/hsia-us</loc>
+    <loc>http://127.0.0.1:8000/store/hsia-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/marley-spoon-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/marley-spoon-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/refurbished-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/refurbished-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/patpat-uk</loc>
+    <loc>http://127.0.0.1:8000/store/patpat-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/bresser-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/bresser-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/stoneline-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/stoneline-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/direct-running-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/direct-running-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/cleor-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/cleor-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/onehanesplace-us</loc>
+    <loc>http://127.0.0.1:8000/store/onehanesplace-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/caseking-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/caseking-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ringconn-us</loc>
+    <loc>http://127.0.0.1:8000/store/ringconn-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/inkifi-uk</loc>
+    <loc>http://127.0.0.1:8000/store/inkifi-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/poundfun-uk</loc>
+    <loc>http://127.0.0.1:8000/store/poundfun-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/car-audio-centre-uk</loc>
+    <loc>http://127.0.0.1:8000/store/car-audio-centre-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/olio-carli-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/olio-carli-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/mpb-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/mpb-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/muck-boot-uk</loc>
+    <loc>http://127.0.0.1:8000/store/muck-boot-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/franco-sarto-us</loc>
+    <loc>http://127.0.0.1:8000/store/franco-sarto-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/chisholm-hunter-uk</loc>
+    <loc>http://127.0.0.1:8000/store/chisholm-hunter-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/diptyque-uk</loc>
+    <loc>http://127.0.0.1:8000/store/diptyque-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/bondi-sands-au</loc>
+    <loc>http://127.0.0.1:8000/store/bondi-sands-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/clothing-shop-online-us</loc>
+    <loc>http://127.0.0.1:8000/store/clothing-shop-online-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/bluebella-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/bluebella-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/carhartt-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/carhartt-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/able-us</loc>
+    <loc>http://127.0.0.1:8000/store/able-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/ampex-us</loc>
+    <loc>http://127.0.0.1:8000/store/ampex-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/sport-decouverte-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/sport-decouverte-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/timberland-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/timberland-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/rf-us</loc>
+    <loc>http://127.0.0.1:8000/store/rf-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/lookfantastic-us</loc>
+    <loc>http://127.0.0.1:8000/store/lookfantastic-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/the-towel-shop-uk</loc>
+    <loc>http://127.0.0.1:8000/store/the-towel-shop-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/aircraft-uk</loc>
+    <loc>http://127.0.0.1:8000/store/aircraft-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/gs-workwear-uk</loc>
+    <loc>http://127.0.0.1:8000/store/gs-workwear-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/big-game-hunters-uk</loc>
+    <loc>http://127.0.0.1:8000/store/big-game-hunters-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/it/store/trotec-it</loc>
+    <loc>http://127.0.0.1:8000/it/store/trotec-it</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/nl/store/trotec-nl</loc>
+    <loc>http://127.0.0.1:8000/nl/store/trotec-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/gravity-uk</loc>
+    <loc>http://127.0.0.1:8000/store/gravity-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/popsa-uk</loc>
+    <loc>http://127.0.0.1:8000/store/popsa-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/ice-watch-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/ice-watch-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/alternate-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/alternate-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/fr/store/stylevana-fr</loc>
+    <loc>http://127.0.0.1:8000/fr/store/stylevana-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/pl/store/eurofirany-pl</loc>
+    <loc>http://127.0.0.1:8000/pl/store/eurofirany-pl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/store/scarosso-de</loc>
+    <loc>http://127.0.0.1:8000/de/store/scarosso-de</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/boop-beauty-uk</loc>
+    <loc>http://127.0.0.1:8000/store/boop-beauty-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/store/boomf-uk</loc>
+    <loc>http://127.0.0.1:8000/store/boomf-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/the-power-of-viator-exploring-the-world-one-experience-at-a-time</loc>
+    <loc>http://127.0.0.1:8000/store/boilerjuice-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/tripcom-your-onestop-shop-for-global-getaways</loc>
+    <loc>http://127.0.0.1:8000/store/cured-pharmacy-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/7-unbeatable-deals-you-can-grab-right-now-before-they-expire</loc>
+    <loc>http://127.0.0.1:8000/store/silentnight-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/healthy-beauty-and-skin-care</loc>
+    <loc>http://127.0.0.1:8000/store/pillsorted-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/latest-apparel-and-clothing-trends-2026-fashion-guide-for-smart-shoppers</loc>
+    <loc>http://127.0.0.1:8000/store/patisserie-valerie-uk</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/arts-and-crafts-creative-ideas-diy-projects-inspiration-for-all-ages</loc>
+    <loc>http://127.0.0.1:8000/nl/store/zapply-nl</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/auctions-guide-2026-how-auctions-work-online-bidding-tips-deals</loc>
+    <loc>http://127.0.0.1:8000/store/kidsy</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/automotive-trends-2026-car-buying-tips-ev-updates-future-vehicle-technology</loc>
+    <loc>http://127.0.0.1:8000/store/lumibricks</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/babies-and-kids-guide-2026-parenting-tips-child-development-care-essentials</loc>
+    <loc>http://127.0.0.1:8000/store/pelsbarn</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/books-and-media-2026-reading-benefits-digital-media-trends-entertainment-guide</loc>
+    <loc>http://127.0.0.1:8000/store/tabs-chocolate</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/business-and-finance-2026-smart-money-management-investments-growth-strategies</loc>
+    <loc>http://127.0.0.1:8000/store/mellow-sleep</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/communication-and-wireless-2026-5g-iot-smart-devices-future-connectivity</loc>
+    <loc>http://127.0.0.1:8000/store/neo-sabers</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/computer-and-software-2026-ai-cloud-solutions-cybersecurity-tech-trends</loc>
+    <loc>http://127.0.0.1:8000/store/ridge-us</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/department-stores-2026-shopping-trends-deals-customer-experience-guide</loc>
+    <loc>http://127.0.0.1:8000/store/ridge</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/education-2026-learning-trends-online-courses-student-success-tips</loc>
+    <loc>http://127.0.0.1:8000/store/peelaways</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/electronics-2026-smart-devices-gadgets-tech-innovations-guide</loc>
+    <loc>http://127.0.0.1:8000/store/gods-love-overcome</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/events-and-entertainment-2026-trends-ideas-experiences-guide</loc>
+    <loc>http://127.0.0.1:8000/store/clean-nutraceuticals</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/eyewear-2026-glasses-lenses-smart-glasses-fashion-trends</loc>
+    <loc>http://127.0.0.1:8000/store/invisawear</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/food-and-drinks-2026-culinary-trends-healthy-recipes-beverage-innovations</loc>
+    <loc>http://127.0.0.1:8000/store/amourscents</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/games-and-toys-2026-educational-interactive-fun-play-guide</loc>
+    <loc>http://127.0.0.1:8000/store/magic-mind</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/gifts-and-flowers-2026-personalized-gift-ideas-floral-trends-guide</loc>
+    <loc>http://127.0.0.1:8000/store/love-in-faith</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/hardware-tools-2026-power-tools-hand-tools-diy-equipment-guide</loc>
+    <loc>http://127.0.0.1:8000/store/polar-dive</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/home-and-garden-2026-interior-daesign-gardening-smart-living-tips</loc>
+    <loc>http://127.0.0.1:8000/store/belffin</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/internet-2026-trends-connectivity-ai-and-online-tools-guide</loc>
+    <loc>http://127.0.0.1:8000/store/flame-king</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/jewelry-and-watches-2026-luxury-fashion-smart-accessories-guide</loc>
+    <loc>http://127.0.0.1:8000/store/ghostbed</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/de/blog/music-and-videos-2025-streaming-trends-digital-content-entertainment-guide</loc>
+    <loc>http://127.0.0.1:8000/store/furlife</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/office-supplies-2026-essential-tools-ergonomic-furniture-smart-workspace-guide</loc>
+    <loc>http://127.0.0.1:8000/store/nushape</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/online-services-2026-digital-tools-ecommerce-cloud-solutions-guide</loc>
+    <loc>http://127.0.0.1:8000/store/synergeefitness</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/organizations-2026-types-management-strategies-trends-guide</loc>
+    <loc>http://127.0.0.1:8000/store/simsonn</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/seasonal-changes-climate-2026-weather-trends-tips-insights</loc>
+    <loc>http://127.0.0.1:8000/store/crz-yoga</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/pets-guide-2026-pet-care-nutrition-training-wellness-tips-for-healthy-animals</loc>
+    <loc>http://127.0.0.1:8000/store/crz-yoga-au</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/best-shoes-2026-franco-sarto-us-muck-boot-uk-fitville-uk-direct-running-fr-top-eu-footwear-brands</loc>
+    <loc>http://127.0.0.1:8000/fr/store/carplaygo</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/sports-and-outdoors-2026-fitness-gear-camping-hiking-outdoor-trends</loc>
+    <loc>http://127.0.0.1:8000/blog/the-power-of-viator-exploring-the-world-one-experience-at-a-time</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/explore-the-world-top-travel-trends-destinations-for-2026-deals-from-deutschlandmuseum-de-lastminute-fr</loc>
+    <loc>http://127.0.0.1:8000/blog/tripcom-your-onestop-shop-for-global-getaways</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/the-ultimate-wedding-guide-2026-trends-planning-tips-inspiration-for-your-perfect-day</loc>
+    <loc>http://127.0.0.1:8000/blog/7-unbeatable-deals-you-can-grab-right-now-before-they-expire</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/top-hobbies-to-explore-in-2025-creative-relaxing-skillbuilding-activities-for-everyone</loc>
+    <loc>http://127.0.0.1:8000/blog/healthy-beauty-and-skin-care</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/top-accessories-trends-2025-fashion-functionality-style-essentials</loc>
+    <loc>http://127.0.0.1:8000/blog/latest-apparel-and-clothing-trends-2026-fashion-guide-for-smart-shoppers</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/top-fashion-trends-2025-style-luxury-everyday-elegance</loc>
+    <loc>http://127.0.0.1:8000/blog/arts-and-crafts-creative-ideas-diy-projects-inspiration-for-all-ages</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/health-fitness-guide-2025-wellness-training-nutrition-tips</loc>
+    <loc>http://127.0.0.1:8000/blog/auctions-guide-2026-how-auctions-work-online-bidding-tips-deals</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/top-consumer-electronics-trends-smart-gadgets-for-2025</loc>
+    <loc>http://127.0.0.1:8000/blog/automotive-trends-2026-car-buying-tips-ev-updates-future-vehicle-technology</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/top-travel-hotel-trends-2025-best-stays-deals-destinations</loc>
+    <loc>http://127.0.0.1:8000/blog/babies-and-kids-guide-2026-parenting-tips-child-development-care-essentials</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/top-furniture-trends-2025-style-comfort-smart-home-designs</loc>
+    <loc>http://127.0.0.1:8000/blog/books-and-media-2026-reading-benefits-digital-media-trends-entertainment-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/blog/home-dcor-trends-2025-stylish-ideas-to-elevate-your-space</loc>
+    <loc>http://127.0.0.1:8000/blog/business-and-finance-2026-smart-money-management-investments-growth-strategies</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/apparel-and-clothing</loc>
+    <loc>http://127.0.0.1:8000/blog/communication-and-wireless-2026-5g-iot-smart-devices-future-connectivity</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/arts-and-crafts</loc>
+    <loc>http://127.0.0.1:8000/blog/computer-and-software-2026-ai-cloud-solutions-cybersecurity-tech-trends</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/auctions</loc>
+    <loc>http://127.0.0.1:8000/blog/department-stores-2026-shopping-trends-deals-customer-experience-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/automotive</loc>
+    <loc>http://127.0.0.1:8000/blog/education-2026-learning-trends-online-courses-student-success-tips</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/babies-and-kids</loc>
+    <loc>http://127.0.0.1:8000/blog/electronics-2026-smart-devices-gadgets-tech-innovations-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/books-and-media</loc>
+    <loc>http://127.0.0.1:8000/blog/events-and-entertainment-2026-trends-ideas-experiences-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/business-and-finance</loc>
+    <loc>http://127.0.0.1:8000/blog/eyewear-2026-glasses-lenses-smart-glasses-fashion-trends</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/communication-and-wireless</loc>
+    <loc>http://127.0.0.1:8000/blog/food-and-drinks-2026-culinary-trends-healthy-recipes-beverage-innovations</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/computer-and-software</loc>
+    <loc>http://127.0.0.1:8000/blog/games-and-toys-2026-educational-interactive-fun-play-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/department-stores</loc>
+    <loc>http://127.0.0.1:8000/blog/gifts-and-flowers-2026-personalized-gift-ideas-floral-trends-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/education</loc>
+    <loc>http://127.0.0.1:8000/blog/hardware-tools-2026-power-tools-hand-tools-diy-equipment-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/electronics</loc>
+    <loc>http://127.0.0.1:8000/blog/home-and-garden-2026-interior-daesign-gardening-smart-living-tips</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/events-and-entertainment</loc>
+    <loc>http://127.0.0.1:8000/blog/internet-2026-trends-connectivity-ai-and-online-tools-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/eyewear</loc>
+    <loc>http://127.0.0.1:8000/blog/jewelry-and-watches-2026-luxury-fashion-smart-accessories-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/food-and-drinks</loc>
+    <loc>http://127.0.0.1:8000/de/blog/music-and-videos-2026-streaming-trends-digital-content-entertainment-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/games-and-toys</loc>
+    <loc>http://127.0.0.1:8000/blog/office-supplies-2026-essential-tools-ergonomic-furniture-smart-workspace-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/gifts-and-flowers</loc>
+    <loc>http://127.0.0.1:8000/blog/online-services-2026-digital-tools-ecommerce-cloud-solutions-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/hardware-tools</loc>
+    <loc>http://127.0.0.1:8000/blog/organizations-2026-types-management-strategies-trends-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/health-and-beauty</loc>
+    <loc>http://127.0.0.1:8000/blog/seasonal-changes-climate-2026-weather-trends-tips-insights</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/home-and-garden</loc>
+    <loc>http://127.0.0.1:8000/blog/pets-guide-2026-pet-care-nutrition-training-wellness-tips-for-healthy-animals</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/internet</loc>
+    <loc>http://127.0.0.1:8000/blog/best-shoes-2026-franco-sarto-us-muck-boot-uk-fitville-uk-direct-running-fr-top-eu-footwear-brands</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/jewelry-and-watches</loc>
+    <loc>http://127.0.0.1:8000/blog/sports-and-outdoors-2026-fitness-gear-camping-hiking-outdoor-trends</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/music-and-videos</loc>
+    <loc>http://127.0.0.1:8000/blog/explore-the-world-top-travel-trends-destinations-for-2026-deals-from-deutschlandmuseum-de-lastminute-fr</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/office-supplies</loc>
+    <loc>http://127.0.0.1:8000/blog/the-ultimate-wedding-guide-2026-trends-planning-tips-inspiration-for-your-perfect-day</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/online-services</loc>
+    <loc>http://127.0.0.1:8000/blog/top-hobbies-to-explore-in-2026-creative-relaxing-skillbuilding-activities-for-everyone</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/organizations</loc>
+    <loc>http://127.0.0.1:8000/blog/top-accessories-trends-2026-fashion-functionality-style-essentials</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/seasonal</loc>
+    <loc>http://127.0.0.1:8000/blog/top-fashion-trends-2026-style-luxury-everyday-elegance</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/pets</loc>
+    <loc>http://127.0.0.1:8000/blog/health-fitness-guide-2026-wellness-training-nutrition-tips</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/shoes</loc>
+    <loc>http://127.0.0.1:8000/blog/top-consumer-electronics-trends-smart-gadgets-for-2026</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/sports-and-outdoors</loc>
+    <loc>http://127.0.0.1:8000/blog/top-travel-hotel-trends-2026-best-stays-deals-destinations</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/travel</loc>
+    <loc>http://127.0.0.1:8000/blog/top-furniture-trends-2026-style-comfort-smart-home-designs</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/wedding</loc>
+    <loc>http://127.0.0.1:8000/blog/home-dcor-trends-2026-stylish-ideas-to-elevate-your-space</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/hobbies</loc>
+    <loc>http://127.0.0.1:8000/blog/mellow-sleep-the-cool-cloud-like-comfort-your-bedroom-has-been-missing</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/accessories</loc>
+    <loc>http://127.0.0.1:8000/blog/ridge-the-minimalist-wallet-that-redefines-everyday-carry</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/fashion</loc>
+    <loc>http://127.0.0.1:8000/blog/ridge-wallet-discount-code</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/health-and-fitness</loc>
+    <loc>http://127.0.0.1:8000/blog/neosabers-coupon-code-2026-15-percent-off</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/consumer-electronics</loc>
+    <loc>http://127.0.0.1:8000/blog/redefining-bedding-management-the-ultimate-peelaways-coupon-code-caregiver-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/travel-and-hotel</loc>
+    <loc>http://127.0.0.1:8000/blog/the-christian-streetwear-movement-the-ultimate-gods-love-overcomes-coupon-code-style-guide</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/furniture</loc>
+    <loc>http://127.0.0.1:8000/blog/clean-nutra-coupon-code-2026-save-15-on-all-in-one-supplements</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/home-and-decor</loc>
+    <loc>http://127.0.0.1:8000/blog/invisawear-coupon-code-2026-save-on-smart-safety-jewelry</loc>
             </url>
     <url>
-    <loc>http://localhost:8000/category/photos-video</loc>
+    <loc>http://127.0.0.1:8000/blog/high-concentration-affordable-luxury-the-ultimate-amour-scents-coupon-code-fragrance-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/unlocking-flow-state-the-ultimate-magic-mind-coupon-code-productivity-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/wear-your-witness-the-ultimate-love-in-faith-coupon-code-christian-apparel-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/the-cold-therapy-revolution-the-ultimate-polar-dive-usa-coupon-code-recovery-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/the-fit-your-life-furniture-revolution-the-ultimate-belffin-coupon-code-modular-sofa-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/fueling-your-adventure-safely-the-ultimate-flame-king-coupon-code-propane-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/restorative-sleep-perfected-the-ultimate-ghostbed-promo-code-sleep-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/holistic-pet-rotection-the-ultimate-furlife-coupon-code-wellness-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/the-home-biohacking-revolution-the-ultimate-nushape-coupon-code-red-light-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/the-home-gym-revolution-the-ultimate-synergee-coupon-code-strength-equipment-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/next-level-sim-racing-realism-theultimate-simsonn-coupon-code-rig-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/the-athleisure-revolution-the-ultimate-crz-yoga-coupon-code-fabric-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/blog/the-australian-athleisure-revolution-the-ultimate-crz-yoga-au-coupon-code-fabric-guide</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/fr/blog/rvolutionnez-votre-conduite-le-guide-ultime-des-codes-promos-et-botiers-carplaygo</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/apparel-and-clothing</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/arts-and-crafts</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/auctions</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/automotive</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/babies-and-kids</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/books-and-media</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/business-and-finance</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/communication-and-wireless</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/computer-and-software</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/department-stores</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/education</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/electronics</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/events-and-entertainment</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/eyewear</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/food-and-drinks</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/games-and-toys</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/gifts-and-flowers</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/hardware-tools</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/health-and-beauty</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/home-and-garden</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/internet</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/jewelry-and-watches</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/music-and-videos</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/office-supplies</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/online-services</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/organizations</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/seasonal</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/pets</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/shoes</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/sports-and-outdoors</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/travel</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/wedding</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/hobbies</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/accessories</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/fashion</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/health-and-fitness</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/consumer-electronics</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/travel-and-hotel</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/furniture</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/home-and-decor</loc>
+            </url>
+    <url>
+    <loc>http://127.0.0.1:8000/category/photos-video</loc>
             </url>
 </urlset>

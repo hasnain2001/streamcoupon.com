@@ -35,7 +35,7 @@
                     @method('PUT')
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <label for="name" class="form-label fw-semibold">Category Name</label>
+                            <label for="name" class="form-label fw-semibold"> Name</label>
                             <input type="text" name="name" id="name" class="form-control" value="{{ $category->name }}" required>
                         </div>
                         <div class="col-md-6">
@@ -46,14 +46,9 @@
                             <label for="meta_keyword" class="form-label fw-semibold">Meta Keyword</label>
                             <input type="text" class="form-control" name="meta_keyword" id="meta_keyword" value="{{ $category->meta_keyword }}">
                         </div>
-                        <div class="col-md-6">
-                            <label for="language" class="form-label fw-semibold">Language</label>
-                            <select name="language_id" id="language" class="form-select">
-                                <option value="">-- Select Language --</option>
-                                @foreach($languages as $language)
-                                    <option value="{{ $language->id }}" {{ $category->language_id == $language->id ? 'selected' : '' }}>{{ $language->name }}</option>
-                                @endforeach
-                            </select>
+                         <div class="col-md-6">
+                            <label for="title" class="form-label fw-semibold">Title</label>
+                            <input type="text" name="title" id="title" class="form-control" value="{{ $category->title }}" >
                         </div>
                         <div class="col-12">
                             <label for="meta_description" class="form-label fw-semibold">Meta Description</label>

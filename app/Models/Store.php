@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+use Illuminate\Support\Facades\Storage;
 class Store extends Model
 {
    /** @use HasFactory<\Database\Factories\StoreFactory> */
@@ -68,5 +68,32 @@ class Store extends Model
     {
         return $this->belongsTo(Network::class, 'network_id');
     }
+    public function getImageUrlAttribute()
+    {
+        if (empty($this->image)) {
+            return asset('assets/img/no-image-found.png');
+        }
 
+        // Check in the symlinked 'stores' folder inside public
+        if (file_exists(public_path('storage/stores/' . $this->image))) {
+            return asset('storage/stores/' . $this->image);
+        }
+
+        // Fallback to other locations (optional)
+        if (Storage::disk('public')->exists('storage/stores/' . $this->image)) {
+            return Storage::disk('public')->url('storage/stores/' . $this->image);
+        }
+
+        return asset('assets/img/no-image-found.png');
+    }
+    protected static function booted()
+    {
+        static::deleting(function ($store) {
+            $folder = "stores/{$store->id}";
+            if (Storage::disk('public')->exists($folder)) {
+                Storage::disk('public')->deleteDirectory($folder);
+            }
+        });
+    }
+        
 }

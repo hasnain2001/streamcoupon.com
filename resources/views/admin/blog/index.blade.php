@@ -145,7 +145,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-3">
                                             <img class="rounded shadow-sm border"
-                                                 src="{{ asset('uploads/blogs/' . $blog->image) }}"
+                                                 src="{{ $blog->image_url  }}"
                                                  style="width: 50px; height: 50px; object-fit: contain;"
                                                  alt="{{ $blog->name }}"
                                                  loading="lazy"
@@ -153,7 +153,8 @@
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="mb-1 fw-semibold">{{ Str::limit($blog->name, 50) }}</h6>
-                                            <small class="text-muted">ID: {{ $blog->id }}</small>
+                                            <small class="text-muted">Slug: {{ $blog->slug }}</small>
+                                               <small class="text-muted">ID: {{ $blog->id }}</small>
                                         </div>
                                     </div>
                                 </td>

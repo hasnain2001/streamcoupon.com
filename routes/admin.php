@@ -32,11 +32,20 @@ use App\Http\Controllers\Admin\SliderController;
     Route::resource('/blog', BlogController::class)->names('admin.blog');
     Route::delete('/blog/deleteSelected', [BlogController::class, 'deleteSelected'])->name('admin.blog.deleteSelected');
 
+
     Route::controller(SearchController::class)->name('admin.')->group(function () {
-    Route::get('/search/store', 'searchStores')->name('search.store');
-    Route::get('/search/store/coupons', 'searchStoresCoupons')->name('search.store.coupons');
-    Route::get('/search',  'search')->name('search');
-    Route::get('/search_results',  'searchResults')->name('search_results');
+        // Main search routes
+        Route::get('/search', 'search')->name('search');
+        Route::get('/search/results', 'searchResults')->name('search.results');
+        
+        // AJAX search endpoints
+        Route::get('/search/stores', 'searchStores')->name('search.stores');
+        Route::get('/search/coupons', 'searchCoupons')->name('search.coupons');
+        Route::get('/search/stores-coupons', 'searchStoresCoupons')->name('search.stores-coupons');
+        Route::get('/search/autocomplete', 'autocomplete')->name('search.autocomplete');
+        
+        // Alternative search index (for backward compatibility)
+        Route::get('/search/index', 'searchResults')->name('search.index');
     });
     Route::resource('/slider', SliderController::class)->names('admin.slider');
     Route::patch('/{slider}/toggle-status', [SliderController::class, 'toggleStatus'])->name('admin.slider.toggle-status');

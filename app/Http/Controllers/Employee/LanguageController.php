@@ -7,6 +7,7 @@ use App\Models\Language;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class LanguageController extends Controller
 {
@@ -37,10 +38,14 @@ class LanguageController extends Controller
         $language->status = $request->status;
 
         /** 🖼 Save flag **/
-        if ($request->hasFile('flag')) {
-            $flagName = Str::slug($request->name) . '.' . $request->flag->extension();
-            $request->flag->move(public_path('uploads/flags'), $flagName);
-            $language->flag = $flagName;
+         if ($request->hasFile('flag')) {
+            $filename = $this->uploadFlag($request->file('flag'), $request->name);
+            if ($filename) {
+                $language->flag = $filename;
+            } else {
+                // Optionally handle upload failure
+                return back()->withInput()->with('error', 'Failed to upload flag image.');
+            }
         }
 
         $language->save();
@@ -68,17 +73,16 @@ class LanguageController extends Controller
         $language->status = $request->status;
 
         /** 🖼 Handle updated flag **/
-        if ($request->hasFile('flag')) {
-
-            // Delete old flag if exists
-            if ($language->flag && file_exists(public_path('uploads/flags/' . $language->flag))) {
-                unlink(public_path('uploads/flags/' . $language->flag));
+       if ($request->hasFile('flag')) {
+            // Delete old flag
+            $this->deleteFlag($language);
+            // Upload new flag
+            $filename = $this->uploadFlag($request->file('flag'), $request->name);
+            if ($filename) {
+                $language->flag = $filename;
+            } else {
+                return back()->withInput()->with('error', 'Failed to upload new flag image.');
             }
-
-            // Save new flag
-            $flagName = Str::slug($request->name) . '.' . $request->flag->extension();
-            $request->flag->move(public_path('uploads/flags'), $flagName);
-            $language->flag = $flagName;
         }
 
         $language->save();
@@ -88,16 +92,56 @@ class LanguageController extends Controller
 
     public function destroy(Language $language)
     {
-        // Delete flag
-        if ($language->flag) {
-            $flagPath = public_path('uploads/flags/' . $language->flag);
-            if (file_exists($flagPath)) {
-                unlink($flagPath);
-            }
+        if (!empty($language->flag)) {
+            Storage::disk('public')->delete('flags/' . $language->flag);
         }
-
         $language->delete();
 
         return redirect()->route('employee.language.index')->with('success', 'Language deleted successfully.');
+    }
+    /* ============================
+        Upload IMAGE
+    ============================ */
+
+    /**
+     * Upload a flag image and return the filename.
+     *
+     * @param \Illuminate\Http\UploadedFile $flag
+     * @param string $name  (language name, used for slug)
+     * @return string|null  The saved filename, or null on failure.
+     */
+    private function uploadFlag($flag, string $name): ?string
+    {
+        try {
+            $extension = $flag->getClientOriginalExtension();
+            $filename = Str::slug($name) . '.' . $extension;
+
+            $path = $flag->storeAs('flags', $filename, 'public');
+
+            if (!$path) {
+                // Log error if needed
+                // \Log::error('Flag upload failed for ' . $name);
+                return null;
+            }
+
+            return $filename;
+        } catch (\Exception $e) {
+            // Log exception if needed
+            // \Log::error('Flag upload exception: ' . $e->getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Delete the flag file if it exists.
+     */
+    private function deleteFlag(Language $language): void
+    {
+        if ($language->flag) {
+            $path = 'flags/' . $language->flag;
+            if (Storage::disk('public')->exists($path)) {
+                Storage::disk('public')->delete($path);
+            }
+        }
     }
 }

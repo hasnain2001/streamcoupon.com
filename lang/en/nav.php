@@ -15,7 +15,7 @@
     'Dashboard' => 'Dashboard',
     'Login' => 'Login',
     'register' =>'Register',
-   'Search here' => 'Search stores for coupons, deals...',
+   'Search here' => 'Search blog here...',
 
     //footer//
    'support'=> 'support',

@@ -19,7 +19,13 @@ class Coupon extends Model
     ];
     protected $casts = [
     'ending_date' => 'date',
-];
+    'created_at' => 'datetime',
+    'updated_at' => 'datetime',
+    ];
+    protected $dates = [
+    'created_at',
+    'updated_at',
+    ];
 
 
     public function stores()

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Models\Language;
 use App\Models\Category;
@@ -13,9 +14,9 @@ use App\Models\Coupon;
 
 class StoreController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    /* ============================
+       Index
+    ============================ */
     public function index(Request $request)
     {
         // Get all languages that have stores
@@ -46,9 +47,9 @@ class StoreController extends Controller
         return view('employee.stores.index', compact('stores', 'languages', 'selectedLanguage'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    /* ============================
+        Create
+    ============================ */
        public function create()
     {
       $categories = Category::orderBy('created_at', 'desc')->get();
@@ -57,9 +58,9 @@ class StoreController extends Controller
         return view('employee.stores.create', compact('categories', 'networks', 'languages'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    /* ============================
+       Store
+    ============================ */
         public function store(Request $request)
         {
             $validated = $request->validate([
@@ -73,7 +74,7 @@ class StoreController extends Controller
                 'meta_description' => 'nullable|string|max:255',
                 'content' => 'nullable|string',
                 'about' => 'nullable|string',
-                'description' => 'required|string',
+                'description' => 'nullable|string',
                 'language_id' => 'required|exists:languages,id',
                 'category_id' => 'required|exists:categories,id',
                 'network_id' => 'nullable|exists:networks,id',
@@ -106,32 +107,15 @@ class StoreController extends Controller
             /* ---------------------------
             2️⃣ Handle Image Upload
             ----------------------------*/
-            if ($request->hasFile('image')) {
-
-                $image = $request->file('image');
-
-                $slug = Str::slug($store->slug ?? $store->name);
-                $imageName = $slug . '.' . $image->getClientOriginalExtension();
-
-                $destinationPath = public_path('uploads/stores');
-
-                if (!file_exists($destinationPath)) {
-                    mkdir($destinationPath, 0755, true);
-                }
-
-                $image->move($destinationPath, $imageName);
-
-                $store->update([
-                    'image' => $imageName
-                ]);
-            }
+        if ($request->hasFile('image')) {
+            $this->uploadImage($request->file('image'), $store);
+        }
             return redirect()->route('employee.store.show', $store->id)->with('success', 'Store created successfully.');
         }
 
-
-    /**
-     * Display the specified resource.
-     */
+    /* ============================
+        Show
+    ============================ */
     public function show(Store $store)
     {
 
@@ -150,9 +134,9 @@ class StoreController extends Controller
         return view('employee.stores.show', compact('store', 'coupons', 'stores', 'languages'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+     /* ============================
+      EDit
+    ============================ */
     public function edit(Store $store)
     {
         $categories = Category::orderBy('created_at', 'desc')->get();
@@ -161,9 +145,9 @@ class StoreController extends Controller
         return view('employee.stores.edit', compact('store', 'categories', 'networks', 'languages'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    /* ============================
+      Update
+    ============================ */
 
     public function update(Request $request, Store $store)
     {
@@ -178,7 +162,7 @@ class StoreController extends Controller
             'meta_description' => 'nullable|string|max:255',
             'content' => 'nullable|string',
             'about' => 'nullable|string',
-            'description' => 'required|string',
+            'description' => 'nullable|string',
             'language_id' => 'required|exists:languages,id',
             'category_id' => 'required|exists:categories,id',
             'network_id' => 'nullable|exists:networks,id',
@@ -212,35 +196,11 @@ class StoreController extends Controller
         2️⃣ Handle Image Upload
         ----------------------------*/
         if ($request->hasFile('image')) {
+            // Delete old image if exists
+            $this->deleteImage($store);
 
-            $destinationPath = public_path('uploads/stores');
-
-            // Create directory if missing
-            if (!file_exists($destinationPath)) {
-                mkdir($destinationPath, 0755, true);
-            }
-
-            // Delete old image
-            if (!empty($store->image)) {
-                $oldImage = $destinationPath . '/' . $store->image;
-                if (file_exists($oldImage)) {
-                    unlink($oldImage);
-                }
-            }
-
-            $image = $request->file('image');
-
-            // Slug-based image name
-            $slug = Str::slug($validated['slug'] ?? $validated['name']);
-            $imageName = $slug . '.' . $image->getClientOriginalExtension();
-
-            // Move image
-            $image->move($destinationPath, $imageName);
-
-            // Save image name
-            $store->update([
-                'image' => $imageName
-            ]);
+            // Upload new image
+            $this->uploadImage($request->file('image'), $store);
         }
 
         return redirect()
@@ -248,9 +208,9 @@ class StoreController extends Controller
             ->with('success', 'Store updated successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    /* ============================
+        DELETE 
+    ============================ */
     public function destroy(Store $store)
     {
         if ($store->image) {
@@ -264,5 +224,31 @@ class StoreController extends Controller
         return redirect()
             ->route('employee.store.index')
             ->with('success', 'Store deleted successfully.');
+    }
+     /* ============================
+       Upload IMAGE
+    ============================ */
+
+        private function uploadImage($image, Store $store)
+    {
+        
+        $imageName = Str::slug($store->slug) . '_' . time() . '.' . $image->getClientOriginalExtension();
+        $path = $image->storeAs('stores', $imageName, 'public');
+        
+        // Save only the filename in database
+        $store->update(['image' => $imageName]);
+        
+        
+        return $path;
+    }
+     /* ============================
+        DELETE IMAGE
+    ============================ */
+        private function deleteImage(Store $store)
+    {
+        if ($store->image) {
+            // Delete from stores folder
+            Storage::disk('public')->delete('stores/' . $store->image);
+        }
     }
 }

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
-@section('title', 'Latest Coupon & Shopping Tips Blog ' . date("Y") . ' | ' . config('app.name'))
-@section('description', 'Explore our amazing blogs and offers. Find the best products and services in one place.')
-@section('keywords', 'blogs, offers, products, services')
-@section('author', 'John Doe')
+@section('title', __('blog.meta_title', ['year' => date('Y'), 'app' => config('app.name')]))
+@section('description', __('blog.meta_description'))
+@section('keywords', __('blog.meta_keywords'))
+@section('author', __('blog.meta_author'))
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/blog.css') }}">
@@ -14,22 +14,22 @@
 <div class="page-header">
     <div class="container">
         <div class="page-header-content">
-            <h1>@lang('message.Our Blog')</h1>
-            <p class="lead">@lang('message.Discover the latest insights, tips, and news.') on {{ config('app.name') }}</p>
+            <h1>{{ __('blog.page_title') }}</h1>
+            <p class="lead">{{ __('blog.page_subtitle', ['app' => config('app.name')]) }}</p>
 
             <!-- Blog Statistics -->
             <div class="header-stats">
                 <div class="stat-item">
                     <span class="stat-number">{{ $blogs->total() }}+</span>
-                    <span class="stat-label">Articles Published</span>
+                    <span class="stat-label">{{ __('blog.stat_articles') }}</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">{{ $uniqueAuthors ?? '10+' }}</span>
-                    <span class="stat-label">Expert Writers</span>
+                    <span class="stat-label">{{ __('blog.stat_writers') }}</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">{{ $currentYear = date('Y') }}</span>
-                    <span class="stat-label">Latest Updates</span>
+                    <span class="stat-number">{{ date('Y') }}</span>
+                    <span class="stat-label">{{ __('blog.stat_updates') }}</span>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <a href="{{ route('blog.detail', ['slug' => Str::slug($blog->slug)]) }}" class="text-decoration-none">
                     <div class="position-relative overflow-hidden">
                         <img
-                            src="{{ $blog->image ? asset('uploads/blogs/' . $blog->image) : asset('front/assets/images/no-image-found.jpg') }}"
+                            src="{{ $blog->image ? $blog->image_url : asset('assets/img/no-image-found.png') }}"
                             alt="{{ $blog->name }}"
                             class="card-img-top"
                             loading="lazy"
@@ -64,7 +64,7 @@
                             <div class="author-avatar">
                                 {{ substr($blog->user->name ?? 'A', 0, 1) }}
                             </div>
-                            <span class="author-name">{{ $blog->user->name ?? 'Admin' }}</span>
+                            <span class="author-name">{{ $blog->user->name ?? __('blog.default_author') }}</span>
                         </div>
                     </div>
                 </a>

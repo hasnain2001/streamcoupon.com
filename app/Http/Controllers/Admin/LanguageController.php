@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Language;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class LanguageController extends Controller
@@ -24,9 +25,9 @@ class LanguageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'  => 'required|string|max:255',
-            'code'  => 'required|string|max:10|unique:languages,code',
-            'flag'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name'   => 'required|string|max:255',
+            'code'   => 'required|string|max:10|unique:languages,code',
+            'flag'   => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'status' => 'required|boolean',
         ]);
 
@@ -36,16 +37,21 @@ class LanguageController extends Controller
         $language->user_id = Auth::id();
         $language->status = $request->status;
 
-        /** 🖼 Save flag **/
+        // Upload flag if provided
         if ($request->hasFile('flag')) {
-            $flagName = Str::slug($request->name) . '.' . $request->flag->extension();
-            $request->flag->move(public_path('uploads/flags'), $flagName);
-            $language->flag = $flagName;
+            $filename = $this->uploadFlag($request->file('flag'), $request->name);
+            if ($filename) {
+                $language->flag = $filename;
+            } else {
+                // Optionally handle upload failure
+                return back()->withInput()->with('error', 'Failed to upload flag image.');
+            }
         }
 
         $language->save();
 
-        return redirect()->route('admin.language.index')->with('success', 'Language created successfully.');
+        return redirect()->route('admin.language.index')
+                         ->with('success', 'Language created successfully.');
     }
 
     public function edit(Language $language)
@@ -56,9 +62,9 @@ class LanguageController extends Controller
     public function update(Request $request, Language $language)
     {
         $request->validate([
-            'name'  => 'required|string|max:255',
-            'code'  => 'required|string|max:10|unique:languages,code,' . $language->id,
-            'flag'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name'   => 'required|string|max:255',
+            'code'   => 'required|string|max:10|unique:languages,code,' . $language->id,
+            'flag'   => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'status' => 'required|boolean',
         ]);
 
@@ -67,37 +73,77 @@ class LanguageController extends Controller
         $language->updated_id = Auth::id();
         $language->status = $request->status;
 
-        /** 🖼 Handle updated flag **/
+        // Handle flag update
         if ($request->hasFile('flag')) {
-
-            // Delete old flag if exists
-            if ($language->flag && file_exists(public_path('uploads/flags/' . $language->flag))) {
-                unlink(public_path('uploads/flags/' . $language->flag));
+            // Delete old flag
+            $this->deleteFlag($language);
+            // Upload new flag
+            $filename = $this->uploadFlag($request->file('flag'), $request->name);
+            if ($filename) {
+                $language->flag = $filename;
+            } else {
+                return back()->withInput()->with('error', 'Failed to upload new flag image.');
             }
-
-            // Save new flag
-            $flagName = Str::slug($request->name) . '.' . $request->flag->extension();
-            $request->flag->move(public_path('uploads/flags'), $flagName);
-            $language->flag = $flagName;
         }
 
         $language->save();
 
-        return redirect()->route('admin.language.index')->with('success', 'Language updated successfully.');
+        return redirect()->route('admin.language.index')
+                         ->with('success', 'Language updated successfully.');
     }
 
     public function destroy(Language $language)
     {
-        // Delete flag
-        if ($language->flag) {
-            $flagPath = public_path('uploads/flags/' . $language->flag);
-            if (file_exists($flagPath)) {
-                unlink($flagPath);
-            }
-        }
-
+        $this->deleteFlag($language);
         $language->delete();
 
-        return redirect()->route('admin.language.index')->with('success', 'Language deleted successfully.');
+        return redirect()->route('admin.language.index')
+                         ->with('success', 'Language deleted successfully.');
+    }
+
+    /* ============================
+       PRIVATE HELPERS
+    ============================ */
+
+    /**
+     * Upload a flag image and return the filename.
+     *
+     * @param \Illuminate\Http\UploadedFile $flag
+     * @param string $name  (language name, used for slug)
+     * @return string|null  The saved filename, or null on failure.
+     */
+    private function uploadFlag($flag, string $name): ?string
+    {
+        try {
+            $extension = $flag->getClientOriginalExtension();
+            $filename = Str::slug($name) . '.' . $extension;
+
+            $path = $flag->storeAs('flags', $filename, 'public');
+
+            if (!$path) {
+                // Log error if needed
+                // \Log::error('Flag upload failed for ' . $name);
+                return null;
+            }
+
+            return $filename;
+        } catch (\Exception $e) {
+            // Log exception if needed
+            // \Log::error('Flag upload exception: ' . $e->getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Delete the flag file if it exists.
+     */
+    private function deleteFlag(Language $language): void
+    {
+        if ($language->flag) {
+            $path = 'flags/' . $language->flag;
+            if (Storage::disk('public')->exists($path)) {
+                Storage::disk('public')->delete($path);
+            }
+        }
     }
 }

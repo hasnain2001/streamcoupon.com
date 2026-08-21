@@ -19,8 +19,8 @@
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
-                        <label for="title" class="form-label">title</label>
-                        <input type="text" class="form-control" id="title" name="title" value="{{ $network->title }}" required>
+                        <label for="name" class="form-label">name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $network->name }}" required>
                     </div>
                   <div class="col-md-6">
                             <div class="form-group">
